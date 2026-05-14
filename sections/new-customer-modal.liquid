@@ -1,0 +1,221 @@
+<div id="newCustomerModal" class="new-customer-modal" style="display:none">
+  <div class="new-customer-modal-content">
+    <div class="success-icon"> ✓</div>
+    <h2>{{ section.settings.success_title }}</h2>
+    <p>{{ section.settings.line1 }}</p>
+    <p>{{ section.settings.line2 }}</p>
+    <p>{{ section.settings.line3 | raw }}</p>
+
+    <button id="closeNewCustomerModal" class="button button--solid">
+      {{ section.settings.button_text }}
+    </button>
+  </div>
+</div>
+
+
+<style>
+  body.new-customer-modal-open main-header,
+body.new-customer-modal-open .sticky-header {
+  z-index: 0 !important;
+}
+    /* Overlay */
+.new-customer-modal {
+
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6); /* dark blur */
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.new-customer-modal-content {
+  background: #c7efee;
+  padding: 48px 40px 40px;
+  max-width: 720px;
+  width: 90%;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  animation: modalFadeIn 0.3s ease;
+}
+
+/* Title */
+.new-customer-modal-content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Body text */
+.new-customer-modal-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+/* Divider line */
+.new-customer-modal-content::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+  margin: 24px 0;
+}
+
+/* Button */
+#closeNewCustomerModal {
+  margin-top: 28px;
+  padding: 14px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(15,23,42,0.35);
+}
+
+#closeNewCustomerModal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.45);
+}
+.success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #d9f7f5;
+  color: #0f766e;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .new-customer-modal-content {
+    padding: 32px 24px;
+  }
+
+  .new-customer-modal-content h2 {
+    font-size: 26px;
+  }
+
+  .new-customer-modal-content p {
+    font-size: 16px;
+  }
+}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("newCustomerModal");
+  const closeBtn = document.getElementById("closeNewCustomerModal");
+
+  // ✅ FIX 1: attach to window
+  window.customerId = {% if customer %}{{ customer.id }}{% else %}null{% endif %};
+
+  console.log("customerId:", window.customerId);
+
+  if (!modal) return;
+
+  // Always hide first
+  modal.style.display = "none";
+
+  const isNewCustomer = localStorage.getItem("newcustomer");
+  console.log("localStorage:", isNewCustomer);
+
+  // ✅ Show modal
+  if (isNewCustomer === "true") {
+
+    // OPTIONAL: check customerId if you want strict validation
+    if (window.customerId) {
+      modal.style.display = "flex";
+      document.body.classList.add("new-customer-modal-open");
+
+      // Remove after showing
+      localStorage.removeItem("newcustomer");
+    }
+
+    // 🔥 IMPORTANT: Do NOT remove in else
+    // because Shopify may delay login
+  }
+
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+      document.body.classList.remove("new-customer-modal-open");
+    });
+  }
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "New Customer Modal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "success_title",
+      "label": "Success title",
+      "default": "Thank you for registering"
+    },
+    {
+      "type": "textarea",
+      "id": "line1",
+      "label": "Line 1",
+      "default": "You’re almost set. Your account is being set up and will be ready shortly."
+    },
+    {
+      "type": "textarea",
+      "id": "line2",
+      "label": "Line 2",
+      "default": "You’ll receive a confirmation email as soon as everything is complete — if you don’t see it, it may be worth checking your spam or junk folder."
+    },
+    {
+  "type": "textarea",
+  "id": "line3",
+  "label": "Line 3",
+  "default": "If you have any questions, please feel free to contact our team — weborders@homecaremedical.ie 0818 911 555."
+},
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "OK"
+    }
+  ],
+  "presets": [
+    { "name": "New Customer Modal" }
+  ]
+}
+{% endschema %}
+

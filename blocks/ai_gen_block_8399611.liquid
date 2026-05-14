@@ -1,0 +1,1118 @@
+{% doc %}
+  @prompt
+    create job listing, one below the other with Learn more button in line with it, thi is perfect, remove the border around each job, add title of the section at the top, add possibility to change colour font and colout weight, and add posisibility to post up to 15 jobs, for this section, leave 50px margin from the left and from the right side
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-job-listing-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .ai-job-listing__header-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.title_margin_bottom }}px;
+  }
+
+  .ai-job-listing__section-title-{{ ai_gen_id }} {
+    margin: 0;
+    font-size: {{ block.settings.section_title_font_size }}px;
+    font-weight: {{ block.settings.section_title_font_weight }};
+    color: {{ block.settings.section_title_color }};
+    text-align: {{ block.settings.section_title_alignment }};
+  }
+
+  .ai-job-listing__container-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.spacing_between_jobs }}px;
+  }
+
+  .ai-job-listing__item-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: {{ block.settings.job_padding }}px;
+    background-color: {{ block.settings.job_background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    transition: all 0.3s ease;
+  }
+
+  .ai-job-listing__item-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.job_hover_background_color }};
+  }
+
+  .ai-job-listing__content-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ai-job-listing__title-{{ ai_gen_id }} {
+    margin: 0 0 8px 0;
+    font-size: {{ block.settings.title_font_size }}px;
+    font-weight: {{ block.settings.title_font_weight }};
+    color: {{ block.settings.title_color }};
+  }
+
+  .ai-job-listing__details-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .ai-job-listing__detail-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: {{ block.settings.detail_font_size }}px;
+    font-weight: {{ block.settings.detail_font_weight }};
+    color: {{ block.settings.detail_color }};
+  }
+
+  .ai-job-listing__detail-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .ai-job-listing__description-{{ ai_gen_id }} {
+    margin: 0;
+    font-size: {{ block.settings.description_font_size }}px;
+    font-weight: {{ block.settings.description_font_weight }};
+    color: {{ block.settings.description_color }};
+    line-height: 1.5;
+  }
+
+  .ai-job-listing__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+
+  .ai-job-listing__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-job-listing-{{ ai_gen_id }} {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .ai-job-listing__item-{{ ai_gen_id }} {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .ai-job-listing__button-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-job-listing-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.section_title != blank %}
+    <div class="ai-job-listing__header-{{ ai_gen_id }}">
+      <h2 class="ai-job-listing__section-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="ai-job-listing__container-{{ ai_gen_id }}">
+    {% for i in (1..15) %}
+      {% liquid
+        assign job_enabled_key = 'job_' | append: i | append: '_enabled'
+        assign job_title_key = 'job_' | append: i | append: '_title'
+        assign job_location_key = 'job_' | append: i | append: '_location'
+        assign job_type_key = 'job_' | append: i | append: '_type'
+        assign job_description_key = 'job_' | append: i | append: '_description'
+        assign job_link_key = 'job_' | append: i | append: '_link'
+
+        assign job_enabled = block.settings[job_enabled_key]
+        assign job_title = block.settings[job_title_key]
+        assign job_location = block.settings[job_location_key]
+        assign job_type = block.settings[job_type_key]
+        assign job_description = block.settings[job_description_key]
+        assign job_link = block.settings[job_link_key]
+      %}
+
+      {% if job_enabled %}
+        <div class="ai-job-listing__item-{{ ai_gen_id }}">
+          <div class="ai-job-listing__content-{{ ai_gen_id }}">
+            {% if job_title != blank %}
+              <h3 class="ai-job-listing__title-{{ ai_gen_id }}">{{ job_title }}</h3>
+            {% endif %}
+
+            <div class="ai-job-listing__details-{{ ai_gen_id }}">
+              {% if job_location != blank %}
+                <div class="ai-job-listing__detail-{{ ai_gen_id }}">
+                  <svg class="ai-job-listing__detail-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>{{ job_location }}</span>
+                </div>
+              {% endif %}
+
+              {% if job_type != blank %}
+                <div class="ai-job-listing__detail-{{ ai_gen_id }}">
+                  <svg class="ai-job-listing__detail-icon-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  <span>{{ job_type }}</span>
+                </div>
+              {% endif %}
+            </div>
+
+            {% if job_description != blank %}
+              <p class="ai-job-listing__description-{{ ai_gen_id }}">{{ job_description }}</p>
+            {% endif %}
+          </div>
+
+          <a href="{{ job_link }}" class="ai-job-listing__button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Job listing",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Open Positions"
+    },
+    {
+      "type": "range",
+      "id": "section_title_font_size",
+      "label": "Font size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "section_title_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "section_title_color",
+      "label": "Color",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "select",
+      "id": "section_title_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Spacing below title",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_jobs",
+      "label": "Spacing between jobs",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "job_padding",
+      "label": "Job padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Job card style"
+    },
+    {
+      "type": "color",
+      "id": "job_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "job_hover_background_color",
+      "label": "Hover background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Job title"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Font size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "header",
+      "content": "Job details"
+    },
+    {
+      "type": "range",
+      "id": "detail_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "detail_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "detail_color",
+      "label": "Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Job description"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "description_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Hover background color",
+      "default": "#350078"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#350078"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Job 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_1_enabled",
+      "label": "Enable job 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "job_1_title",
+      "label": "Job title",
+      "default": "Senior Product Designer"
+    },
+    {
+      "type": "text",
+      "id": "job_1_location",
+      "label": "Location",
+      "default": "Dublin, Ireland"
+    },
+    {
+      "type": "text",
+      "id": "job_1_type",
+      "label": "Job type",
+      "default": "Full-time"
+    },
+    {
+      "type": "textarea",
+      "id": "job_1_description",
+      "label": "Description",
+      "default": "We're looking for an experienced product designer to join our growing team and help shape the future of our products."
+    },
+    {
+      "type": "url",
+      "id": "job_1_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_2_enabled",
+      "label": "Enable job 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "job_2_title",
+      "label": "Job title",
+      "default": "Frontend Developer"
+    },
+    {
+      "type": "text",
+      "id": "job_2_location",
+      "label": "Location",
+      "default": "Remote"
+    },
+    {
+      "type": "text",
+      "id": "job_2_type",
+      "label": "Job type",
+      "default": "Full-time"
+    },
+    {
+      "type": "textarea",
+      "id": "job_2_description",
+      "label": "Description",
+      "default": "Join our engineering team to build beautiful, performant web applications using modern technologies."
+    },
+    {
+      "type": "url",
+      "id": "job_2_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_3_enabled",
+      "label": "Enable job 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "job_3_title",
+      "label": "Job title",
+      "default": "Customer Success Manager"
+    },
+    {
+      "type": "text",
+      "id": "job_3_location",
+      "label": "Location",
+      "default": "Dublin, Ireland"
+    },
+    {
+      "type": "text",
+      "id": "job_3_type",
+      "label": "Job type",
+      "default": "Full-time"
+    },
+    {
+      "type": "textarea",
+      "id": "job_3_description",
+      "label": "Description",
+      "default": "Help our customers succeed by providing exceptional support and building lasting relationships."
+    },
+    {
+      "type": "url",
+      "id": "job_3_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_4_enabled",
+      "label": "Enable job 4",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_4_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_4_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_4_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_4_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_4_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_5_enabled",
+      "label": "Enable job 5",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_5_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_5_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_5_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_5_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_5_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_6_enabled",
+      "label": "Enable job 6",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_6_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_6_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_6_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_6_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_6_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_7_enabled",
+      "label": "Enable job 7",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_7_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_7_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_7_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_7_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_7_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_8_enabled",
+      "label": "Enable job 8",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_8_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_8_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_8_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_8_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_8_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 9"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_9_enabled",
+      "label": "Enable job 9",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_9_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_9_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_9_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_9_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_9_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 10"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_10_enabled",
+      "label": "Enable job 10",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_10_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_10_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_10_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_10_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_10_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 11"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_11_enabled",
+      "label": "Enable job 11",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_11_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_11_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_11_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_11_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_11_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 12"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_12_enabled",
+      "label": "Enable job 12",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_12_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_12_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_12_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_12_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_12_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 13"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_13_enabled",
+      "label": "Enable job 13",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_13_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_13_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_13_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_13_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_13_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 14"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_14_enabled",
+      "label": "Enable job 14",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_14_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_14_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_14_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_14_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_14_link",
+      "label": "Job link"
+    },
+    {
+      "type": "header",
+      "content": "Job 15"
+    },
+    {
+      "type": "checkbox",
+      "id": "job_15_enabled",
+      "label": "Enable job 15",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "job_15_title",
+      "label": "Job title"
+    },
+    {
+      "type": "text",
+      "id": "job_15_location",
+      "label": "Location"
+    },
+    {
+      "type": "text",
+      "id": "job_15_type",
+      "label": "Job type"
+    },
+    {
+      "type": "textarea",
+      "id": "job_15_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "job_15_link",
+      "label": "Job link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Job listing"
+    }
+  ]
+}
+{% endschema %}

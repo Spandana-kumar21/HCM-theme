@@ -1,0 +1,643 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".breadcrumb-container {display: none;}"
+      ],
+      "settings": {
+        "center": false
+      }
+    },
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24": {
+      "type": "rich-text",
+      "blocks": {
+        "title_93FEYR": {
+          "type": "title",
+          "settings": {
+            "title": "The Homecare Medical Story",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For over 35 years we’ve been providing products and services that support carers, enable the cared-for, and empower self-carers to remain in the comfort and familiarity of their own home for as long as possible.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_93FEYR",
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1"
+      ],
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".card__text h2 {color: #350078; margin-top: 1em;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "246e138e-af82-422b-b44a-b8ade034b0b8": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__246e138e-af82-422b-b44a-b8ade034b0b8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a family-owned business from the West of Ireland. Our family values of care and empathy filter through our business, and are as important to us as the skills, abilities, and work ethic of our 120-strong team. <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__246e138e-af82-422b-b44a-b8ade034b0b8-text-1"
+      ],
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".container--vertical-space {margin-top: 2rem;}",
+        ".rich-text__image figure {margin-bottom: 3rem;}",
+        ".rich-text__image figure img {border-radius: 10px !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_About_Image_01A.jpg",
+        "image_position": "top",
+        "height": "large",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Valued Care Partners",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are reliable care partners, delivering best-in-class products and innovative services.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_HKrRtY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products and services are in every care setting across the island of Ireland, from private homes, residential care, and hospitals to primary care centres and schools. <\/p><p>In these settings, our products and services are making a real difference. They’re freeing up carers to focus on the important work of helping those in care.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1",
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1",
+        "text_HKrRtY"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/valued-partner.jpg",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_VE4tgd": {
+      "type": "rich-text",
+      "blocks": {
+        "title_q7ErAj": {
+          "type": "title",
+          "settings": {
+            "title": "Building a National Community of Care",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QURTzt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our retail stores in locations across the country, including Athlone, Galway, Ballyhaunis, Castlebar, Ennis, Dundalk, Limerick, Tralee, Dublin and Waterford we are building a national community servicing the needs of carers, the cared-for and self-carers.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_wByN7U": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our expert in-store staff are ready to help you find the best product or service for you, whether you’re modifying your home or simply making everyday changes.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_q7ErAj",
+        "text_QURTzt",
+        "text_wByN7U"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {border-top: 1px solid #ddd !important; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3219.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_PaTfNF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_6VHzj4": {
+          "type": "title",
+          "settings": {
+            "title": "A Keen Focus on Sustainability",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_b9GLYX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Community, in all its forms, is part of our ethos. We are aiming to create a sustainable Homecare Medical community.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_Ki4aP9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are committed to working with local Irish communities and charities to provide support to people who need care, in a sustainable and equitable way. <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_6VHzj4",
+        "text_b9GLYX",
+        "text_Ki4aP9"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {border-top: 1px solid #ddd !important; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3217.png",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "c825dccd-0bec-41c1-aa03-63cc063e2deb": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".rte p {color: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div id=\"page-banner-green\" class=\"banner-green image-right\">\n\t<div class=\"banner-inner\">\n        <div class=\"banner-content\">\n                <h2 class=\"h3 rte rich-text__title\">Home is Where the <\/br>Heart is <\/h2>\n                <div class=\"rte text-size--large\">\n                        <p>Wherever you call home, we want to make sure you and your loved ones can stay there as long as possible.<\/p>\n                <\/div>\n\t\t\t<div class=\"rte text-size--regular\">\n                        <p>With our comfort and safety solutions, we can make your home a sanctuary, where you can take care of yourself or your loved one. <\/p>\n                <\/div>\n        <\/div>\n        <div class=\"banner-image\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hcm_care_at_home_01a.png?v=1716477050\"><\/div>\n\t<\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__c0192f25-eec4-44fd-9b1b-3956e04a7083-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Products designed to provide care<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_ifqeMp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our best-in-class products have been developed to aid caregiving, and enhance your health and wellbeing. From mobility, incontinence, and pain management, to home comfort, safety, and supports, our products cover all areas of caregiving. <\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_mzYVqm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Services tailored to meet your needs<br\/><\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_zBKQrj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our range of specialised services can be modified to suit your home and your needs, whether that’s customised seating or a home modification we are happy to advise and help. <\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_jbWWAH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Caring staff offer sound advice<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_NF3Ytc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our helpful in-store staff have the knowledge and expertise to listen and respond to your specific needs. We know that everyone is different; that’s why our expert team have been trained to offer advice customized for every situation. <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__c0192f25-eec4-44fd-9b1b-3956e04a7083-text-1",
+        "text_ifqeMp",
+        "text_mzYVqm",
+        "text_zBKQrj",
+        "text_jbWWAH",
+        "text_NF3Ytc"
+      ],
+      "custom_css": [
+        ".text-size--large {font-weight: 600; color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3224.png",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_Kcjyf8": {
+      "type": "rich-text",
+      "blocks": {
+        "title_JhTBfe": {
+          "type": "title",
+          "settings": {
+            "title": "Why Homecare Medical?",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Gtg8Gh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have been providing products to help you care for yourself or a loved one for over 35 years. We know the market, and ensure that we are constantly innovating and delivering best-in-class products. <br\/><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_JhTBfe",
+        "text_Gtg8Gh"
+      ],
+      "custom_css": [
+        ".h3 {color: #350078 !important;}",
+        "@media only screen and (min-width: 1024px) {.container--large {margin-top: -80px; margin-bottom: -80px; }}",
+        "@media only screen and (max-width: 1024px) {.container--large {margin-top: -30px; margin-bottom: 0; }}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>With our in-depth knowledge we have developed a suite of services that wrap around our products, ensuring you or your loved one can stay in their home as long as possible. <\/li><li>Our nationwide network of stores means we’re available where you are. Over the past three decades we’ve built a national community servicing the needs of carers, the cared-for and self-carers. Our in-store staff are empathetic and knowledgeable, and they are expertly placed to help you find the products and services you need.<\/li><li>If you’d like to find out more about how we can help you contact your nearest store today to speak with a Customer Care Representative, who will be happy to assist you with your essential care, health and wellness needs.<br\/><\/li><\/ul>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3220.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_EXUmDP": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".text-size--regular {color: #fff;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div id=\"page-banner-purple\" class=\"banner-purple image-right\">\n\t<div class=\"banner-inner\">\n        <div class=\"banner-content\">\n<span class=\"text-size--large subheading-bold-white\">Our Commitment to Care<\/span>\n                <h2 class=\"h2 rte rich-text__title\">We are at Your Service<\/h2>\n                <div class=\"rte text-size--large\">\n                        <p>Homecare Medical is much more than a retail store, we are your partner in care. From product recommendations and in-home consultations, to advice and know-how, our expert care staff offers a variety of services to help you care for yourself or your loved ones. \n<\/p>\n                       \n                <\/div>\n\t\t\t<div class=\"rte text-size--regular\">\n                \n                <\/div>\n\n        <\/div>\n        <div class=\"banner-image\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_3229.jpg?v=1715346308\"><\/div>\n\t<\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "27349f38-8738-4d3a-af38-1b3a9a162a3b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Personal Account",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up to benefit from a range of convenient features: <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_xQkhLJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><ul><li>Save your billing and delivery details<\/li><li>Easily check your order history <\/li><li>Compile a list of your future orders<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        },
+        "button_KfmMVM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Sign Up",
+            "link": "https:\/\/41895f-3.myshopify.com\/account\/register",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        },
+        "button_XcNTHi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Login",
+            "link": "https:\/\/41895f-3.myshopify.com\/account\/login",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-title-1",
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-text-1",
+        "text_xQkhLJ",
+        "button_KfmMVM",
+        "button_XcNTHi"
+      ],
+      "custom_css": [
+        ".text-size--regular ul li {color: #333 !important;}",
+        ".card__text > .increased-spacing:nth-child(1) {margin-right: 20px;}",
+        ".card__text > .increased-spacing:nth-child(2) {display: inline-block;}",
+        ".spacing--large > *.increased-spacing {margin-top: 1.5em; margin-bottom: 1.5em;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-us-homecare-medical_4.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "media_with_text_overlay_two_buttons_EnL4VQ": {
+      "type": "media-with-text-overlay-two-buttons",
+      "blocks": {
+        "image_9r6gUK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home-banner-1.jpg",
+            "caption": "INCONTINENCE",
+            "title": "Having the confidence to be comfortably you.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/incontinence",
+            "button_label": "View Products",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_MBmpwc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home-banner-2.jpg",
+            "caption": "BEDS",
+            "title": "Rediscover yourself with a good night’s rest.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/beds",
+            "button_label": "View Products",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_9r6gUK",
+        "image_MBmpwc"
+      ],
+      "custom_css": [
+        ".card {display: flex; flex-direction: column;}",
+        ".card .card__text {order: 2; max-width: 100%;}",
+        ".card .card-image {order: 1 !important;}",
+        ".card__image--background {position: relative;}",
+        ".lazy-image.lazy-image--background {padding-top: unset !important; position: relative !important;}",
+        ".lazy-image[data-ratio] img {position: relative;}",
+        ".h3 {font-weight: 400;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-2 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "caption_size": "small",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "regular",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "a9249859-da55-45da-ae74-bda358c2d07c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Quality, Assured.",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We pride ourselves in offering the optimum customer service, with a very strong emphasis on quality. We are proud holder of the following ISO certifications.\u2028<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/9001_ISO_9001_Amtivo_Certificate_Dec24.pdf?v=1744814955\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/9001_ISO_9001_Amtivo_Certificate_Dec24.pdf?v=1744814955\">ISO 9001 (Quality Management Systems) <\/a><\/p><p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/14001_ISO_14001_Amtivo_Certificate_Dec24.pdf?v=1744814957\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/14001_ISO_14001_Amtivo_Certificate_Dec24.pdf?v=1744814957\">ISO 14001 (Environmental Management System) <\/a><\/p><p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/13485_06.02.25_MD19.8100_Homecare_Medical_Supplies_IS_EN_ISO_13485-2016_Certificate.pdf?v=1744814954\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/13485_06.02.25_MD19.8100_Homecare_Medical_Supplies_IS_EN_ISO_13485-2016_Certificate.pdf?v=1744814954\">ISO 13485 (Medical Devices Quality Management Systems)<\/a><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1",
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1",
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa"
+      ],
+      "custom_css": [
+        ".text-size--regular p a {color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/new_logos.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24",
+    "246e138e-af82-422b-b44a-b8ade034b0b8",
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14",
+    "rich_text_VE4tgd",
+    "rich_text_PaTfNF",
+    "c825dccd-0bec-41c1-aa03-63cc063e2deb",
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083",
+    "rich_text_Kcjyf8",
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9",
+    "custom_liquid_EXUmDP",
+    "27349f38-8738-4d3a-af38-1b3a9a162a3b",
+    "media_with_text_overlay_two_buttons_EnL4VQ",
+    "a9249859-da55-45da-ae74-bda358c2d07c"
+  ]
+}

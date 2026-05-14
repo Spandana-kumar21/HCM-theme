@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "pagetify-page": {
+      "type": "pagetify-page",
+      "settings": {
+        "type": "landing"
+      }
+    }
+  },
+  "order": [
+    "pagetify-page"
+  ]
+}

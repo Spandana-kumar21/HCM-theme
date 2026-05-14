@@ -1,0 +1,31 @@
+<product-quantity class="product-quantity" {% unless variant.available %} style="display:none" {% endunless %} data-js-product-quantity data-product-id="{{ product.id }}">
+
+  <button class="product-quantity__minus qty-minus no-js-hidden" aria-label="{{ 'general.accessibility_labels.decrease_quantity' | t }}" role="button" controls="qty-{{ id }}">
+    {%- render 'theme-symbols', icon: 'minus' -%}
+  </button>
+
+  <label for="qty-{{ id }}" class="visually-hidden">{{ 'general.accessibility_labels.quantity' | t }}</label>
+
+  {%- assign min_qty = product.selected_or_first_available_variant.quantity_rule.min | default: 1 -%}
+  {%- assign max_qty = product.selected_or_first_available_variant.quantity_rule.max | default: 999 -%}
+
+  <input type="number" name="quantity" value="{{ min_qty }}" min="{{ min_qty }}" max="{{ max_qty }}" class="product-quantity__selector qty-selector text-size--xlarge" id="qty-{{ id }}">
+
+  <button class="product-quantity__plus qty-plus no-js-hidden" aria-label="{{ 'general.accessibility_labels.increase_quantity' | t }}" role="button" controls="qty-{{ id }}">
+    {%- render 'theme-symbols', icon: 'plus' -%}
+  </button>
+
+</product-quantity>
+{%- if customer.b2b? and product.selected_or_first_available_variant.quantity_rule.min > 1 or roduct.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
+  {%- if template == 'product' or template == 'product.quick-view'-%}
+    <div class="b2b-qty-rules" id="quantity-rules-{{ section.id }}" class="granite-quantity-rules" data-product-url="{{ product.url }}" data-section-id="{{ section.id }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+      <div class="b2b-qty-rules-container">
+        {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
+            <span>
+            {{- 'products.page.pack_size' | t: quantity: product.selected_or_first_available_variant.quantity_rule.increment -}}
+            </span>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}

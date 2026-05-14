@@ -1,0 +1,422 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "center": false
+      }
+    },
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24": {
+      "type": "rich-text",
+      "blocks": {
+        "title_93FEYR": {
+          "type": "title",
+          "settings": {
+            "title": "Homecare Medical for Trade",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’ve been providing products and services to the care industry for over 35 years. We don’t believe in standing still, and so we continue to innovate with our services, and deliver a broad range of quality medical devices and consumable products to busy care providers across Ireland.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_93FEYR",
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1"
+      ],
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".card__text h2 {color: #350078; margin-top: 1em;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_KDjwcQ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"featured-video-wrapper\">\n<a class=\"featured-video mobx\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9ce115747f29420f86910b06edf2b5e3.mp4\" data-poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/HM_B2B_V4_1.jpg?v=1716481378\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/HM_B2B_V4_1.jpg?v=1716481378\">\n<\/a><\/div>",
+        "full_width": false,
+        "remove_margin": true
+      }
+    },
+    "text_columns_images_4PYnDc": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_WbXcYw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector-mainetnance.png",
+            "title": "Maintenance",
+            "caption": "Our expert team is here to ensure the reliability of your equipment",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UChYBT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-repair.png",
+            "title": "Repair",
+            "caption": "Count on us for top-quality\u2028repairs, big or small.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UHKpyi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-rental.png",
+            "title": "Rental",
+            "caption": "We offer a wide range of rental solutions to meet your needs",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_VriNja": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-logistic.png",
+            "title": "Logistics",
+            "caption": "We manage everything from \u2028stock to routes",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_CgVQ6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/decontamination.png",
+            "title": "Decontamination",
+            "caption": "We are fully certified to the highest international standards",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_WbXcYw",
+        "image_UChYBT",
+        "image_UHKpyi",
+        "image_VriNja",
+        "image_CgVQ6R"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: auto; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); \/* object-fit: cover; *\/}",
+        ".h5 {color: #350078;}"
+      ],
+      "settings": {
+        "heading": "Introducing ProCare Services",
+        "subheading": "We want to ensure we are delivering a reliable service you can trust. ProCare services adds that extra layer of security, with a series of solutions to help make the most of our products.",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_jdNMM8": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".featured-video-wrapper a {border-radius: 15px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-video-wrapper\">\n<a class=\"featured-video mobx\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0e706c244ff44e4d9fdb0cef162426d9.mp4\" data-poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Homecare_Medical_KM_Final_1920x1080_Comp_1.png?v=1716296037\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/procare-video-poster.jpg?v=1716981113\">\n<\/a><\/div>\n<script>$( document ).ready( function() {\n\n    var options = {\n    mediaSelector  : '.mobx',\n    attraction     : {\n        slider : 0.055,\n        slide  : 0.018,\n        thumbs : 0.016\n    },\n    prevNextKey : false,\n    scrollToZoom   : true,\n    shareButtons   : ['facebook', 'googleplus', 'twitter', 'pinterest', 'linkedin'],\n    controls : ['zoom', 'play', 'fullScreen', 'close'],\n    videoAutoPlay : true,\n    thumbnailSizes : {\n        1920 : {\n            width  : 110,\n            height : 80,\n            gutter : 10\n        },\n        1280 : {\n            width  : 90,\n            height : 65,\n            gutter : 10\n        },\n        480 : {\n            width  : 60,\n            height : 44,\n            gutter : 5\n        }\n    }\n};\n\n    \/\/ create instance of ModuloBox\n    var mobx = $.ModuloBox( options );\n    \/\/ initialize the instance\t\n    mobx.init(); \n    \n});<\/script>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_VWxy4A": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_VE4tgd": {
+      "type": "rich-text",
+      "blocks": {
+        "title_Qiqqpn": {
+          "type": "title",
+          "settings": {
+            "title": "Next Level Care, with a Homecare Medical Price Match Promise.",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QURTzt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Farewell to the dilemma of value versus quality.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_qXGXtT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our new Price Match Promise, we’ll match over 5,000 products like-for-like with the same exceptional service and support that you’ve come to expect from Homecare Medical.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_Qiqqpn",
+        "text_QURTzt",
+        "text_qXGXtT"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_3226_a921218b-d36d-44fb-a15d-525445bc6a96.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Open a Trade Account Today",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make the most of your time with these enhanced benefits:<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_QzAC6J": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Real-time trade prices and stock availability<\/li><li>Quick order and reorder options<\/li><li>Access to invoices and statements<\/li><li>Streamlined procurement, servicing and aftercare<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        },
+        "button_tUiK43": {
+          "type": "button",
+          "settings": {
+            "button_label": "Signup",
+            "link": "https:\/\/shopify.com\/80113074523\/auth\/lookup?destination_uuid=03fc6eef-cc32-4e42-a3c2-fee2f6114788&redirect_uri=https%3A%2F%2Fshopify.com%2F80113074523%2Faccount%2Fcallback&rid=460830c9-1cae-4087-aa4d-4c3bacff66de&ui_locales=en-US&verify=1716551915-hivPRE%2FaYtuuk1unQnHjVmIOJuTjnttQI6htkFg%2B%2FvA%3D",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        },
+        "button_LbEMzp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Login",
+            "link": "https:\/\/shopify.com\/80113074523\/auth\/lookup?destination_uuid=03fc6eef-cc32-4e42-a3c2-fee2f6114788&redirect_uri=https%3A%2F%2Fshopify.com%2F80113074523%2Faccount%2Fcallback&rid=460830c9-1cae-4087-aa4d-4c3bacff66de&ui_locales=en-US&verify=1716551915-hivPRE%2FaYtuuk1unQnHjVmIOJuTjnttQI6htkFg%2B%2FvA%3D",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1",
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1",
+        "text_QzAC6J",
+        "button_tUiK43",
+        "button_LbEMzp"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {padding-top: 3rem;}",
+        ".card .button--solid {background-color: #6dd0bd; border-color: #6dd0bd; color: #350078;}",
+        ".card .button--solid:hover {background-color: #350078; border-color: #350078; color: #fff;}",
+        ".card .button {color: #350078;}",
+        ".card .button:hover {color: #fff; background-color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-us-homecare-medical_4_e4798d09-0797-4a51-b5e8-882e27934dfa.png",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "text_columns_images_hPdM84": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_p4cAcm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_ae563507-89f4-4c6a-8057-38cc0bbf0587.png",
+            "title": "Our Price Promise",
+            "caption": "We match over 5,000 products, all with the same exceptional service & support",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_yA3UbV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable advice to healthcare professionals.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_dhV7Jx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local Delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_WUXCbn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_p4cAcm",
+        "image_yA3UbV",
+        "image_dhV7Jx",
+        "image_WUXCbn"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "a9249859-da55-45da-ae74-bda358c2d07c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Quality, Assured.",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We pride ourselves in offering the optimum customer service, with a very strong emphasis on quality. We are proud holder of the following ISO certifications.\u2028<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"#\" title=\"#\">ISO 9001 (Quality Management Systems) <\/a><\/p><p><a href=\"#\" title=\"#\">ISO 14001 (Environmental Management System)<\/a> <\/p><p><a href=\"#\" title=\"#\">ISO 13485 (Medical Devices Quality Management Systems)<\/a><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1",
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1",
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa"
+      ],
+      "custom_css": [
+        ".text-size--regular p a {color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/logos.jpg",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24",
+    "custom_liquid_KDjwcQ",
+    "text_columns_images_4PYnDc",
+    "custom_liquid_jdNMM8",
+    "custom_liquid_VWxy4A",
+    "rich_text_VE4tgd",
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14",
+    "text_columns_images_hPdM84",
+    "a9249859-da55-45da-ae74-bda358c2d07c"
+  ]
+}

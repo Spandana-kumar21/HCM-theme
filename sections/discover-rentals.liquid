@@ -1,0 +1,184 @@
+{% comment %}
+  Section: Discover Rentals
+  Description: A call-to-action banner for rental services, similar to the provided image.
+{% endcomment %}
+
+<style>
+ 
+  .discover-rentals-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: {{ section.settings.background_color }};
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #1a1a1a; /* Default text color */
+  }
+
+  .discover-rentals-content {
+    flex-grow: 1;
+    max-width: 70%;
+  }
+
+  .discover-rentals-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: {{ section.settings.title_color }};
+  }
+
+  .discover-rentals-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: {{ section.settings.text_color }};
+  }
+
+  .discover-rentals-button {
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Keep button text on one line */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .discover-rentals-button:hover {
+    opacity: 0.85;
+  }
+
+  /* Arrow icon for the button */
+  .discover-rentals-button svg {
+    height: 16px;
+    width: 16px;
+    fill: currentColor;
+    margin-top: 1px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 567px) {
+    .discover-rentals-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .discover-rentals-content {
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin: 0px auto;
+    }
+
+    .discover-rentals-title {
+      font-size: 24px;
+    }
+    .discover-rentals-button{
+      margin : 0px auto;
+    }
+  }
+</style>
+
+<div class="discover-rentals-section">
+  <div class="discover-rentals-container">
+    <div class="discover-rentals-content">
+      <h2 class="discover-rentals-title">
+        {{ section.settings.title | escape }}
+      </h2>
+      <p class="discover-rentals-text">
+        {{ section.settings.text | escape }}
+      </p>
+    </div>
+    
+    <a href="{{ section.settings.button_link }}" class="discover-rentals-button">
+      {{ section.settings.button_label | escape }}
+      <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Discover Rentals CTA",
+  "tag": "section",
+  "class": "section-discover-rentals",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Discover all of our rental services",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "default": "Homecare Medical offers a wide range of medical equipment for rent.",
+      "label": "Subtext"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "View all rentals",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "info": "Link to your rental collection or page."
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#f0f8fb",
+      "label": "Container Background Color",
+      "info": "Light blue/off-white color in the image."
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "default": "#1a1a1a",
+      "label": "Title Text Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#444444",
+      "label": "Subtext Color"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "default": "#5b2c99",
+      "label": "Button Background Color",
+      "info": "The dark purple color."
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#ffffff",
+      "label": "Button Text Color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Discover Rentals Banner",
+      "category": "Call to action"
+    }
+  ]
+}
+{% endschema %}

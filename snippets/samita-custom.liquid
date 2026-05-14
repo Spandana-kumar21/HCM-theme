@@ -1,0 +1,15 @@
+<script>
+  window.Samita = window.Samita || {}
+  Samita.ProductLabels = Samita.ProductLabels || {}
+  Samita.ProductLabels.overrideOptions = Samita.ProductLabels.overrideOptions || {}
+  Samita.ProductLabels.overrideOptions.selectors = Samita.ProductLabels.overrideOptions.selectors || {}
+  Samita.ProductLabels.overrideOptions.selectors.product = {
+    elementSelectors: [".main-product"],
+    imageSelectors: [".product-gallery figure", ".product-item figure"],
+    formSelectors: [".main-product"],
+    {% comment %} link: "a.product-item__title", {% endcomment %}
+    customAddEl: { productPageSameLevel: false, collectionPageSameLevel: false, cartPageSameLevel: false },
+    variant: ".product-variant__item, .variant-selection__variants, .formVariantId, .product-variant-id, .product-form__variants, .ga-product_variant_select, select[name=\"id\"], input[name=\"id\"], .qview-variants > select, select[name=\"id[]\"]",
+    variantActivator: ".product-variant__item, .product__swatches [data-swatch-option], .product__swatches .swatch--color, .swatch-view-item, variant-radios input, .swatch__container .swatch__option, .gf_swatches .gf_swatch, .product-form__controls-group-options select, ul.clickyboxes li, .pf-variant-select, ul.swatches-select li, .product-options__value, .form-check-swatch, button.btn.swatch select.product__variant, .pf-container a, button.variant.option, ul.js-product__variant--container li, .variant-input, .product-variant > ul > li  ,.input--dropdown, .HorizontalList > li, .product-single__swatch__item, .globo-swatch-list ul.value > .select-option, .form-swatch-item, .selector-wrapper select, select.pf-input, ul.swatches-select > li.nt-swatch.swatch_pr_item, ul.gfqv-swatch-values > li, .lh-swatch-select, .swatch-image, .variant-image-swatch, #option-size, .selector-wrapper .replaced, .regular-select-content > .regular-select-item, .radios--input, ul.swatch-view > li > .swatch-selector ,.single-option-selector, .swatch-element input, [data-product-option], .single-option-selector__radio, [data-index^=\"option\"], .SizeSwatchList input, .swatch-panda input[type=radio], .swatch input, .swatch-element input[type=radio], select[id*=\"product-select-\"], select[id|=\"product-select-option\"], [id|=\"productSelect-product\"], [id|=\"ProductSelect-option\"],select[id|=\"product-variants-option\"],select[id|=\"sca-qv-product-selected-option\"],select[id*=\"product-variants-\"],select[id|=\"product-selectors-option\"],select[id|=\"variant-listbox-option\"],select[id|=\"id-option\"],select[id|=\"SingleOptionSelector\"], .variant-input-wrap input, [data-action=\"select-value\"]"
+  }
+</script>

@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false
+      }
+    },
+    "slideshow_Xx8Mmb": {
+      "type": "slideshow",
+      "blocks": {
+        "image_cbpMn3": {
+          "type": "image",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "link": "",
+            "open_in_new_window": false,
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_K4DdAL": {
+          "type": "image",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "link": "",
+            "open_in_new_window": false,
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_gVTcXU": {
+          "type": "image",
+          "settings": {
+            "caption": "Introducing",
+            "title": "Your best promotion yet",
+            "link": "",
+            "open_in_new_window": false,
+            "button_label": "Show more",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_cbpMn3",
+        "image_K4DdAL",
+        "image_gVTcXU"
+      ],
+      "settings": {
+        "desktop_height": "80vh",
+        "mobile_height": "60vh",
+        "is_auto_height": false,
+        "autorotate_enable": false,
+        "autorotate_interval": 5,
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "text_size": "regular",
+        "title_size": "h2",
+        "button_size": "large",
+        "button_style": "solid",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_hide_borders": false,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_4rfFhb": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "Custom careers list here",
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_Xx8Mmb",
+    "custom_liquid_4rfFhb"
+  ]
+}

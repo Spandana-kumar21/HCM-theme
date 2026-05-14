@@ -1,0 +1,437 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-page-container\">\n        <div class=\"video-container\">\n                <img class=\"show-on-mobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/feat-img.jpg?v=1718122842\"> <img class=\"show-on-desktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/video-poster_3a3881fe-c6ac-42d0-b0fd-7ab1ecd06808.jpg?v=1718122778\">\n                <div class=\"overlay\">\n                        <div class=\"rte text-size--regular\">\n                                <p>\n                                        Alliana Air Alternating Chair\n                                <\/p>\n                        <\/div>\n                        <h2 class=\"h2 rte rich-text__title\">\n                                Advanced Comfort<br>\n                                and Relief\n                        <\/h2>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Ultimate Pressure \u2028Management",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designed for high-care environments.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\u2028\u2028The Alliana Air Chair offers superior pressure relief to prevent sores, using an air cushion system in the seat and backrest.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "button_PicDVA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a Demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_37F7HA",
+        "text_THFAz9",
+        "button_PicDVA"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}",
+        ".card .button--solid {background: #6dd0bd; border-color: #6dd0bd; color: #350078 !important;}",
+        ".card .button--solid:hover {background: #350078; border-color: #350078; color: #fff !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_1.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_begAtM": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #350078;}",
+        ".text-size--large {font-weight: 600;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"info-page-full-width\">\n        <div class=\"info-page-full-width-wrapper\">\n                <div class=\"info-page-feat-img\">\n                        <img alt=\"Innovative Design\" src=\"https:\/\/41895f-3.myshopify.com\/cdn\/shop\/files\/Group_18446.png?v=1718181826&width=480\">\n                <\/div>\n                <div class=\"info-page-description\">\n                        <div class=\"info-page-container\">\n                                <h2 class=\"h2 rte rich-text__title\">\n                                        Innovative Design and Convenience\n                                <\/h2>\n                                <div class=\"rte text-size--large\">\n                                        <p>\n                                                Enjoy top-tier comfort and adjustability with Alliana’s advanced foam system and four-way stretch material.\n                                        <\/p>\n                                <\/div>\n                                <div class=\"rte text-size--regular\">\n                                        <ul class=\"custom-list\">\n                                                <li>\n                                                        <span>Smart Connectivity<\/span>\n                                                        <p>\n                                                                Bluetooth control with remote monitoring via Apple or Android devices.\n                                                        <\/p>\n                                                <\/li>\n                                                <li>\n                                                        <span>Enhanced Safety<\/span>\n                                                        <p>\n                                                                Auto-lock control panel and alarms for leaks, power, and tilt sensor.\n                                                        <\/p>\n                                                <\/li>\n                                                <li>\n                                                        <span>Adaptive Suppor<\/span>\n                                                        <p>\n                                                                Tilt sensor adds pressure automatically when upright for sacral support.\n                                                        <\/p>\n                                                <\/li>\n                                        <\/ul>\n                                <\/div>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jzTycy": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qHztD9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ico-01.svg",
+            "title": "Full Adjustability",
+            "caption": "Backrest, leg rest, and tilt-in-space adjustments for personalised comfort.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_9tpF8A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/battery-full_1.svg",
+            "title": "Convenient Charging",
+            "caption": "Easy wall charging system for quick recharging.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_LAnB7w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warehouse-alt_1.svg",
+            "title": "Secure Storage",
+            "caption": "Heavy-duty rear equipment bag for protection and storage.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KNEFWH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review_1.svg",
+            "title": "User-Friendly",
+            "caption": "Intuitive control panel for easy operation and auto-lock feature to prevent unauthorised use.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qHztD9",
+        "image_9tpF8A",
+        "image_LAnB7w",
+        "image_KNEFWH"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}",
+        ".text-color--opacity {opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "Key Features",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#1d1d1d",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "Easy Transfers and Cleaning",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_d4CQAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alliana is designed for convenience and longevity, featuring side wings that open for easy transfers and cleaning.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_d4CQAg"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/features.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_jLdnCC": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9Xby3A": {
+          "type": "title",
+          "settings": {
+            "title": "Comfort and Long-Lasting Power",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_jKCdcn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The multi-stretch PU top cover with hyper stretch coverlet ensures comfort and durability, while the deep cycle gel battery provides up to 2 days of continuous therapy, making maintenance and mobility seamless.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_9Xby3A",
+        "text_jKCdcn"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18436.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button {border-color: #6ecfbc; color: #350078; background: #6ecfbc; margin: 30px auto; display: block; max-width: 300px;}",
+        ".button:hover {border-color: #350078; color: #fff; background: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book a Demo<\/a>\n                        <\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_cy9JYz": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".download-pdf-brochure {text-align: center; background: #f8f8f8; padding: 60px 15px; border-radius: 10px;}",
+        ".download-pdf-brochure h2 {font-size: 1.5em; font-weight: 600;}",
+        "#downlaod-btn {position: relative;}",
+        ".download-pdf-brochure span {font-size: 1.5em; display: block; margin-bottom: 1.4em;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"download-pdf-brochure-wrapper\">\n  <div class=\"download-pdf-brochure\">\n    <h2>Want to know more about the Alliana Alternating Chair?<\/h2>\n    <span>Download our detailed brochure.<\/span>\n    <a id=\"downlaod-btn\" class=\"uil-download-alt button button--large button--outline\" target=\"_blank\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Alliana_Brochure_PROOF_V1.pdf?v=1718203319\">Download PDF Brochure<\/a>\n  <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_9ajmYq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_LWdbGh": {
+      "type": "marquee",
+      "blocks": {
+        "text_EQw3bC": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_Hnf4m8": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €50.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EQw3bC",
+        "text_Hnf4m8"
+      ],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "custom_liquid_begAtM",
+    "text_columns_images_jzTycy",
+    "rich_text_wkfpdL",
+    "rich_text_jLdnCC",
+    "custom_liquid_ckhnBR",
+    "custom_liquid_cy9JYz",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_9ajmYq",
+    "marquee_LWdbGh"
+  ]
+}

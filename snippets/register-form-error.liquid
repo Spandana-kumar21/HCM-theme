@@ -1,0 +1,32 @@
+{%- if form.errors -%}
+	{%- for field in form.errors -%}
+		<span class="alert alert--error alert--icon">
+			<span class="alert__icon">
+				{%- render 'theme-symbols', icon: 'alert-error' -%}
+			</span>
+			<span>
+        {% comment %} {%- if form.errors.messages[field] contains 'already registered' -%}
+          It looks like this email address is already registered with us. If this is your account, you can
+          <a href="/account/login">reset your password</a> to access it again.<br>
+          <br>
+          If you’re unsure or need any support, our team is always happy to help — weborders@homecaremedical.ie | 0818
+          911 555.
+        {%- else -%} {% endcomment %}
+		 {%- if form.errors.messages[field] contains 'already associated' -%}
+		It looks like this email address is already registered with us. If this is your account, you can
+		<a href="/account/login">reset your password</a> to access it again.<br>
+		<br>
+		If you’re unsure or need any support, our team is always happy to help —
+		<a href="mailto:weborders@homecaremedical.ie?subject=Account%20registration%20query">weborders@homecaremedical.ie</a> |
+		<a href="tel:0818911555">0818 911 555</a>.
+		{%- else -%}
+          {{ form.errors.messages[field] }}
+        {%- endif -%}
+      </span>
+		</span>
+	{%- endfor -%}
+	{% else %}
+		<script>
+		localStorage.setItem("newcustomer", "true");
+		</script>
+{%- endif -%}

@@ -1,0 +1,437 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"tofarvel-video-poster\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/pixie-video-poster.jpg?v=1718031071\">\n        <video id=\"video\" \n autoplay=\"\" loop=\"\"><source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/da34eb4c6d6a45d1a2c1a54b5c70269f.mp4\" type=\"video\/mp4\"> Your browser does not support the video tag.<\/video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Innovation\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                       Improving the quality of life for <\/br>people with Dementia\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                       \n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book A Pixie Demo<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "rich_text_LMi4HR": {
+      "type": "rich-text",
+      "blocks": {
+        "title_PqqG7U": {
+          "type": "title",
+          "settings": {
+            "title": "What makes Tovertafel Pixie so special?",
+            "title_size": "h2",
+            "seo_h_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "title_PqqG7U"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-center",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Person-centred",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stimulate a more intimate atmosphere, where you can truly connect and build trust with the people you take care of. <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tovertafel Pixie's projector has been designed specifically for sessions between one resident or a small group and a care professional or family member. <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_37F7HA",
+        "text_THFAz9"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Pixie_Image_01A.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_JPKaJh": {
+      "type": "rich-text",
+      "blocks": {
+        "title_CMmeYX": {
+          "type": "title",
+          "settings": {
+            "title": "Flexible",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_6Bkaim": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The interactive games and soothing images of the Tovertafel Pixie can be projected on multiple surfaces, automatically adjusting to each situation.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_B8AjD6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Effortlessly, create a meaningful recreational activity that stimulates residents, have fun playing a game on the table during a family visit, or generate a peaceful moment before going to sleep with pleasing images on the wall or ceiling.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_CMmeYX",
+        "text_6Bkaim",
+        "text_B8AjD6"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Pixie_Image_02A.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#8b83e2",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "Mobile",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_d4CQAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Provide the best care to residents where it is needed! For example, the Tovertafel Pixie can be used in a resident's bedroom to calm them down. <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_Gbzaxh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Or simply in the living room to play a fun game in a small group. You can easily carry the Tovertafel Pixie to another room, so multiple groups can enjoy and benefit from it!<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_d4CQAg",
+        "text_Gbzaxh"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Pixie_Image_03A.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".h4 {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px); margin-bottom: 1em; color: #350078;}",
+        ".button {border-color: #6ecfbc; color: #350078; background: #6ecfbc; margin: 30px auto; display: block; max-width: 300px;}",
+        ".button:hover {border-color: #350078; color: #fff; background: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"container--large  container--vertical-space   remove-empty-space\"><div class=\"section-heading section-heading--center gutter-bottom--page\"><div class=\"section-heading__text remove-empty-space\"><h2 class=\"section-heading__title h4\">Benefits of Tovertafel Pixie<\/h2><\/div><\/div><style>\n    #shopify-section-template--22801860854107__text_columns_icons_JrYGKJ .card__icon {\n      border-radius: 200px;\n    }\n  <\/style><div class=\"pixie-grid-container grid grid-3 grid-lap-2\"><div class=\"item item1 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_FEjNby\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Gluten-free_17e28c68-26fb-46cc-a43f-9009f8fc0bae_png.svg?v=1717489605\" alt=\"\" srcset=\"\n                https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Gluten-free_17e28c68-26fb-46cc-a43f-9009f8fc0bae_png.svg?v=1717489605\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Personalised Care<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Empowers carers to provide personalised care and attention.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_FEjNby {\n            background-color: #99ded0;\n          }\n        <\/style>\n<div class=\"item item2 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_JqbY3W\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/brain_1.svg?v=1716999215\" alt=\"\" srcset=\"\n                https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/brain_1.svg?v=1716999215\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Cognitive & Physical<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Stimulates the cared for both cognitively and physically.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_JqbY3W {\n            background-color: #f8f1e4;\n          }\n        <\/style>\n<div class=\"item item3 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_NF8kdK\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/people_2.svg?v=1716999325\" alt=\"\" srcset=\"\n                https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/people_2.svg?v=1716999325\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Social<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Increases social interaction and provides joy.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_NF8kdK {\n            background-color: #ccd6d5; \n          }\n        <\/style>\n<div class=\"item item4 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_aHhVWC\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/self-love_1.svg?v=1716999320\" alt=\"\" srcset=\"\n                https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/self-love_1.svg?v=1716999320\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Promotes Relaxation<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Stimulate senses in a relaxed, enjoyable way.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_aHhVWC {\n            background-color:#ffdbd6;\n          }\n        <\/style>\n<div class=\"item item5 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_yHcJcj\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_18444.svg?v=1717493268\" alt=\"\" srcset=\"\n               https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_18444.svg?v=1717493268\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Meaningfulness<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Provides meaningful moments between carers and the cared-for.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_yHcJcj {\n            background-color: #f8f1e4;\n          }\n        <\/style>\n\t\n\t<div class=\"item item6 element--no-border text-align--center element--no-radius js-slider-item\">\n\n        <div class=\"card__icon card__icon--is-img card__icon-size--large lazyloaded\" id=\"element-image_yHcJcjk\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/user_1_59915349-4182-4365-8960-4959dc1958d9.svg?v=1717493367\" alt=\"\" srcset=\"\n               https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/user_1_59915349-4182-4365-8960-4959dc1958d9.svg?v=1717493367\n                 \n                 \n                 \n              \" loading=\"lazy\" sizes=\"(max-width: 474px) 60px, (max-width: 1023px) 80px, 110px\" width=\"64\" height=\"64\" onload=\"this.parentNode.classList.add('lazyloaded')\"><\/div>\n\n        <div class=\"gutter--regular spacing--small remove-empty-space\"><div style=\"color:var(--color-text-main)\">\n              <h3 class=\"h5\" style=\"margin-bottom:0;display:block\"><span class=\"text-animation--underline\">Job Satisfaction<\/span><\/h3>\n            <\/div><div class=\"text-size--small text-color--opacity\" style=\"color:var(--color-text-main)\">Increases the job satisfaction of carers and care staff.<\/div><\/div>\n      <\/div><style data-shopify=\"\">\n          #element-image_yHcJcjk {\n            background-color: #ccd6d5;\n          }\n        <\/style>\n\n\n  <\/div>\n<div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book A Pixie Demo<\/a>\n                        <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "e5d33890-e104-4507-b42a-a40303dc52ab": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Collection_Sensory_Stimulation.jpg",
+            "caption": "Sensory Stimulation",
+            "title": "Sensory Stimulation To Enhance Life",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/creativity-sensory",
+            "button_label": "Show more",
+            "color_background_main": "#c2bff3",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Collection_Assistive_Tech.jpg",
+            "caption": "Assistive Technology",
+            "title": "Supporting Carers \u2028& the Cared-For",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/assistive-technology",
+            "button_label": "Show more",
+            "color_background_main": "#99ded0",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Collection_Games.jpg",
+            "caption": "Games & Activities",
+            "title": "Helping the Cared-For \u2028Stay Active",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/games-puzzles",
+            "button_label": "Show more",
+            "color_background_main": "#f8f1e4",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3"
+      ],
+      "custom_css": [
+        ".card__text h3 {font-weight: 400;}",
+        ".button--outline:hover {background-color: #350078; border-color: #350078;}",
+        ".button--outline {color: #350078; border: 1px solid #350078;}",
+        ".button--outline:hover {color: #fff; background: #350078;}",
+        "h2 {font-size: calc(32px \/ 60 * var(--base-headings-size) + 0px); color: #350078;}",
+        ".card__text h3 {font-weight: 400; font-size: 28px; min-height: 68px;}"
+      ],
+      "settings": {
+        "heading": "Stimulate the Senses",
+        "subheading": "Complement the cognitive and sensory benefits of Tovertafel games with practical and supportive products from Homecare Medical Supplies.",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_9ajmYq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "rich_text_LMi4HR",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "rich_text_JPKaJh",
+    "rich_text_wkfpdL",
+    "custom_liquid_ckhnBR",
+    "e5d33890-e104-4507-b42a-a40303dc52ab",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_9ajmYq"
+  ]
+}

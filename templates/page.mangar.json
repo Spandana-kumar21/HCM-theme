@@ -1,0 +1,571 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "p {color: #1d1d1d;}",
+        ".h2 {color: #3c0077;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #3c0077;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-page-container\">\n        <div class=\"video-container\">\n                <img class=\"show-on-mobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hero-desktop.jpg?v=1718208208\"> \n\t\t\t    <img class=\"show-on-desktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hero-mobile.jpg?v=1718206954\">\n                <div class=\"no-overlay\">\n                        <div class=\"rte text-size--regular\">\n                                <p>\n                                        Mangar Lifting Cushions\n                                <\/p>\n                        <\/div>\n                        <h2 class=\"h2 rte rich-text__title\">\n                                Safe and Dignified<br>Lifting Solutions\n                        <\/h2>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Simple and Safe Lifting",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mangar Lifting Cushions offer safe, dignified lifting for individuals who have fallen, providing an easy-to-use solution that minimises the risk of injury for both the individual and the caregiver.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Perfect for home and professional care settings, Mangar’s ELK, Camel, and Eagle cushions ensure a comfortable and efficient lift.<\/strong><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "button_7RJCeP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a Demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_THFAz9",
+        "text_37F7HA",
+        "button_7RJCeP"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}",
+        ".card .button--solid {background: #6dd0bd; border-color: #6dd0bd; color: #350078 !important;}",
+        ".card .button--solid:hover {background: #350078; border-color: #350078; color: #fff !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_1_048ec771-96f4-423e-86b3-7a5af48e715b.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_begAtM": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #350078;}",
+        ".featured-block-container-c {background: #6dd0bd; color: #1d1d1d;}",
+        ".featured-block-image-c img {width: 100%; display: block;}",
+        ".text-size--large {font-weight: 400;}",
+        "@media only screen and (min-width: 1024px) {.featured-block-container-c {display: grid; grid-template-columns: 1.4fr 2fr; } .featured-block-image-c {grid-column: 2 \/ 3; grid-row: 1 \/ 2; } .featured-block-content-c {grid-column: 1 \/ 2; grid-row: 1 \/ 2; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-c\">\n        <div class=\"featured-block-image-c\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_18446_368bb4cc-a7ad-4af6-891d-8eafe649f836.png?v=1718207643\">\n        <\/div>\n        <div class=\"featured-block-content-c\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">\n                        <h2 class=\"h3 rte rich-text__title\">\n                                Applications and Benefits\n                        <\/h2>\n                        <div class=\"rte text-size--large\">\n                                <p>\n                                        Mangar Lifting Cushions are suitable for a wide range of users, including healthcare professionals, carers, and family members.\n                                <\/p>\n                                <p>\n                                        They provide a safe and ergonomic solution for lifting individuals with various conditions, ensuring independence and dignity.\n                                <\/p>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jzTycy": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qHztD9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guarantee_1.svg",
+            "title": "Safe and Dignified",
+            "caption": "Minimises risk and provides a respectful lift for the fallen individual.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_9tpF8A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-simple_1.svg",
+            "title": "Single-Person Operation",
+            "caption": "Easy to use with the help \u2028of one person.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_LAnB7w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-holding-box_1.svg",
+            "title": "Portable and Versatile",
+            "caption": "Suitable for both indoor and outdoor use, adaptable to various environments.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KNEFWH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/user-nurse_1.svg",
+            "title": "Reduces Carer Injury",
+            "caption": "Designed to protect carers from injuries related to manual lifting.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qHztD9",
+        "image_9tpF8A",
+        "image_LAnB7w",
+        "image_KNEFWH"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}",
+        ".text-color--opacity {opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "Key Features",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#1d1d1d",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_rTncje": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #350078; text-align: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"card__text gutter-top--xlarge gutter-bottom--xlarge spacing--large remove-empty-space\">\n        <h2 class=\"h2 rte rich-text__title\">\n                Our Lifting Solutions Range\n        <\/h2>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "ELK Lifting Cushion",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_d4CQAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Provides a safe and respectful lift at the touch of a button, making it ideal for confined spaces and single-handed care. <strong>The ELK is perfect for home use, allowing family members to assist loved ones with ease and reducing the risk of injury.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_d4CQAg"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2_jpg_4aa99b1c-753a-4351-819e-997f4acee668.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_jLdnCC": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9Xby3A": {
+          "type": "title",
+          "settings": {
+            "title": "Camel Lifting Cushion",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_jKCdcn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Features a supportive, chair-like backrest for a comfortable lift, accommodating users up to 320 kg. <strong>The Camel cushion ensures a secure and stable lifting experience, making it suitable for a variety of care settings, including home and professional environments.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_9Xby3A",
+        "text_jKCdcn"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18436_dacda7cd-e5b0-4d62-b642-7e7f7c512f82.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_9Kr4Yg": {
+      "type": "rich-text",
+      "blocks": {
+        "title_hR3kXg": {
+          "type": "title",
+          "settings": {
+            "title": "Eagle Lifting Cushion",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QQTNL7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Combines sitting up and lifting functions, designed for use in compact spaces. <strong>The Eagle cushion provides comprehensive support for the head, back, and neck, ensuring a comfortable and secure lift for individuals with limited mobility.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_hR3kXg",
+        "text_QQTNL7"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2.jpg_1_2f4c8598-924f-4e9e-bf98-f4751fc82e45.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button {border-color: #6ecfbc; color: #350078; background: #6ecfbc; margin: 30px auto; display: block; max-width: 300px;}",
+        ".button:hover {border-color: #350078; color: #fff; background: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book a Demo<\/a>\n                        <\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_B8dkMV": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #6dd0bd;}",
+        ".featured-block-image-c img {width: 100%; display: block;}",
+        "@media only screen and (min-width: 1024px) {.featured-block-container-c {display: grid; grid-template-columns: 2fr 1.4fr; } .featured-block-image-c {grid-column: 1 \/ 2; grid-row: 1 \/ 2; } .featured-block-content-c {grid-column: 2 \/ 3; grid-row: 1 \/ 2; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-c\">\n        <div class=\"featured-block-image-c\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_18446_1.png?v=1718269957\">\n        <\/div>\n        <div class=\"featured-block-content-c\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">\n                        <h2 class=\"h3 rte rich-text__title\">\n                                Ergonomic and Hygienic Design\n                        <\/h2>\n                        <div class=\"rte text-size--large\">\n                                <p>\n                                        Each Mangar Lifting Cushion is crafted with ergonomics and hygiene in mind, ensuring easy operation and cleaning. \n                                <\/p>\n                                <p>\n                                       Their portable design makes them perfect for use in diverse care settings, enhancing both caregiver and patient well-being.\n                                <\/p>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "rich_text_dfAQbz": {
+      "type": "rich-text",
+      "blocks": {
+        "title_yhiK33": {
+          "type": "title",
+          "settings": {
+            "title": "ISTUMBLE® App Integration",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_kfRVdq": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The ISTUMBLE® app works alongside Mangar Lifting Cushions to guide carers through the decision-making process.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_eYJX8M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Helping carers determine when to lift a fallen individual or call for professional assistance, thereby promoting safe and effective care practices.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_yhiK33",
+        "text_kfRVdq",
+        "text_eYJX8M"
+      ],
+      "custom_css": [
+        "p {color: #1d1d1d;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18455.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_cy9JYz": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".download-pdf-brochure {text-align: center; background: #f8f8f8; padding: 60px 15px; border-radius: 10px;}",
+        ".download-pdf-brochure h2 {font-size: 1.5em; font-weight: 600;}",
+        "#downlaod-btn {position: relative;}",
+        ".download-pdf-brochure span {font-size: 1.5em; display: block; margin-bottom: 1.4em;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"download-pdf-brochure-wrapper\">\n  <div class=\"download-pdf-brochure\">\n    <h2>Want to learn more about how Mangar Lifting Cushions can enhance your care practice?<\/h2>\n    <span>Find more details in our brochure.<\/span>\n    <a id=\"downlaod-btn\" class=\"uil-download-alt button button--large button--outline\" target=\"_blank\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Mangar_Brochure_Web_Version.pdf?v=1718270870\">Download PDF Brochure<\/a>\n  <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_9ajmYq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_LWdbGh": {
+      "type": "marquee",
+      "blocks": {
+        "text_EQw3bC": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_Hnf4m8": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €50.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EQw3bC",
+        "text_Hnf4m8"
+      ],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "custom_liquid_begAtM",
+    "text_columns_images_jzTycy",
+    "custom_liquid_rTncje",
+    "rich_text_wkfpdL",
+    "rich_text_jLdnCC",
+    "rich_text_9Kr4Yg",
+    "custom_liquid_ckhnBR",
+    "custom_liquid_B8dkMV",
+    "rich_text_dfAQbz",
+    "custom_liquid_cy9JYz",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_9ajmYq",
+    "marquee_LWdbGh"
+  ]
+}

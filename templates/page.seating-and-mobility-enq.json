@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false
+      }
+    },
+    "1716303114d760ff8a": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "17253619779548cba2": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_rM9CWt": {
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_rM9CWt"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "1725362309170b12b8": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_axrbH4": {
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_axrbH4"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "1725363300468cc2b3": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_N4gMeJ": {
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_N4gMeJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "1725363906c5b66176": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_aMDdCf": {
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_aMDdCf"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_r7Fee3": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.refactor_words.custom_code.name",
+      "settings": {
+        "custom_liquid": "<div class=\"enquiry-form-wrapper\">\n  <div id=\"form-title-and-img\">\n  <h5 id=\"form-title\">Product Enquiry<\/h5>  \n  <div id=\"product-image-container\" style=\"display: none;\">\n    <img id=\"product-image\" src=\"\" alt=\"\" style=\"max-width: 75px; height: auto;\">\n  <\/div>\n<\/div>\n  \n  <div id=\"wufoo-rnxbm210658e8t\">\n   <a href=\"https:\/\/homecaremedicalcontact.wufoo.com\/forms\/rnxbm210658e8t\"><\/a>\n  <\/div>\n  \n  <script type=\"text\/javascript\">\n    \/\/ Get product name and image from URL\n    const urlParams = new URLSearchParams(window.location.search);\n    const productName = urlParams.get('product') || '';\n    const productImage = urlParams.get('image') || '';\n    \n    \/\/ Update page title\n    if (productName) {\n      document.getElementById('form-title').textContent = 'Product ' + productName;\n      document.title = 'Product ' + productName;\n    }\n    \n    \/\/ Set product image if available\n    if (productImage) {\n      const imgContainer = document.getElementById('product-image-container');\n      const img = document.getElementById('product-image');\n      img.src = productImage;\n      img.alt = productName || 'Product Image';\n      imgContainer.style.display = 'block';\n    }\n    \n    \/\/ Create Wufoo form with pre-filled field\n    var rnxbm210658e8t;\n    (function(d, t) {\n      var s = d.createElement(t), options = {\n        'userName': 'homecaremedicalcontact',\n        'formHash': 'rnxbm210658e8t',\n        'autoResize': true,\n        'height': '1577',\n        'async': true,\n        'host': 'wufoo.com',\n        'header': 'show',\n        'defaultValues': 'field117=' + encodeURIComponent(productName)\n      };\n      \n      console.log('Setting defaultValues:', options.defaultValues);\n      \n      s.src = ('https:' == d.location.protocol ? 'https:\/\/' : 'http:\/\/') + 'secure.wufoo.com\/scripts\/embed\/form.js';\n      s.onload = s.onreadystatechange = function() {\n        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;\n        try { \n          rnxbm210658e8t = new WufooForm(); \n          rnxbm210658e8t.initialize(options); \n          rnxbm210658e8t.display(); \n        } catch (e) {\n          console.error('Error initializing Wufoo form:', e);\n        }\n      };\n      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);\n    })(document, 'script');\n  <\/script>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1716303114d760ff8a",
+    "17253619779548cba2",
+    "1725362309170b12b8",
+    "1725363300468cc2b3",
+    "1725363906c5b66176",
+    "custom_liquid_r7Fee3"
+  ]
+}

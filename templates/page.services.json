@@ -1,0 +1,561 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "center": false
+      }
+    },
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24": {
+      "type": "rich-text",
+      "blocks": {
+        "title_93FEYR": {
+          "type": "title",
+          "settings": {
+            "title": "ProCare Services",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We want to ensure we are delivering a reliable service you can trust. Our ProCare services add that extra layer of security, with a series of solutions to help you make the most of our products.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_93FEYR",
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1"
+      ],
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".card__text h2 {color: #350078; margin-top: 1em;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "text_columns_images_4PYnDc": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_WbXcYw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector-mainetnance.png",
+            "title": "Maintenance",
+            "caption": "Our expert team is here to ensure the reliability of your equipment",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UChYBT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-repair.png",
+            "title": "Repair",
+            "caption": "Count on us for top-quality\u2028repairs, big or small.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UHKpyi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-rental.png",
+            "title": "Rental",
+            "caption": "We offer a wide range of rental solutions to meet your needs",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_VriNja": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vector-logistic.png",
+            "title": "Logistics",
+            "caption": "We manage everything from \u2028stock to routes",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_CgVQ6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/decontamination.png",
+            "title": "Decontamination",
+            "caption": "We are fully certified to the highest international standards",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_WbXcYw",
+        "image_UChYBT",
+        "image_UHKpyi",
+        "image_VriNja",
+        "image_CgVQ6R"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: auto; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); \/* object-fit: cover; *\/}",
+        ".h5 {color: #350078;}"
+      ],
+      "settings": {
+        "heading": "How can we help you?",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_KDjwcQ": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".featured-video-wrapper a{border-radius:15px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-video-wrapper\">\n<a class=\"featured-video mobx\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0e706c244ff44e4d9fdb0cef162426d9.mp4\" data-poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/procare-video-poster.jpg?v=1716981113\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/procare-video-poster.jpg?v=1716981113\">\n<\/a><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_VE4tgd": {
+      "type": "rich-text",
+      "blocks": {
+        "title_Qiqqpn": {
+          "type": "title",
+          "settings": {
+            "title": "Maintenance & Service",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QURTzt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our nationwide team of highly skilled engineers keep your equipment up and running so that you can deliver consistent care to your clients.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_Qiqqpn",
+        "text_QURTzt"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/maintenance-and-repair.jpg",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Replacement Parts",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our replacement parts service you  have ready access to new parts for your devices or equipment. This ensures you can provide a consistent service to your client. <\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1",
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #8b83e2 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/replacement-parts.jpg",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_mQq9y6": {
+      "type": "rich-text",
+      "blocks": {
+        "title_bkjea3": {
+          "type": "title",
+          "settings": {
+            "title": "Asset Pal and Reporting",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_4RrXL6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Asset Pal and reporting systems manage all the monitoring, auditing, and inspecting of your essential equipment freeing you up to concentrate on patient care.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_bkjea3",
+        "text_4RrXL6"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/asset-pal.jpg",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083": {
+      "type": "rich-text",
+      "blocks": {
+        "title_QKjHVG": {
+          "type": "title",
+          "settings": {
+            "title": "Fitout Solutions",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_ifqeMp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Homecare Solutions team works with you to plan and design high-quality, innovative residential care homes. Combining our planning and design expertise with your knowledge of what your client needs, we can create safe and efficient care homes for patients and caregivers.  <\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_QKjHVG",
+        "text_ifqeMp"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #8b83e2 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/fitout.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_PaTfNF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_6VHzj4": {
+          "type": "title",
+          "settings": {
+            "title": "Decontamination Centre",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Ki4aP9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our dedicated decontamination centre, and use of ozone disinfection solutions, ensures all our equipment is cleaned to the highest standard.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_6VHzj4",
+        "text_Ki4aP9"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/decont.png",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9m6UwF": {
+          "type": "title",
+          "settings": {
+            "title": "Rental Services",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By renting your medical equipment, you can expand the range of equipment your facility has on site, ensuring you are always using the best-in-class equipment, and maintaining consistency in the patient experience. You can also reduce costs by only paying for the equipment you need when you need it, and you have more control over your equipment budget. <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_9m6UwF",
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #8b83e2 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rental.jpg",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "c825dccd-0bec-41c1-aa03-63cc063e2deb": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".rte p {color: #fff;}",
+        ".rte ul {color: #fff;}",
+        "h2 {color: #fff;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div id=\"page-banner-purple\" class=\"banner-purple image-right\">\n\t<div class=\"banner-inner\">\n        <div class=\"banner-image\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/find-out-more-01.jpg?v=1715616104\"><\/div>\n        <div class=\"banner-content\">\n                <h2 class=\"h3 rte rich-text__title\">Learn More About ProCare Services<\/h2>\n                <div class=\"rte text-size--large\">\n                        <p>If you’d like to find out more about our ProCare services call us today on <a style=\"color:#fff\" href=\"tel:0818 911 555\">0818 911 555<\/a>.<\/p>\n                <\/div>\n\t\t\t<div class=\"rte text-size--regular\">\n\n\n                <\/div>\n<div class=\"increased-spacing\">\n                <a href=\"\/pages\/contact\" id=\"button-outline-white\" class=\" button button--regular button--outline\">Arrange a callback<\/a>\n              <\/div>\n        <\/div>\n\n\t<\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_hPdM84": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_p4cAcm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_ae563507-89f4-4c6a-8057-38cc0bbf0587.png",
+            "title": "Our Price Promise",
+            "caption": "We match over 5,000 products, all with the same exceptional service & support",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_yA3UbV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable advice to healthcare professionals.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_dhV7Jx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local Delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_WUXCbn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_p4cAcm",
+        "image_yA3UbV",
+        "image_dhV7Jx",
+        "image_WUXCbn"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "a9249859-da55-45da-ae74-bda358c2d07c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Quality, Assured.",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We pride ourselves in offering the optimum customer service, with a very strong emphasis on quality. We are proud holder of the following ISO certifications.\u2028<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"#\" title=\"#\">ISO 9001 (Quality Management Systems) <\/a><\/p><p><a href=\"#\" title=\"#\">ISO 14001 (Environmental Management System)<\/a> <\/p><p><a href=\"#\" title=\"#\">ISO 13485 (Medical Devices Quality Management Systems)<\/a><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1",
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1",
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa"
+      ],
+      "custom_css": [
+        ".text-size--regular p a {color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/logos.jpg",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24",
+    "text_columns_images_4PYnDc",
+    "custom_liquid_KDjwcQ",
+    "rich_text_VE4tgd",
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14",
+    "rich_text_mQq9y6",
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083",
+    "rich_text_PaTfNF",
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9",
+    "c825dccd-0bec-41c1-aa03-63cc063e2deb",
+    "text_columns_images_hPdM84",
+    "a9249859-da55-45da-ae74-bda358c2d07c"
+  ]
+}

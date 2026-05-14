@@ -1,0 +1,397 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        ".breadcrumb-main {display: none;}"
+      ],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_GY9NMt": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".csa-hero img {width: 100%;}"
+      ],
+      "name": "t:sections.refactor_words.custom_code.name",
+      "settings": {
+        "custom_liquid": "<div class=\"csa-hero\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Comp_Web-Banner.png?v=1758285587\" alt=\"Competition Flyer\">\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_pcUUiW": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.refactor_words.custom_code.name",
+      "settings": {
+        "custom_liquid": "<div class=\"competition-form-section\">\n<div class=\"competition-form\">\n<iframe height=\"971\" title=\"AOTI - Harmony Quiz\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https:\/\/homecaremedicalcontact.wufoo.com\/embed\/sf8vsil0kffoja\/\"> <a href=\"https:\/\/homecaremedicalcontact.wufoo.com\/forms\/sf8vsil0kffoja\/\">AOTI - Harmony Quiz<\/a> <\/iframe>\n<\/div>\n<div class=\"competition-flyer\">\n<a href=\"#booking-form\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/vertical-flyer-02.jpg?v=1758555630\" alt=\"Competition Banner\"><\/a>\n<\/div>\n<\/div>\n<a href=\"#terms\" style=\"text-decoration:underline;\">See Terms and Conditions<\/a>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_LPUAjP": {
+      "type": "rich-text",
+      "blocks": {
+        "title_6GYHt4": {
+          "type": "title",
+          "settings": {
+            "title": "Browse our Seating Range",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_UMGjFz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have expert Seating Specialists around the country who have been trained extensively on the rationale behind the design and use of therapeutic seating. <br\/><br\/><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_Y6AtMt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>They have helped thousands, have a wealth of experience, and can help support you with assessments, demos, or trials.<br\/><br\/><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "button_FEwty7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download PDF",
+            "link": "",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "title_6GYHt4",
+        "text_UMGjFz",
+        "text_Y6AtMt",
+        "button_FEwty7"
+      ],
+      "custom_css": [
+        ".card .button--solid {background: #6dd0bd; border-color: #6dd0bd; color: #350078 !important;}",
+        ".card .button--solid:hover {background: #350078; border-color: #350078; color: #fff !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/clinical-range.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_Aj8CcQ": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"csa-container\">\n    <div class=\"csa-hero-section\">       \n        <div class=\"csa-hero-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/main-banner.jpg?v=1744978398\" alt=\"Senior person in chair\" alt=\"Senior person in chair\" class=\"csa-hero-image\">\n        <\/div>\n        <div id=\"csa-form-section\" class=\"csa-hero-content\">\n            <div id=\"booking-form\" class=\"csa-expert-tag\">Expert<\/div>\n            <h1 class=\"csa-hero-title\">Seating Assessment<\/h1>\n        <\/div>\n    <\/div>\n\n    <div class=\"csa-content-wrapper\">\n        <!-- Form that appears overlaying on desktop -->\n        <div class=\"csa-form-overlay\">\n            \n           <iframe height=\"700\" title=\"Embedded Wufoo Form\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https:\/\/homecaremedicalcontact.wufoo.com\/embed\/r16lr1bv0xm92ju\/\"> <a href=\"https:\/\/homecaremedicalcontact.wufoo.com\/forms\/r16lr1bv0xm92ju\/\">Fill out the form!<\/a> <\/iframe>\n        <\/div>\n\n        <div class=\"csa-booking-section\">\n            <div class=\"csa-booking-info\">\n                <h2 class=\"csa-booking-title\">Book a free Seating Assessment<\/h2>\n                \n                <div class=\"csa-feature\">\n                    <div class=\"csa-feature-icon\">\n                        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/ico-01_58dfe78b-52fb-4265-9540-fae857fb09e5.svg?v=1745002928\">\n                    <\/div>\n                    <p class=\"csa-feature-text\">Clients are matched with the ideal seat, tailored to their needs, measurements, and seating\/mobility history.<\/p>\n                <\/div>\n                \n                <div class=\"csa-feature\">\n                    <div class=\"csa-feature-icon\">\n                       <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/ico-02.svg?v=1745002928\">\n                    <\/div>\n                    <p class=\"csa-feature-text\">Each assessment includes a 30–45 minute evaluation of the client in the chair.<\/p>\n                <\/div>\n<div class=\"csa-feature\">\n                    <div class=\"csa-feature-icon\">\n                       <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/ico-03.svg?v=1745002928\">\n                    <\/div>\n                    <p class=\"csa-feature-text\">A quotation from our Trusted Assessors is provided after every assessment.<\/p>\n                <\/div>\n            <\/div>\n            \n            <!-- Form that appears below booking info on mobile\/tablet -->\n            <div class=\"csa-form-section-mobile\">\n                <iframe height=\"730\" title=\"Embedded Wufoo Form\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https:\/\/homecaremedicalcontact.wufoo.com\/embed\/r16lr1bv0xm92ju\/\"> <a href=\"https:\/\/homecaremedicalcontact.wufoo.com\/forms\/r16lr1bv0xm92ju\/\">Fill out my Wufoo form!<\/a> <\/iframe>\n            <\/div>\n        <\/div>\n    <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_JczhCn": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".h3 {color: #fff;}",
+        ".text-size--regular {max-width: 25ch;}",
+        "@media only screen and (min-width: 1024px) {}",
+        ".feat-outline-green-c:hover {border: 1px solid #6ccfbd; background: #6ccfbd; color: #3c0077;}",
+        ".feat-outline-green-c {border: 1px solid #fff; background: transparent; color: #fff;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-csa\">\n        <div class=\"featured-block-image-d\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/section-banner.jpg?v=1744989858\">\n        <\/div>\n        <div class=\"featured-block-content-d\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">                        \n                        <h2 class=\"h3 rte rich-text__title\">\n                               Need<\/br> Assistance?\n                        <\/h2>\n                        <div class=\"rte text-size--regular\">\n                                <p>Request a call back or call us direct on 0818 911 555<\/p>\n\t\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n                        <\/div>\n                        <div class=\"increased-spacing\">\n                                <a class=\"feat-outline-green-c button button--large button--outline\" href=\"#register\">Arrange a call back<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "featured_products_section_JpBYLF": {
+      "type": "featured-products-section",
+      "blocks": {
+        "featured_product_3pVnXK": {
+          "type": "featured_product",
+          "settings": {
+            "product": "eco-flex-recliner-recliner-ecoflex",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_FR4EHH": {
+          "type": "featured_product",
+          "settings": {
+            "product": "harmony-rise-and-recline-stock-chair-harmony-rise-and-recline-stock-chair",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_mTkgQG": {
+          "type": "featured_product",
+          "settings": {
+            "product": "harmony-porta-stock-chair-harmony-porta-stock-chair",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_dTQG9h": {
+          "type": "featured_product",
+          "settings": {
+            "product": "multicare-plus-chair-multicare-chair",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_YTxbAc": {
+          "type": "featured_product",
+          "settings": {
+            "product": "multicare-plus-chair-multicare-chair",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_GRarTC": {
+          "type": "featured_product",
+          "settings": {
+            "product": "tempo-portable-rise-and-recline-chair",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_nFcmkn": {
+          "type": "featured_product",
+          "settings": {
+            "product": "high-back-chair-adjustable-height",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_D6LiHR": {
+          "type": "featured_product",
+          "settings": {
+            "product": "popular-plus-hb-chair-w-infills-wings-adj-seat-cush-br-sl",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_V3dHUC": {
+          "type": "featured_product",
+          "settings": {
+            "product": "sara-stedy-stand-aid-sara-stedy-stand-aid",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_epghtj": {
+          "type": "featured_product",
+          "settings": {
+            "product": "turning-and-moving-system-turning-and-moving-system",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_dJLFdi": {
+          "type": "featured_product",
+          "settings": {
+            "product": "etac-turner-rotation-disc",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        },
+        "featured_product_xckpC7": {
+          "type": "featured_product",
+          "settings": {
+            "product": "karma-vip2-transit-positioning-wheelchair-wheelchair-vip-2-transit-18",
+            "show_price": false,
+            "button_text": "Enquire now"
+          }
+        }
+      },
+      "block_order": [
+        "featured_product_3pVnXK",
+        "featured_product_FR4EHH",
+        "featured_product_mTkgQG",
+        "featured_product_dTQG9h",
+        "featured_product_YTxbAc",
+        "featured_product_GRarTC",
+        "featured_product_nFcmkn",
+        "featured_product_D6LiHR",
+        "featured_product_V3dHUC",
+        "featured_product_epghtj",
+        "featured_product_dJLFdi",
+        "featured_product_xckpC7"
+      ],
+      "name": "Featured Products",
+      "settings": {
+        "heading": "Browse our Seating and Mobility Range",
+        "subheading": "",
+        "show_view_all": false,
+        "collection": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "testimonials_Rxwz8i": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_DkYR4C": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Kathleen",
+            "author_title": "Occupational Therapist",
+            "quote": "<p>The change in Barbara when she was sitting in the new chaircompared to just laying in bed was amazing.<br\/><br\/><\/p>",
+            "image": "shopify:\/\/shop_images\/Figure.png"
+          }
+        },
+        "testimonial_EzDtdC": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Author",
+            "author_title": "Customer",
+            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
+          }
+        },
+        "testimonial_rqYnVG": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "author_name": "Author",
+            "author_title": "Customer",
+            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_DkYR4C",
+        "testimonial_EzDtdC",
+        "testimonial_rqYnVG"
+      ],
+      "settings": {
+        "heading": "Just Ask the Experts",
+        "subheading": "See how therapeutic seating can vastly improve the well being of our customers",
+        "section_heading_layout": "section-heading--left",
+        "quote_font": "poppins_i4",
+        "quote_font_size": 24,
+        "quote_line_height": 1.5,
+        "content_alignment": "center",
+        "color_background_main": "#e5daf3",
+        "color_text_main": "#1d1d1d",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "media_with_text_overlay_two_buttons_8ajBpQ": {
+      "type": "media-with-text-overlay-two-buttons",
+      "blocks": {
+        "image_gwGLgR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/book.png",
+            "caption": "FREE - NO OBLIGATION",
+            "title": "Book a free Seating Assessment",
+            "subtitle": "",
+            "link": "#csa-form-section",
+            "button_label": "Book Now",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_w6mH9T": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/call-bk.jpg",
+            "caption": "SPEAK TO OUR EXPERTS",
+            "title": "Request a Call Back",
+            "subtitle": "",
+            "link": "",
+            "button_label": "Arrange a Callback",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_gwGLgR",
+        "image_w6mH9T"
+      ],
+      "custom_css": [
+        ".card {display: flex; flex-direction: column;}",
+        ".card .card__text {order: 2; max-width: max-content;}",
+        ".card .card-image {order: 1 !important;}",
+        ".card__image--background {position: relative;}",
+        ".lazy-image.lazy-image--background {padding-top: unset !important; position: relative !important;}",
+        ".lazy-image[data-ratio] img {position: relative;}",
+        ".h3 {font-weight: 400; min-height: 90px;}"
+      ],
+      "settings": {
+        "heading": "Next Steps",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-2 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "caption_size": "small",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "regular",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_AiCqqr": {
+      "type": "custom-liquid",
+      "name": "t:sections.refactor_words.custom_code.name",
+      "settings": {
+        "custom_liquid": "<div id=\"terms\" class=\"competition-terms\">\n  <h6>Competition Terms and Conditions<\/h6>\n  <ol style=\"list-style-type: decimal; padding-left: 1.5rem; margin: 0;font-size:13px;\">\n    <li style=\"margin-bottom: 0.6rem;\">Participants must be OT, registered with Coru.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">Prize Details: One spa voucher not exceeding the value of €500.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">Entry Period: Entries open on Monday 22nd September 2025 and close on Monday 6th October 2025 at 5pm.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">The winner will be selected and notified the week commencing Monday 6th October 2025.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">If the winner does not provide delivery details within 48 hours of contact, the prize will be forfeited and an alternative winner may be selected.\n<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">The prize is non-transferable, non-refundable, and cannot be exchanged for cash or any alternative, in whole or in part.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">The promoter of this competition is Homecare Medical.<\/li>\n    <li style=\"margin-bottom: 0.6rem;\">Homecare Medical reserves the right to cancel or amend the competition due to circumstances beyond its control.<\/li>\n<li>I consent to Homecare Medical collecting and using my personal data to respond to my enquiry, send\nnewsletters, and provide email marketing, in accordance with the <a style=\"text-decoration:underline;\" href=\"https:\/\/www.homecaremedicalsupplies.ie\/pages\/privacy-policy\">Privacy Policy<\/a><\/li>\n  <\/ol>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_GY9NMt",
+    "custom_liquid_pcUUiW",
+    "rich_text_LPUAjP",
+    "custom_liquid_Aj8CcQ",
+    "custom_liquid_JczhCn",
+    "featured_products_section_JpBYLF",
+    "testimonials_Rxwz8i",
+    "media_with_text_overlay_two_buttons_8ajBpQ",
+    "custom_liquid_AiCqqr"
+  ]
+}

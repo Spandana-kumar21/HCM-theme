@@ -1,0 +1,647 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "p {color: #1d1d1d;}",
+        ".h2 {color: #3c0077;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #3c0077;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-page-container\">\n        <div class=\"video-container\">\n                <img class=\"show-on-mobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hero-desktop_3a30e874-57c9-43f9-9b97-b1acfdd9ac7d.jpg?v=1718271690\"> \n\t\t\t    <img class=\"show-on-desktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hero-mobile_456629b5-1257-45d2-bc1a-b1b312df9611.jpg?v=1718271691\">\n                <div class=\"no-overlay\">\n                        <div class=\"rte text-size--regular\">\n                                <p>\n                                        OBI\n                                <\/p>\n                        <\/div>\n                        <h2 class=\"h2 rte rich-text__title\">\n                                Revolutionising<br>Independent Eating\n                        <\/h2>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Adaptive Eating Made Easy",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OBI is an adaptive eating device designed for individuals with upper extremity strength and mobility limitations.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>It enhances independence, social interaction, and meal enjoyment through customisable accessibility switches, allowing users to control what and when they eat.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        },
+        "button_7RJCeP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a Demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_THFAz9",
+        "text_37F7HA",
+        "button_7RJCeP"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}",
+        ".card .button--solid {background: #6dd0bd; border-color: #6dd0bd; color: #350078 !important;}",
+        ".card .button--solid:hover {background: #350078; border-color: #350078; color: #fff !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18458.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_begAtM": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #6dd0bd;}",
+        ".featured-block-container-c {background: #350078; color: #fff;}",
+        ".featured-block-image-c img {width: 100%; display: block;}",
+        ".text-size--large {font-weight: 400;}",
+        "@media only screen and (min-width: 1024px) {.featured-block-container-c {display: grid; grid-template-columns: 1.4fr 2fr; } .featured-block-image-c {grid-column: 2 \/ 3; grid-row: 1 \/ 2; } .featured-block-content-c {grid-column: 1 \/ 2; grid-row: 1 \/ 2; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-c\">\n        <div class=\"featured-block-image-c\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Group_18446_849efc42-447d-4bb6-a72a-af4098b3e0be.png?v=1718271927\">\n        <\/div>\n        <div class=\"featured-block-content-c\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">\n                        <h2 class=\"h3 rte rich-text__title\">\n                                Design Excellence <br>for Independent Eating\n                        <\/h2>\n                        <div class=\"rte text-size--large\">\n                                <p>\n                                        OBI’s development is rooted in personal experience and extensive research, resulting in an award-winning product \u2028that promotes dignity and independence at mealtime.\n                                <\/p>\n                               \n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jzTycy": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qHztD9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dial.svg",
+            "title": "Custom Controls",
+            "caption": "Allows users to control their eating experience.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_9tpF8A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plate-utensils.svg",
+            "title": "Reusable Spoons and Plate",
+            "caption": "BPA-free, dishwasher safe, and designed for efficiency.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_LAnB7w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-holding-box_1.svg",
+            "title": "Portable and Lightweight",
+            "caption": "Weighs only 7lbs and features a rechargeable battery for up to 3-4 hours of use.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KNEFWH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fabric.svg",
+            "title": "Anti-Slip Surface",
+            "caption": "Ensures stability by keeping OBI stationary during meals.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qHztD9",
+        "image_9tpF8A",
+        "image_LAnB7w",
+        "image_KNEFWH"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}",
+        ".text-color--opacity {opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "Key Features",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#1d1d1d",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_rTncje": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #350078; text-align: center;}",
+        "p {text-align: center;}",
+        "b {font-weight: 600;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"card__text gutter-top--xlarge gutter-bottom--xlarge spacing--large remove-empty-space\">\n        <h2 class=\"h2 rte rich-text__title\">\n                Safe and User-Friendly\n        <\/h2>\n        <p>\n                <b>OBI ensures safety and ease of use<\/b> with features designed to make mealtime stress-free and enjoyable.\n        <\/p>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "Collision Detection",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_d4CQAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OBI is equipped with collision detection technology that stops and backs away for safety in the event of misuse, ensuring a secure dining experience for the user.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_d4CQAg"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18459.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_jLdnCC": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9Xby3A": {
+          "type": "title",
+          "settings": {
+            "title": "Water Resistant",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_jKCdcn": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Designed for easy maintenance, OBI is water-resistant, allowing it to be wiped down and disinfected after meals, promoting hygiene and cleanliness.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_9Xby3A",
+        "text_jKCdcn"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18436_4a3d579f-1079-4eb5-8884-c139d715b567.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_9Kr4Yg": {
+      "type": "rich-text",
+      "blocks": {
+        "title_hR3kXg": {
+          "type": "title",
+          "settings": {
+            "title": "Anti-Slip Surface",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QQTNL7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>OBI features a latex-free, elastic over-mold anti-slip surface that keeps the device stationary during meals, ensuring stability and preventing unwanted movement.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_hR3kXg",
+        "text_QQTNL7"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2_jpg_37c4cc81-ccf6-475e-83e4-612f678c6ec0.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button {border-color: #6ecfbc; color: #350078; background: #6ecfbc; margin: 30px auto; display: block; max-width: 300px;}",
+        ".button:hover {border-color: #350078; color: #fff; background: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book a Demo<\/a>\n                        <\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_B8dkMV": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #6dd0bd;}",
+        ".featured-block-image-c img {width: 100%; display: block;}",
+        "@media only screen and (min-width: 1024px) {.featured-block-container-c {display: grid; grid-template-columns: 2fr 1.4fr; } .featured-block-image-c {grid-column: 1 \/ 2; grid-row: 1 \/ 2; } .featured-block-content-c {grid-column: 2 \/ 3; grid-row: 1 \/ 2; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-c\">\n        <div class=\"featured-block-image-c\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Mask_group.png?v=1718272935\">\n        <\/div>\n        <div class=\"featured-block-content-c\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">\n                        <h2 class=\"h3 rte rich-text__title\">\n                                Versatile Food Options\n                        <\/h2>\n                        <div class=\"rte text-size--large\">\n                                <p>\n                                        OBI accommodates a wide variety of foods, making it versatile for different dietary needs & preferences, such as:\n                                <\/p>\n\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t<li>Solid foods like peas, grapes, mac and cheese, and mashed potatoes.<\/li>\n\t\t\t\t\t\t\t\t<li>Liquid foods such as soup, stew, cereal, and pudding.<\/li>\n\t\t\t\t\t\t\t\t<li>Users have fun experimenting with different foods and are impressed with OBI's capabilities<\/li>\n\t\t\t\t\t\t\t<\/ul>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "rich_text_dfAQbz": {
+      "type": "rich-text",
+      "blocks": {
+        "title_yhiK33": {
+          "type": "title",
+          "settings": {
+            "title": "Empower Your \u2028Mealtime with OBI",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_kfRVdq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>OBI is designed to serve individuals with various conditions affecting upper extremity function, such as Muscular Dystrophy, Multiple Sclerosis, Parkinson’s Disease, and more. \u2028\u2028<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_eYJX8M": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>It empowers users to eat with ease and dignity.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_yhiK33",
+        "text_kfRVdq",
+        "text_eYJX8M"
+      ],
+      "custom_css": [
+        "p {color: #1d1d1d;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frame_2.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "text_columns_images_HpiLU7": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_CecJKC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/command.svg",
+            "title": "Teach Icon",
+            "caption": "Simplifies setup by allowing caregivers to easily program food delivery positions.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_VedbGX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/smart-home-alt.svg",
+            "title": "Switch Ports",
+            "caption": "Universal 3.5mm headphone jacks for various switches.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_3dRJdn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sparkles.svg",
+            "title": "Easy-Clean Touch Controls",
+            "caption": "User-friendly, touch-sensitive buttons that are easy to clean, ensuring hygiene and ease of use.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_EbXrY4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spoon_1.svg",
+            "title": "Interchangeable Spoons",
+            "caption": "Magnetically attached spoons designed for comfortable use and efficient food capture.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_CecJKC",
+        "image_VedbGX",
+        "image_3dRJdn",
+        "image_EbXrY4"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}",
+        ".text-color--opacity {opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "Additional Features",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#1d1d1d",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_cy9JYz": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".download-pdf-brochure {text-align: center; background: #f8f8f8; padding: 60px 15px; border-radius: 10px;}",
+        "span {text-wrap: balance;}",
+        ".download-pdf-brochure h2 {font-size: 1.5em; font-weight: 600;}",
+        "#downlaod-btn {position: relative;}",
+        ".download-pdf-brochure span {font-size: 1.5em; display: block; margin-bottom: 1.4em;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"download-pdf-brochure-wrapper\">\n  <div class=\"download-pdf-brochure\">\n    <h2>Interested in learning more about OBI?<\/h2>\n    <span>Find more details in our brochure and discover how OBI can enhance independence and meal enjoyment.<\/span>\n    <a id=\"downlaod-btn\" class=\"uil-download-alt button button--large button--outline\" target=\"_blank\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/HCM_OBI_Brochure_3.pdf?v=1725895929\">Download PDF Brochure<\/a>\n  <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_9ajmYq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_LWdbGh": {
+      "type": "marquee",
+      "blocks": {
+        "text_EQw3bC": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_Hnf4m8": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €50.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EQw3bC",
+        "text_Hnf4m8"
+      ],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "custom_liquid_begAtM",
+    "text_columns_images_jzTycy",
+    "custom_liquid_rTncje",
+    "rich_text_wkfpdL",
+    "rich_text_jLdnCC",
+    "rich_text_9Kr4Yg",
+    "custom_liquid_ckhnBR",
+    "custom_liquid_B8dkMV",
+    "rich_text_dfAQbz",
+    "text_columns_images_HpiLU7",
+    "custom_liquid_cy9JYz",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_9ajmYq",
+    "marquee_LWdbGh"
+  ]
+}

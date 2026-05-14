@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false
+      }
+    },
+    "1716303114d760ff8a": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "image_njfUWy": {
+      "type": "image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gdrp.jpg",
+        "link": "",
+        "open_in_new_window": false,
+        "image_size": "large"
+      }
+    },
+    "rich_text_ja3JK4": {
+      "type": "rich-text",
+      "blocks": {
+        "text_erBrbG": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br\/>                On 25 May 2018, the General Data Protection Regulation (GDPR), a new Europe-wide data protection regulation comes into effect. This new regulation seeks to strengthen and unify data protection for all individuals within the European Union and grants new and enhanced rights for individuals in relation to their personal information.<br\/>        <\/p><h3><br\/>                What does GDPR mean for you?<br\/>        <\/h3><p><br\/>                GDPR increases and reinforces the rights of individuals in relation to the information we hold about them. Being transparent and providing accessible information to customers about how we process their personal information is a key element of the new regulation.<br\/>        <\/p><p><br\/>                Homecare Medical Supplies takes privacy and the protection of customer and staff data very seriously. We have always attached the highest priority to the security of our customers' information and will continue to do so going forward. We support the enhancements to data protection which GDPR will introduce and our company have been actively working to implement the changes required to be ready for this new regulation.<br\/>        <\/p><h3><br\/>                What are Homecare Medical Supplies doing to prepare for GDPR?<br\/>        <\/h3><p><br\/>                We have developed a standalone <a href=\"\/pages\/privacy-policy\">Privacy Policy<\/a>, which is available in two separate formats, a long form and short form, to help provide an enhanced understanding of our privacy policy.<br\/>        <\/p><p><br\/>                The short form <a href=\"\/pages\/privacy-policy\">Privacy Policy<\/a>, which you can review on our website outlines a summary of what we do with the personal information of our customers in order to run our business and provide our customers with products and services. It also provides more information about your enhanced rights and how to exercise them.<br\/>        <\/p><p><br\/>                The long form Privacy Notice is a more detailed version which is available from Homecare Medical Supplies Data Protection Officer by emailing dataprotection@homecaremedical.ie.<br\/>        <\/p><p><br\/>                Both formats of the <a href=\"\/pages\/privacy-policy\">Privacy Notice<\/a> may be updated from time to time and you can find the updated notices on our website.<br\/>        <\/p><p><br\/>                In order to comply with Article 25 of Medical device Regulation 2017\/745, Homecare Medical Supplies must be able to identify within the supply chain:<br\/>        <\/p><p><br\/>                Anyone who has supplied us a device. Anyone we have supplied a device.<br\/>        <\/p><p><br\/>                For a period of at least 10 years after the last device covered by the EU declaration of conformity has been placed on the market.<br\/>        <\/p><p><br\/>                Meaning that Homecare Medical Supplies are required by law to keep customer details on file for this duration. This information is treated as confidential, see our Privacy Policy for additional details.<br\/>        <\/p><h3><br\/>                What do you need to do?<br\/>        <\/h3><p><br\/>                The changes described in this communication are purely to enhance and clarify your rights under your relationship with Homecare Medical Supplies. Please take some time to read the short form Privacy Policy which you can review here.<br\/>        <\/p><p><br\/>                If you're not happy with these changes, you have the option to close your account and we have included some Important Information regarding this below.<br\/>        <\/p><h3><br\/>                Need more information?<br\/>        <\/h3><p><br\/>                If you've any questions about these changes, please call us on <a href=\"ted:0818%20911%20555\">0818 911 555<\/a> \/ <a href=\"+353%20(094)%209633%20800\">+353 (094) 9633 800<\/a> or email <a href=\"mailto:dataprotection@homecaremedical.ie\">dataprotection@homecaremedical.ie<\/a>.<br\/>        <\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_erBrbG"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1716303114d760ff8a",
+    "image_njfUWy",
+    "rich_text_ja3JK4"
+  ]
+}

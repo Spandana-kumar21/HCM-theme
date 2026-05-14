@@ -1,0 +1,13 @@
+{
+    "layout": "theme.pagetify",
+    "sections": {
+        "pagetify-page": {
+            "type": "pagetify-page",
+            "settings": {
+                "type": "article",
+                "width": ""
+            }
+        }
+    },
+    "order": ["pagetify-page"]
+}

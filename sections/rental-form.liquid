@@ -1,0 +1,143 @@
+{% assign pageURL = page.handle %}
+
+{% assign customerEmail = customer.email | default: '' %}
+{% assign locId = customer.current_location.external_id  | default: '' %}
+{% assign locName = customer.current_location.name | escape | default: '' %}
+{% assign accountManagerEmail = customer.current_location.metafields.custom.account_manager_email | default: '' %}
+
+<div id="rental-form-section" class="container  container--vertical-space   container--large " style="margin-top : 50px;">
+
+  {%- comment -%}
+  =============================
+  RENTAL – MATTRESS DELIVERY
+  Form Hash: s1fk9t0i1r0pz1l
+  Fields: 11, 17, 22, 24
+  =============================
+  {%- endcomment -%}
+
+  
+  {% if pageURL == "new-mattress-delivery" %}
+  <h1 class="title h2" style="text-align: center;margin-bottom: 20px;">New Mattress Delivery</h1>
+    <div id="wufoo-s1fk9t0i1r0pz1l"></div>
+    <script>
+      var s1fk9t0i1r0pz1l;
+      (function(d, t) {
+        var s = d.createElement(t),
+        options = {
+          userName: 'homecaremedicalcontact',
+          formHash: 's1fk9t0i1r0pz1l',
+          autoResize: true,
+          height: '1200',
+          async: true,
+          host: 'wufoo.com',
+          header: 'hide',
+          ssl: true,
+          defaultValues: 'Field11={{ customerEmail }}&Field17={{ locId }}&Field22={{ locName }}&Field24={{ accountManagerEmail }}'
+        };
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') +
+                'secure.wufoo.com/scripts/embed/form.js';
+
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          try {
+            s1fk9t0i1r0pz1l = new WufooForm();
+            s1fk9t0i1r0pz1l.initialize(options);
+            s1fk9t0i1r0pz1l.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0];
+        scr.parentNode.insertBefore(s, scr);
+      })(document, 'script');
+    </script>
+  {% endif %}
+
+
+  {%- comment -%}
+  =============================
+  RENTAL – MATTRESS COLLECTION
+  Form Hash: ssn9fe91a6nqgy
+  Fields: 11, 19, 20, 31
+  =============================
+  {%- endcomment -%}
+  {% if pageURL == "mattress-collection" %}
+    <h1 class="title h2" style="text-align: center;margin-bottom: 20px;"> Mattress Collection</h1>
+    <div id="wufoo-ssn9fe91a6nqgy"></div>
+    <script>
+      var ssn9fe91a6nqgy;
+      (function(d, t) {
+        var s = d.createElement(t),
+        options = {
+          userName: 'homecaremedicalcontact',
+          formHash: 'ssn9fe91a6nqgy',
+          autoResize: true,
+          height: '1300',
+          async: true,
+          host: 'wufoo.com',
+          header: 'hide',
+          ssl: true,
+          defaultValues: 'Field11={{ customerEmail }}&Field19={{ locId }}&Field20={{ locName }}&Field31={{ accountManagerEmail }}'
+        };
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') +
+                'secure.wufoo.com/scripts/embed/form.js';
+
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          try {
+            ssn9fe91a6nqgy = new WufooForm();
+            ssn9fe91a6nqgy.initialize(options);
+            ssn9fe91a6nqgy.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0];
+        scr.parentNode.insertBefore(s, scr);
+      })(document, 'script');
+    </script>
+  {% endif %}
+
+
+  {%- comment -%}
+  =============================
+  RENTAL – SPARE INTO USE
+  Form Hash: scmbr211201cta
+  Fields: 11, 13, 14, 25
+  =============================
+  {%- endcomment -%}
+  {% if pageURL == "spare-into-use" %}
+    <h1 class="title h2" style="text-align: center;margin-bottom: 20px;"> Spare Into Use</h1>
+    <div id="wufoo-scmbr211201cta"></div>
+    <script>
+      var scmbr211201cta;
+      (function(d, t) {
+        var s = d.createElement(t),
+        options = {
+          userName: 'homecaremedicalcontact',
+          formHash: 'scmbr211201cta',
+          autoResize: true,
+          height: '1300',
+          async: true,
+          host: 'wufoo.com',
+          header: 'hide',
+          ssl: true,
+          defaultValues: 'Field11={{ customerEmail }}&Field13={{ locId }}&Field14={{ locName }}&Field25={{ accountManagerEmail }}'
+        };
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') +
+                'secure.wufoo.com/scripts/embed/form.js';
+
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          try {
+            scmbr211201cta = new WufooForm();
+            scmbr211201cta.initialize(options);
+            scmbr211201cta.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0];
+        scr.parentNode.insertBefore(s, scr);
+      })(document, 'script');
+    </script>
+  {% endif %}
+
+</div>

@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "center": false
+      }
+    },
+    "1716303114d760ff8a": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1716303114d760ff8a"
+  ]
+}

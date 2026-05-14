@@ -1,0 +1,8 @@
+input{
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+}
+.wufoo li.focused{
+  background:red!important;
+}

@@ -1,0 +1,465 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".container {display: none;}"
+      ],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        "img {width: 100%; display: block;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"show-on-mobile residential-care-hero\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/residential-care-hero.png?v=1725281840\">\n\t<img class=\"show-on-desktop residential-care-hero\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/res-care-01.png?v=1726056007\">\n\t\n       \n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Homecare View\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                        Simplifying Operations,<\/br> Enhancing Care\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                        <div class=\"increased-spacing\">\n                                <a href=\"#download-ebook\" class=\"button button--large button--outline\" >Homecare View<\/a>\n                        <\/div>\n                       \n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "rich_text_hcm_cRtCwa": {
+      "type": "rich-text-hcm",
+      "blocks": {
+        "title_yniYpp": {
+          "type": "title",
+          "settings": {
+            "title": "Your Trusted Partner in Care Management",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_zN6LHh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We know that running a successful care facility involves balancing high-quality care with efficient operations.\u2028<\/p>\n<p>That’s why we developed <span style=\"color:#350078;font-weight: 500;\">Homecare View<\/span>, an innovative platform that simplifies processes, reduces costs, and provides the control and visibility needed to focus on what matters most, your residents’ well-being.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_yniYpp",
+        "text_zN6LHh"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_18516_1.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_Chxntd": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".h3 {color: #6dd0bd;}",
+        ".text-size--regular {max-width: 55ch;}",
+        "@media only screen and (min-width: 1024px) {}",
+        ".feat-outline-green-c:hover {border: 1px solid #fff; background: transparent; color: #fff;}",
+        ".feat-outline-green-c {border: 1px solid #6ccfbd; background: #6ccfbd; color: #3c0077;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-d\">\n        <div class=\"featured-block-image-d\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/carer-1.png?v=1725284416\">\n        <\/div>\n        <div class=\"featured-block-content-d\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">                        \n                        <h2 class=\"h3 rte rich-text__title\">\n                               Efficiency and Transparency <\/br> in One Platform.\n                        <\/h2>\n                        <div class=\"rte text-size--regular\">\n                                <strong>Homecare View provides full visibility into your purchases, helping you manage and reduce costs across all facilities.<\/strong>\n\t\t\t\t\t\t\t\t\t<p style=\"margin-top:10px;\" >From financial transparency to seamless product rollout, Homecare View Care allows you to streamline operations and enhance the quality of care provided.<\/p>\n\n\n\n\n\n\n\n                        <\/div>\n                        <div class=\"increased-spacing\">\n                                <a class=\"feat-outline-green-c button button--large button--outline\" href=\"#register\">Register your interest<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_b6d3QA": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_HxAdFp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/financial-transparency.svg",
+            "title": "Full Financial Transparency",
+            "caption": "Manage and control spending with real-time reporting across locations.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_jG4Rah": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/streamlined-opperation.svg",
+            "title": "Streamlined Operations",
+            "caption": "Reduce supply lists and simplify procurement processes.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_bCGKJ8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/seamless-rollout.svg",
+            "title": "Seamless Rollout",
+            "caption": "Consistent product quality and support from our regional account managers.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_HxAdFp",
+        "image_jG4Rah",
+        "image_bCGKJ8"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}"
+      ],
+      "settings": {
+        "heading": "Transparent, Streamlined & Seamless",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_TDfxRn": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".h3 {color: #3c0077;}",
+        "#downlaod-btn-e {position: relative;}",
+        ".text-size--regular {max-width: 55ch;}",
+        "@media only screen and (min-width: 1024px) {}",
+        ".feat-outline-green-e:hover {border: 1px solid #fff; background: transparent; color: #fff;}",
+        ".feat-outline-green-e {border: 1px solid #6ccfbd; background: #6ccfbd; color: #3c0077;}",
+        "@media screen and (max-width: 1023px) {.card__text {padding-inline-start: var(--gutter-container); padding-inline-end: var(--gutter-container); margin-top: 20px; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<section id=\"download-ebook\">\n<div class=\"featured-block-container-e\">\n        <div class=\"featured-block-image-e\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Figure_about_us_1_jpg_5d363a5a-08d0-4018-bd05-ec29ea3c0d89.png?v=1725885883\">\n        <\/div>\n        <div class=\"featured-block-content-e\">\n                <div class=\"featured-block-content-container-e card__text spacing--large remove-empty-space\">                        \n                        <h2 class=\"h3 rte rich-text__title\">\n                               Master Operational <\/br>Challenges \n                        <\/h2>\n                        <div class=\"rte text-size--regular\">\n                               <p>Our eBook, <strong>‘Farewell to Complexity, Hello to Streamlined Success’<\/strong> guides nursing home leaders through practical strategies to overcome financial and operational challenges, empowering them to achieve greater efficiency and success.<\/p>\n\t\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n                        <\/div>\n                        <div class=\"increased-spacing\">\n                                <a id=\"downlaod-btn-e\" class=\"uil-download-alt button button--large button--outline\" target=\"_blank\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Res_Care_Ebook_2.pdf?v=1726153281\">Download PDF Brochure<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>\n<\/section>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".video-description {text-align: center; margin-top: 20px;}",
+        ".overlay,.video-container {border-radius: 10px;}",
+        "img {width: 100%;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"tofarvel-video-poster show-on-mobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/trusted-by.png?v=1725291183\">\n\t<img class=\"tofarvel-video-poster show-on-desktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Video.png?v=1726056088\">\n\t\n       \n        <div class=\"no-overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Hear from Our Partners\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                      Trusted by Ireland’s<\/br> Leading Nursing Homes\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                       \n                        <div class=\"increased-spacing\">\n                                <a class=\"mobx button button--large button--outline\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/34c174afcf1b4ab18a1a3cdbbe19f928.mp4\">Watch Video<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>\n<div class=\"video-description\">\n<p>Homecare Medical is proud to partner with some of Ireland’s most respected nursing home groups. <\/p>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "testimonials_niKpRT": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_qPJLfE": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Simon Balfe",
+            "author_title": "Beechfield Care Group",
+            "quote": "<p>“The benefits we've experienced so far reduced our supply list by over 50% and streamlined our offering and pricing structure across our eight locations.”<\/p>",
+            "image": "shopify:\/\/shop_images\/simon-avatar.png"
+          }
+        },
+        "testimonial_rBDFYi": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "author_name": "Author",
+            "author_title": "Customer",
+            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_qPJLfE",
+        "testimonial_rBDFYi"
+      ],
+      "custom_css": [
+        ".h4 {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px); color: #3c0077;}",
+        ".testimonials--center .testimonial {padding: 0 12%;}",
+        ".section-heading__subheading {max-width: 600px;}",
+        "@media screen and (max-width: 1023px) {.h4 {font-size: calc(26px \/ 60 * var(--base-headings-size) + 0px); }}"
+      ],
+      "settings": {
+        "heading": "Transforming Care Together",
+        "subheading": "Hear directly from our partners about the benefits of working with us and how Homecare View Care has transformed their operations.",
+        "section_heading_layout": "section-heading--center",
+        "quote_font": "poppins_i4",
+        "quote_font_size": 24,
+        "quote_line_height": 1.5,
+        "content_alignment": "center",
+        "color_background_main": "#e5daf3",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_fUF6br": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section id=\"register\"><\/section>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_cUFqkk": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".h3 {color: #3c0077;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-f\">\n        \n        <div class=\"featured-block-content-f\">\n                <div class=\"featured-block-content-container-f card__text spacing--large remove-empty-space\">                        \n                        <h2 class=\"h3 rte rich-text__title\">\n\t\t\t\t\t\t\tReady to Enhance <\/br>Your Operations?\n                        <\/h2>\n                        <div class=\"rte text-size--regular\">\n                               <p>Let Homecare Medical be your trusted partner in delivering top-tier care while simplifying your business operations.<\/p>\n\t\t\t\t\t\t\t<strong>Fill out the form below to register your interest and learn how Homecare View Care can support your nursing homes.<\/strong>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n                        <\/div>\n                        <iframe height=\"580px\" title=\"Embedded Wufoo Form\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https:\/\/homecaremedicalcontact.wufoo.com\/embed\/qu041bo1cz7p0g\/\"> <a href=\"https:\/\/homecaremedicalcontact.wufoo.com\/forms\/qu041bo1cz7p0g\/\">Fill out my Wufoo form!<\/a> <\/iframe>\n                <\/div>\n        <\/div>\n<div class=\"featured-block-image-f\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/enhance-your-options-banner.png?v=1725365128\">\n        <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "collection_list_z9KLAa": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_wXahtW": {
+          "type": "collection",
+          "settings": {
+            "collection": "personal-care"
+          }
+        },
+        "collection_eJHMxj": {
+          "type": "collection",
+          "settings": {
+            "collection": "first-aid"
+          }
+        },
+        "collection_aMCXDa": {
+          "type": "collection",
+          "settings": {
+            "collection": "incontinence"
+          }
+        },
+        "collection_DyfhRm": {
+          "type": "collection",
+          "settings": {
+            "collection": "nurse-station"
+          }
+        },
+        "collection_kw8CMr": {
+          "type": "collection",
+          "settings": {
+            "collection": "clothing-footwear"
+          }
+        },
+        "collection_YfCUmp": {
+          "type": "collection",
+          "settings": {
+            "collection": "laundry-management"
+          }
+        }
+      },
+      "block_order": [
+        "collection_wXahtW",
+        "collection_eJHMxj",
+        "collection_aMCXDa",
+        "collection_DyfhRm",
+        "collection_kw8CMr",
+        "collection_YfCUmp"
+      ],
+      "settings": {
+        "heading": "Shop by Category",
+        "subheading": "",
+        "show_view_all": true,
+        "section_heading_layout": "section-heading--left",
+        "style": "grid",
+        "layout": "grid-6 grid-portable-4 grid-lap-3 grid-palm-2",
+        "image_aspect_ratio": "1",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_ae563507-89f4-4c6a-8057-38cc0bbf0587.png",
+            "title": "Our Price Promise",
+            "caption": "We match over 5,000 products, all with the same exceptional service & support",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_4qwXDc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_f9Uab3": {
+      "type": "marquee",
+      "blocks": {
+        "text_QVcWUQ": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_eLnwg6": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €75.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QVcWUQ",
+        "text_eLnwg6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#1d1d1d"
+      }
+    },
+    "172536232147f3747b": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "rich_text_hcm_cRtCwa",
+    "custom_liquid_Chxntd",
+    "text_columns_images_b6d3QA",
+    "custom_liquid_TDfxRn",
+    "custom_liquid_ckhnBR",
+    "testimonials_niKpRT",
+    "custom_liquid_fUF6br",
+    "custom_liquid_cUFqkk",
+    "collection_list_z9KLAa",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_4qwXDc",
+    "marquee_f9Uab3",
+    "172536232147f3747b"
+  ]
+}

@@ -1,0 +1,67 @@
+<div id="product-price-product-card" class="product-price">
+
+  {%- liquid
+    assign show_price = true
+  -%}
+
+  {%- if product_price_varies -%}
+
+    <span class="product-price--original text-size--regular" data-js-product-price-original="{{ product.id }}">
+      {%- liquid
+        if show_price
+          assign price = target.price | money
+          if target.compare_at_price > target.price or target.compare_at_price_varies
+            echo 'products.grid.on_sale_from_html' | t: price: price
+          else
+            echo 'products.grid.from_text_html' | t: price: price
+          endif
+        endif
+      -%}
+    </span>
+
+  {%- else -%}
+    <span style="display: none;" class="product-price--original text-size--regular" data-js-product-price-original="{{ product.id }}">{{ target.price | money }}</span>
+    <del  style="display: none;" class="product-price--compare" data-js-product-price-compare>
+      {%- liquid
+        if show_price
+          if target.compare_at_price > target.price
+            echo target.compare_at_price | money | prepend: '<span>' | append: '</span>'
+            if show_saving
+              assign saving = target.compare_at_price | minus: target.price | money
+              echo 'products.page.sales_amount_html' | t: amount: saving | prepend: '<span>' | append: '</span>'
+            endif
+          endif
+        endif
+      -%}
+    </del>
+  {%- endif -%}
+
+  <span class="product-price--unit text-size--regular" data-js-product-price-unit>
+    {%- liquid
+      if show_price
+        if variant.unit_price_measurement
+          echo variant.unit_price | money
+          echo ' / '
+          if variant.unit_price_measurement.reference_value != 1
+            echo variant.unit_price_measurement.reference_value
+          endif
+          echo variant.unit_price_measurement.reference_unit
+        endif
+      endif
+    -%}
+  </span>
+
+    <!-- Case Price -->
+    <span class="product-price--pack-title text-size--regular">{%- liquid echo 'products.page.total_price_plp' | t -%}</span>
+    <span class="product-price--pack text-size--large" data-js-product-price-pack="{{ product.id }}">
+      {%- liquid
+         if show_price
+          assign pack_price = variant.price | times: product.selected_or_first_available_variant.quantity_rule.min
+          echo pack_price | money
+         endif
+      -%}
+    </span>
+    <span class="homecare-price-type">
+      {{  'products.custom.ex_vat' | t }}
+    </span>
+</div>

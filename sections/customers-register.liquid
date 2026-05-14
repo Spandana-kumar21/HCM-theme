@@ -1,0 +1,289 @@
+{{ 'account-registration.css' | asset_url | stylesheet_tag }}
+
+<div class="register-wrapper">
+  <!-- Left Side -->
+
+  <div class="register-left">
+	{% if section.settings.left_image %}
+	<img
+		src="{{ section.settings.left_image | image_url: width: 800 }}"
+		alt="Register"
+		class="register-img"
+		>
+	{% endif %}
+
+  {% if section.settings.enable_overlay %}
+      <div class="overlay"></div>
+    {% endif %}
+
+    <div class="register-left-content">
+      <h2>{{ section.settings.left_heading }}</h2>
+      <p>{{ section.settings.left_description }}</p>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="register-right">
+    <div class="register-form-container">
+      <div class="register-form-box">
+        <h1>New Customer Registration</h1>
+        <p>Join Homecare Medical and find trusted support for your everyday needs.</p>
+
+        {% comment %} {% assign success_url = routes.root_url | append: '?newcustomer=true' %} {% endcomment %}
+
+        {% form 'create_customer', class: 'simple-form' %}
+          {% comment %} {% render 'form-errors', form: form %} {% endcomment %}
+
+          {% render 'register-form-error', form: form %}
+
+          <!-- Two Column Row for Names -->
+          <div class="form-row-two-col">
+            <div class="form-group">
+              <label for="first_name">{{ 'customers.register_page.form.first_name_label' | t }}</label>
+              <input
+                required
+                type="text"
+                value=""
+                name="customer[first_name]"
+                id="first_name"
+                placeholder="Enter your first name"
+                {% if form.errors contains 'first_name' %}
+                  class="error"
+                {% endif %}
+                autocapitalize="words"
+                autofocus
+              >
+              <span
+                id="first-name-error"
+                class="error-message hide_element"
+                data-error-alpha="{{ 'customers.register_page.form.first_name_alphabetical' | t }}"
+                data-error-capital="{{ 'customers.register_page.form.first_name_capital_start' | t }}"
+              >
+                {{ 'customers.register_page.form.first_name_alphabetical' | t }}
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="last_name">{{ 'customers.register_page.form.last_name_label' | t }}</label>
+              <input
+                required
+                type="text"
+                value=""
+                name="customer[last_name]"
+                id="last_name"
+                placeholder="Enter your last name"
+                {% if form.errors contains 'last_name' %}
+                  class="error"
+                {% endif %}
+                autocapitalize="words"
+              >
+              <span
+                id="last-name-error"
+                class="error-message hide_element"
+                data-error-alpha="{{ 'customers.register_page.form.last_name_alphabetical' | t }}"
+                data-error-capital="{{ 'customers.register_page.form.last_name_capital_start' | t }}"
+              >
+                {{ 'customers.register_page.form.last_name_alphabetical' | t }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">{{ 'customers.register_page.form.email_label' | t }}</label>
+              <div class="input-wrapper">
+                <input
+                  required
+                  type="email"
+                  value=""
+                  name="customer[email]"
+                  id="email"
+                  placeholder="Enter your email address"
+                  {% if form.errors contains 'email' %}
+                    class="error"
+                  {% endif %}
+                  autocorrect="off"
+                  autocapitalize="off"
+                >
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/email-icon.png?v=1773069188"
+                  alt="Email"
+                  class="input-icon"
+                >
+              </div>
+              <span id="email-error" class="error-message hide_element">Invalid email format</span>
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="create_password">{{ 'customers.register_page.form.password_label' | t }}</label>
+              <div class="input-wrapper">
+                <input
+                  required
+                  type="password"
+                  value=""
+                  name="customer[password]"
+                  id="create_password"
+                  placeholder="Enter your password"
+                  {% if form.errors contains 'password' %}
+                    class="error"
+                  {% endif %}
+                >
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/password-icon.png?v=1773069188"
+                  alt="Password"
+                  class="input-icon"
+                >
+              </div>
+              <div class="password-requirement">Must be at least 8 characters long</div>
+              <span id="password-weak" class="error-message hide_element">
+                {{ 'customers.register_page.form.password_weak' | t }}
+              </span>
+              <span id="password-weak-custom" class="error-message hide_element">
+                <div class="custom-error-message"></div>
+              </span>
+            </div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="form-checkbox">
+            <input type="checkbox" id="terms" required>
+            <label for="terms"
+              > By creating an account, you agree to our <a href="/pages/terms-and-conditions" target="blank"
+                >Terms and Conditions</a
+              >
+              and <a href="/pages/privacy-policy" target="blank">Privacy Policy</a></label
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            id="create-account-button"
+            class="button button--solid button--regular submit-button"
+            type="submit"
+            disabled
+          >
+            Create Account
+          </button>
+
+          <!-- Login Link -->
+          <div class="login-link">Already registered? <a href="{{ routes.account_login_url }}">Sign In</a></div>
+        {% endform %}
+      </div>
+      <!-- Close register-form-box -->
+    </div>
+    <!-- Close register-form-container -->
+  </div>
+  <!-- Close register-right -->
+</div>
+<!-- Close register-wrapper -->
+
+<script src="{{ 'account-registration.js' | asset_url }}" defer></script>
+
+<!-- Dynamic Styles -->
+<style>
+  .register-left-content {
+    color: {{ section.settings.font_color }};
+  }
+
+  .register-left .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    z-index: 1;
+  }
+
+  .register-left-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 768px) {
+    .register-left .overlay {
+      {% if section.settings.enable_mobile_overlay %}
+        background-color: {{ section.settings.mobile_overlay_color }};
+        opacity: {{ section.settings.mobile_overlay_opacity | divided_by: 100.0 }};
+      {% else %}
+        display: none;
+      {% endif %}
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.local-extra-words.sections.customers.register.name",
+  "class": "section--remove-bottom-margin-after",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Side Image"
+    },
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Left Side Heading",
+      "default": "Expert care starts with the right equipment."
+    },
+    {
+      "type": "textarea",
+      "id": "left_description",
+      "label": "Left Side Description",
+      "default": "Create an account to access our full range of medical supplies."
+    },
+
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font Color",
+      "default": "#F6F4F4"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enable Desktop Overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_overlay",
+      "label": "Enable Mobile Overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "mobile_overlay_color",
+      "label": "Mobile Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "mobile_overlay_opacity",
+      "label": "Mobile Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50
+    }
+  ]
+}
+{% endschema %}

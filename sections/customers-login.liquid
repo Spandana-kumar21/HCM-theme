@@ -1,0 +1,314 @@
+{{ 'account-login.css' | asset_url | stylesheet_tag }}
+
+<div class="login-wrapper">
+  <!-- Left Side -->
+  <div class="login-left">
+    {% if section.settings.left_background_image %}
+      <img
+        src="{{ section.settings.left_background_image | image_url: width: 800 }}"
+        alt="Login"
+        class="login-left-img"
+      >
+    {% endif %}
+
+    {% if section.settings.enable_overlay %}
+      <div class="overlay"></div>
+    {% endif %}
+
+    <div class="login-left-content">
+      <h2>{{ section.settings.left_heading }}</h2>
+      <p>{{ section.settings.left_description }}</p>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="login-right">
+    <div class="login-form-container">
+      <div class="login-form-box">
+        <h1>Sign In</h1>
+        <p>Please enter your details to access your account.</p>
+
+        {% form 'customer_login', id: 'customer_login' %}
+          {% render 'form-errors', form: form %}
+
+          <!-- Email Field -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customer_email">{{ 'customers.login_page.form_email_label' | t }}</label>
+              <div class="input-wrapper">
+                <input
+                  required
+                  type="email"
+                  value=""
+                  name="customer[email]"
+                  id="customer_email"
+                  placeholder="Enter your email address"
+                  {% if form.errors contains 'email' %}
+                    class="error"
+                  {% endif %}
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autofocus
+                >
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/email-icon.png?v=1773069188"
+                  alt="Email"
+                  class="input-icon"
+                >
+              </div>
+            </div>
+          </div>
+
+          {%- if form.password_needed -%}
+            <!-- Password Field -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customer_password">{{ 'customers.login_page.form_password_label' | t }}</label>
+                <div class="input-wrapper">
+                  <input
+                    required
+                    type="password"
+                    value=""
+                    name="customer[password]"
+                    id="customer_password"
+                    placeholder="Enter your password"
+                    {% if form.errors contains 'password' %}
+                      class="error"
+                    {% endif %}
+                  >
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/password-icon.png?v=1773069188"
+                    alt="Password"
+                    class="input-icon"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="forgot-password-link">
+              <a href="#recover" onclick="showRecoverPasswordForm();return false;">
+                {{- 'customers.login_page.forgot_password_check' | t -}}
+              </a>
+            </div>
+          {%- endif -%}
+
+          <!-- Stay Signed In Checkbox -->
+          <div class="form-checkbox">
+            <input type="checkbox" id="stay_signed_in" name="customer[remember_me]">
+            <label for="terms"
+              > By signing into your account, you agree to our<a href="/pages/terms-and-conditions" target="blank"
+                >Terms and Conditions</a
+              >
+              and <a href="/pages/privacy-policy" target="blank">Privacy Policy</a></label
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <button class="button button--solid button--regular submit-button" type="submit">
+            Sign In
+            <img
+              src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/arrow-icon.png?v=1773069777"
+              alt="arrow"
+              style="width:16px;height:16px;vertical-align:middle;margin-left:8px;"
+            >
+          </button>
+
+          <!-- Sign Up Link -->
+          <div class="signup-link"> Don't have an account?  <a href="{{ routes.account_register_url }}">Register here</a></div>
+        {% endform %}
+      </div>
+      <!-- Close login-form-box -->
+    </div>
+    <!-- Close login-form-container -->
+  </div>
+  <!-- Close login-right -->
+</div>
+<!-- Close login-wrapper -->
+
+<!-- Password Recovery Form -->
+<div id="recover_password" style="display: none;">
+  <div class="login-wrapper">
+    <div class="login-left">
+      {% if section.settings.left_background_image %}
+        <img
+          src="{{ section.settings.left_background_image | image_url: width: 800 }}"
+          alt="Reset Password"
+          class="login-left-img"
+        >
+      {% endif %}
+
+      {% if section.settings.enable_overlay %}
+        <div class="overlay"></div>
+      {% endif %}
+      <div class="login-left-content">
+      <h2>{{ section.settings.left_heading }}</h2>
+      <p>{{ section.settings.left_description }}</p>
+    </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-form-container">
+        <div class="login-form-box">
+          <h1>{{ 'customers.login_page.password_reset.title' | t }}</h1>
+          <p>{{ 'customers.login_page.password_reset.subtitle' | t }}</p>
+
+          {% form 'recover_customer_password', class: '' %}
+            {% render 'form-errors', form: form %}
+
+            {% if form.posted_successfully? %}
+              {% assign reset_success = true %}
+            {% endif %}
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="recover-email">{{ 'customers.login_page.password_reset.email_label' | t }}</label>
+                <div class="input-wrapper">
+                  <input
+                    required
+                    type="email"
+                    value=""
+                    name="email"
+                    id="recover-email"
+                    placeholder="Enter your email address"
+                    autocorrect="off"
+                    autocapitalize="off"
+                  >
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0684/5874/1933/files/email-icon.png?v=1773069188"
+                    alt="Email"
+                    class="input-icon"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+              <button type="submit" class="button button--solid button--regular submit-button" style="margin-top: 0;">
+                {{ 'customers.login_page.password_reset.submit_button' | t }}
+              </button>
+              <button
+                type="button"
+                class="button button--outline button--regular submit-button"
+                style=" margin-top: 0; border: 1px solid black;"
+                onclick="hideRecoverPasswordForm();return false;"
+              >
+                {{ 'customers.login_page.password_reset.cancel_button' | t }}
+              </button>
+            </div>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'account-login.js' | asset_url }}" defer></script>
+
+{% if reset_success %}
+  <style type="text/css">
+    #resetSuccess {
+      display: block !important;
+      margin-top: 25px;
+    }
+  </style>
+{% endif %}
+
+
+<!-- Dynamic Styles -->
+<style>
+  .login-left-content {
+    color: {{ section.settings.font_color }};
+  }
+
+  .login-left .overlay {
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+
+  @media (max-width: 768px) {
+    .login-left .overlay {
+      {% if section.settings.enable_mobile_overlay %}
+        background-color: {{ section.settings.mobile_overlay_color }};
+        opacity: {{ section.settings.mobile_overlay_opacity | divided_by: 100.0 }};
+      {% else %}
+        display: none;
+      {% endif %}
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.local-extra-words.sections.customers.login.name",
+  "class": "section--remove-bottom-margin-after",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_background_image",
+      "label": "Left Side Background Image"
+    },
+    {
+      "type": "text",
+      "id": "left_heading",
+      "label": "Left Side Heading",
+      "default": "Expert care starts with the right equipment."
+    },
+    {
+      "type": "textarea",
+      "id": "left_description",
+      "label": "Left Side Description",
+      "default": "Create an account to access our full range of medical supplies, manage your B2B orders, and receive specialised support from our healthcare consultants."
+    },
+
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font Color",
+      "default": "#F6F4F4"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enable Desktop Overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_overlay",
+      "label": "Enable Mobile Overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "mobile_overlay_color",
+      "label": "Mobile Overlay Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "mobile_overlay_opacity",
+      "label": "Mobile Overlay Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 50
+    }
+  ]
+}
+{% endschema %}

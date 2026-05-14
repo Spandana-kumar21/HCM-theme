@@ -1,0 +1,845 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "center": false
+      }
+    },
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24": {
+      "type": "rich-text",
+      "blocks": {
+        "title_93FEYR": {
+          "type": "title",
+          "settings": {
+            "title": "Homecare Medical & Sustainability",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We recognise that our operations impact every community, household, hospital and residential home in Ireland. We are committed to making a positive environmental and social impact. We believe in equality for all, and we strive to create opportunities for our customers to live a more sustainable life.<\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_93FEYR",
+        "template--20685976404315__15923bcc-43ce-4bf1-9097-94adeafd2c24-text-1"
+      ],
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".card__text h2 {color: #350078; margin-top: 1em;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "246e138e-af82-422b-b44a-b8ade034b0b8": {
+      "type": "rich-text",
+      "custom_css": [
+        ".gutter--xlarge {padding: 0 !important;}",
+        ".container--vertical-space {margin-top: 2rem;}",
+        ".rich-text__image figure {margin-bottom: 3rem;}",
+        ".rich-text__image figure img {border-radius: 10px !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sustainability.jpg",
+        "image_position": "top",
+        "height": "large",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_zR7Xrx": {
+      "type": "rich-text",
+      "blocks": {
+        "title_yM9wfd": {
+          "type": "title",
+          "settings": {
+            "title": "Our Goals",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "title_yM9wfd"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-center",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "text_columns_images_4PYnDc": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_WbXcYw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_3263.png",
+            "title": "1",
+            "caption": "We will reduce waste and provide goods and services in a more sustainable way",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UChYBT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gluten-free_17e28c68-26fb-46cc-a43f-9009f8fc0bae_png.png",
+            "title": "2",
+            "caption": "We will make a positive impact on our communities and beyond",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_UHKpyi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/corn-1084_png_b0d63a9c-faa1-4c9e-9719-57a6cbeae968.png",
+            "title": "3",
+            "caption": "We will collaborate with like-minded partners and suppliers",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_VriNja": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/meat-1037_ca0e1c8c-1dc9-4771-998e-f8947c4dc6a3_png.png",
+            "title": "4",
+            "caption": "We will empower our employees, our ambassadors and our customers to lead this charge",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_WbXcYw",
+        "image_UChYBT",
+        "image_UHKpyi",
+        "image_VriNja"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: auto; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); \/* object-fit: cover; *\/}",
+        ".h5 {color: #350078;}",
+        ".text-size--small {color: #350078 !important; opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "rich_text_VE4tgd": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QURTzt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are guided by the United Nations Sustainable Development Goals (UN SDGs), and we’re focused on the four most relevant to our business:<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_wByN7U": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Goal 5: Industry, Innovation and infrastructure\u2028<\/li><li>Goal 6: Sustainable Cities and Community\u2028<\/li><li>Goal 7:: Responsible Consumption & Production<\/li><li>Goal 8: Climate Action<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "text_QURTzt",
+        "text_wByN7U"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #33b793 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {border-top: 1px solid #ddd !important; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Unsplash_Image_02A_1.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_B9AMVR": {
+      "type": "rich-text",
+      "blocks": {
+        "title_m49jmf": {
+          "type": "title",
+          "settings": {
+            "title": "Our Journey to Sustainability",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "title_m49jmf"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Why ISO 14001?",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 2015, we retained accreditation of ISO 14001 Environmental Management Systems. This accreditation supports us in improving our environmental performance through efficient use of resources and the reduction of waste.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_HKrRtY": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>As part of our effort to maintain this accreditation we conduct audits on waste segregation and employee awareness.<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-title-1",
+        "template--20685976404315__3e119ea9-1b07-4a11-b992-c7f03c9cee14-text-1",
+        "text_HKrRtY"
+      ],
+      "custom_css": [
+        ".text-size--large p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/iso.jpg",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_mQq9y6": {
+      "type": "rich-text",
+      "blocks": {
+        "title_bkjea3": {
+          "type": "title",
+          "settings": {
+            "title": "Maximizing Smart Technology",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_4RrXL6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Logistics Department – In 2019, Homecare Medical introduced smart routes, a route optimisation software.\u2028Result 30% more eco<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_36yn7Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Result <\/strong>30% more economical with our route planning<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_3wXqjA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Finance Dept – In 2021, We introduced spindle document management system, this allows accounts payable to operate paperless.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_FA86C8": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Result<\/strong> Reducing paper by 10000 A4 pages a year<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_bkjea3",
+        "text_4RrXL6",
+        "text_36yn7Q",
+        "text_3wXqjA",
+        "text_FA86C8"
+      ],
+      "custom_css": [
+        ".text-size--regular {color: #350078;}",
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Unsplash_Image_02A_1_1.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083": {
+      "type": "rich-text",
+      "blocks": {
+        "title_QKjHVG": {
+          "type": "title",
+          "settings": {
+            "title": "Switching to Solar",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_ifqeMp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 2023, we implemented solar panels on our distribution centre. In March we installed a 25kw system in our distribution centre in Kiltimagh.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_zBKQrj": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Result<\/strong> The system has produced 12.477MWh in a six-month period and drastically reduced the buildings energy consumption from the grid.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_QKjHVG",
+        "text_ifqeMp",
+        "text_zBKQrj"
+      ],
+      "custom_css": [
+        ".text-size--regular {color: #350078;}",
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Unsplash_Image_01A.png",
+        "image_position": "left",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_PaTfNF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_6VHzj4": {
+          "type": "title",
+          "settings": {
+            "title": "The Move to Digital Working",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Ki4aP9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homecare Medical has a hybrid model of working where some staff can work from home during the week. Last year, Homecare Medical staff working from home days were 2662.5 days.<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_jPCGzm": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Result <\/strong>Saved 29.86 tones of Co2 saved from emissions.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_6VHzj4",
+        "text_Ki4aP9",
+        "text_jPCGzm"
+      ],
+      "custom_css": [
+        ".text-size--regular p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {border-top: 1px solid #ddd !important; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Unsplash_Image_02A_1_2.png",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9m6UwF": {
+          "type": "title",
+          "settings": {
+            "title": "Environmentally Friendly Products & Services",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Dry Wipes (flushable), Toilet Rolls (septic tank friendly)<\/li><li>Disposable Urinal (single use and can be macerated), Disposable Bowl (single use and can be macerated), Disposable Kidney Dish (single use and can be macerated) , MIP - Laundry bags<\/li><li>Taking back packaging supplied with products along with electrical products when supplying replacements<\/li><li>Our rental service promotes multi use rather than single use.<br\/><\/li><\/ul>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_9m6UwF",
+        "template--20685976404315__91317d70-2c8d-47c1-a95f-a74f7d6d49c9-text-1"
+      ],
+      "custom_css": [
+        ".h3 {color: #350078 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Unsplash_Image_01A_1.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_Kcjyf8": {
+      "type": "rich-text",
+      "blocks": {
+        "title_JhTBfe": {
+          "type": "title",
+          "settings": {
+            "title": "“Charity is the heartbeat of community,  that bridges the gap between those in need and those with the means to help, embodying the essence of human compassion and solidarity.\"",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Gtg8Gh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Mary McGuinness<\/strong><br\/><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_UPgE6z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homecare Medical Co-Founder<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_JhTBfe",
+        "text_Gtg8Gh",
+        "text_UPgE6z"
+      ],
+      "custom_css": [
+        ".h3 {color: #8b83e2 !important;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_TCD6MF": {
+      "type": "rich-text",
+      "blocks": {
+        "title_WBdRDd": {
+          "type": "title",
+          "settings": {
+            "title": "Charity is Important to Homecare Medical",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_qVcYx9": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>We have donated medical supplies to our Ukrainian friends, this included core consumables to the medics and hospitals<\/li><li>We have donated core consumables, defibrillators etc products to communities & hospitals across Ireland<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_WBdRDd",
+        "text_qVcYx9"
+      ],
+      "custom_css": [
+        ".text-size--regular p {color: #350078 !important;}",
+        ".h3 {color: #350078 !important;}",
+        ".container--large {border-top: 1px solid #ddd !important; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Charity_01A.jpg",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "27349f38-8738-4d3a-af38-1b3a9a162a3b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Personal Account",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up to benefit from a range of convenient features: <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_xQkhLJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><ul><li>Save your billing and delivery details<\/li><li>Easily check your order history <\/li><li>Compile a list of your future orders<\/li><\/ul>",
+            "text_size": "regular"
+          }
+        },
+        "button_KfmMVM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Sign Up",
+            "link": "https:\/\/41895f-3.myshopify.com\/account\/register",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        },
+        "button_XcNTHi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Login",
+            "link": "https:\/\/41895f-3.myshopify.com\/account\/login",
+            "button_size": "large",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-title-1",
+        "template--20685976404315__27349f38-8738-4d3a-af38-1b3a9a162a3b-text-1",
+        "text_xQkhLJ",
+        "button_KfmMVM",
+        "button_XcNTHi"
+      ],
+      "custom_css": [
+        ".text-size--regular ul li {color: #333 !important;}",
+        ".card__text > .increased-spacing:nth-child(1) {margin-right: 20px;}",
+        ".card__text > .increased-spacing:nth-child(2) {display: inline-block;}",
+        ".spacing--large > *.increased-spacing {margin-top: 1.5em; margin-bottom: 1.5em;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-us-homecare-medical_4.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "media_with_text_overlay_two_buttons_EnL4VQ": {
+      "type": "media-with-text-overlay-two-buttons",
+      "blocks": {
+        "image_9r6gUK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home-banner-1.jpg",
+            "caption": "INCONTINENCE",
+            "title": "Having the confidence to be comfortably you.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/incontinence",
+            "button_label": "View Products",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_MBmpwc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home-banner-2.jpg",
+            "caption": "BEDS",
+            "title": "Rediscover yourself with a good night’s rest.",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/beds",
+            "button_label": "View Products",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_hide_borders": false,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_9r6gUK",
+        "image_MBmpwc"
+      ],
+      "custom_css": [
+        ".card {display: flex; flex-direction: column;}",
+        ".card .card__text {order: 2; max-width: 100%;}",
+        ".card .card-image {order: 1 !important;}",
+        ".card__image--background {position: relative;}",
+        ".lazy-image.lazy-image--background {padding-top: unset !important; position: relative !important;}",
+        ".lazy-image[data-ratio] img {position: relative;}",
+        ".h3 {font-weight: 400;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-2 grid-lap-1",
+        "height": "regular",
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "width": "60%",
+        "caption_size": "small",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "regular",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "a9249859-da55-45da-ae74-bda358c2d07c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Quality, Assured.",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We pride ourselves in offering the optimum customer service, with a very strong emphasis on quality. We are proud holder of the following ISO certifications.\u2028<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/9001_ISO_9001_Amtivo_Certificate_Dec24.pdf?v=1744814955\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/9001_ISO_9001_Amtivo_Certificate_Dec24.pdf?v=1744814955\">ISO 9001 (Quality Management Systems) <\/a><\/p><p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/14001_ISO_14001_Amtivo_Certificate_Dec24.pdf?v=1744814957\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/14001_ISO_14001_Amtivo_Certificate_Dec24.pdf?v=1744814957\">ISO 14001 (Environmental Management System) <\/a><\/p><p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/13485_06.02.25_MD19.8100_Homecare_Medical_Supplies_IS_EN_ISO_13485-2016_Certificate.pdf?v=1744814954\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/13485_06.02.25_MD19.8100_Homecare_Medical_Supplies_IS_EN_ISO_13485-2016_Certificate.pdf?v=1744814954\">ISO 13485 (Medical Devices Quality Management Systems)<\/a><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-title-1",
+        "template--20685976404315__a9249859-da55-45da-ae74-bda358c2d07c-text-1",
+        "bb94c21c-6dda-4094-a18a-4cf5332f5cfa"
+      ],
+      "custom_css": [
+        ".text-size--regular p a {color: #350078;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/new_logos.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "15923bcc-43ce-4bf1-9097-94adeafd2c24",
+    "246e138e-af82-422b-b44a-b8ade034b0b8",
+    "rich_text_zR7Xrx",
+    "text_columns_images_4PYnDc",
+    "rich_text_VE4tgd",
+    "rich_text_B9AMVR",
+    "3e119ea9-1b07-4a11-b992-c7f03c9cee14",
+    "rich_text_mQq9y6",
+    "c0192f25-eec4-44fd-9b1b-3956e04a7083",
+    "rich_text_PaTfNF",
+    "91317d70-2c8d-47c1-a95f-a74f7d6d49c9",
+    "rich_text_Kcjyf8",
+    "rich_text_TCD6MF",
+    "27349f38-8738-4d3a-af38-1b3a9a162a3b",
+    "media_with_text_overlay_two_buttons_EnL4VQ",
+    "a9249859-da55-45da-ae74-bda358c2d07c"
+  ]
+}

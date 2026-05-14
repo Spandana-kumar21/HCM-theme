@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-b2b-test",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

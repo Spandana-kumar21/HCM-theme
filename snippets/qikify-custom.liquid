@@ -1,0 +1,35 @@
+{% if customer.b2b? %}
+  <script>
+    document.addEventListener('smartmenu-loaded', () => {
+      document.body.classList.add('b2b_customer')
+    })
+  </script>
+{% endif %}
+
+<style>
+  li.tmenu_item_level_0.b2b_menu {
+    display: none !important;
+  }
+  .b2b_customer li.tmenu_item_level_0.b2b_menu {
+    display: block !important;
+  }
+  .b2b_customer li.tmenu_item_level_0 {
+    display: none !important;
+  }
+  .menu_account,
+  .b2b_customer li.menu_account {
+    display: none !important;
+  }
+</style>
+
+{% if customer %}
+  <style>
+    .menu_personal,
+    .menu_trade {
+      display: none !important;
+    }
+    li.menu_account {
+      display: block !important;
+    }
+  </style>
+{% endif %}

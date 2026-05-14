@@ -1,0 +1,501 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-page-container\">\n        <div class=\"video-container\">\n                <img class=\"show-on-mobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/hero-01.jpg?v=1718195716\"> \n\t\t\t<img class=\"show-on-desktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/carisma-feat-img.jpg?v=1718195608\">\n                <div class=\"overlay\">\n                        <div class=\"rte text-size--regular\">\n                                <p>\n                                        Carisma SC Nursing Bed\n                                <\/p>\n                        <\/div>\n                        <h2 class=\"h2 rte rich-text__title\">\n                                Comfort and Safety<br>\n                                Redefined\n                        <\/h2>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Functionality with Comfort",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Carisma SC Nursing Bed is tailored for retirement and nursing homes, offering a perfect blend of functionality and comfort.  <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This advanced nursing bed meets the highest standards for caregivers and residents, ensuring safety, autonomy, and well-being.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "button_7RJCeP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a Demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_37F7HA",
+        "text_THFAz9",
+        "button_7RJCeP"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}",
+        ".card .button--solid {background: #6dd0bd; border-color: #6dd0bd; color: #350078 !important;}",
+        ".card .button--solid:hover {background: #350078; border-color: #350078; color: #fff !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/frame-01.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_begAtM": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #6dd0bd;}",
+        ".featured-block-image-c img {width: 100%; display: block;}",
+        ".text-size--large {font-weight: 400;}",
+        "@media only screen and (min-width: 1024px) {.featured-block-container-c {display: grid; grid-template-columns: 2fr 1.4fr; } .featured-block-image-c {grid-column: 1 \/ 2; grid-row: 1 \/ 2; } .featured-block-content-c {grid-column: 2 \/ 3; grid-row: 1 \/ 2; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"featured-block-container-c\">\n        <div class=\"featured-block-image-c\">\n                <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/mask-group.png?v=1718196695\">\n        <\/div>\n        <div class=\"featured-block-content-c\">\n                <div class=\"featured-block-content-container-c card__text spacing--large remove-empty-space\">\n                        \n                        <h2 class=\"h3 rte rich-text__title\">\n                               Enhanced Mobility <br>and Independence\n                        <\/h2>\n                        <div class=\"rte text-size--large\">\n                                <p>\n                                        Promoting individual mobility, the Carisma SC features four adjustable side rail heights, doubling as stand-up aids. With the optional SafeSense® bed-exit system, residents can self-mobilize safely and confidently.\n                                <\/p>\n                        <\/div>\n                       \n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jzTycy": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qHztD9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bed-alt.svg",
+            "title": "Adjustable Side Rails",
+            "caption": "Four height settings assist\u2028in standing up.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_9tpF8A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bed-empty.svg",
+            "title": "SafeFree® Side Rails",
+            "caption": "Supports safe movement and active fall prevention.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_LAnB7w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/face-sleeping_1.svg",
+            "title": "Low Sleeping Height",
+            "caption": "Safe sleeping height of 25 cm to minimise fall risk.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KNEFWH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/user-nurse_1.svg",
+            "title": "Ergonomic Nursing Height",
+            "caption": "Adjustable up to 80 cm for back-friendly care routines.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qHztD9",
+        "image_9tpF8A",
+        "image_LAnB7w",
+        "image_KNEFWH"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}",
+        ".text-color--opacity {opacity: 1;}"
+      ],
+      "settings": {
+        "heading": "Key Features",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "#1d1d1d",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_Ne8KUp": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {color: #350078; text-align: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"card__text \n           \n           gutter-top--xlarge gutter-bottom--xlarge  \n        spacing--large remove-empty-space\"><h2 class=\"h2 rte rich-text__title\">\n                  Optimised Safety, Comfort and Ergonomics\n                <\/h2>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "Effective Falls Prevention",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_d4CQAg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designed with effective fall prevention in mind, the Carisma SC Nursing Bed reduces the risk of serious falls with a safe sleeping height of 25 cm. <strong>The adaptable side rails can be configured to meet both room and individual safety requirements.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_d4CQAg"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2_jpg_020eab74-02d1-4586-b37e-d6ece036ec84.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_jLdnCC": {
+      "type": "rich-text",
+      "blocks": {
+        "title_9Xby3A": {
+          "type": "title",
+          "settings": {
+            "title": "Care Ergonomics",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_jKCdcn": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Supporting nursing staff, the Carisma SC offers an ergonomic nursing height of up to 80 cm, facilitating back-friendly care. Automatic positions can be easily set with a touch of a button on the handset, streamlining care routines.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_9Xby3A",
+        "text_jKCdcn"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2.jpg_1.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_9Kr4Yg": {
+      "type": "rich-text",
+      "blocks": {
+        "title_hR3kXg": {
+          "type": "title",
+          "settings": {
+            "title": "Resident Comfort",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_QQTNL7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Combining homely design with functionality, the Carisma SC ensures residents feel at home. <strong>A variety of mattress options cater to different needs, and the handset’s backlighting allows for easy operation even in the dark.<\/strong><\/p>",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "title_hR3kXg",
+        "text_QQTNL7"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2.jpg_2.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".button {border-color: #6ecfbc; color: #350078; background: #6ecfbc; margin: 30px auto; display: block; max-width: 300px;}",
+        ".button:hover {border-color: #350078; color: #fff; background: #350078;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/pages\/contact\">Book a Demo<\/a>\n                        <\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_cy9JYz": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".download-pdf-brochure {text-align: center; background: #f8f8f8; padding: 60px 15px; border-radius: 10px;}",
+        ".download-pdf-brochure h2 {font-size: 1.5em; font-weight: 600;}",
+        "#downlaod-btn {position: relative;}",
+        ".download-pdf-brochure span {font-size: 1.5em; display: block; margin-bottom: 1.4em;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"download-pdf-brochure-wrapper\">\n  <div class=\"download-pdf-brochure\">\n    <h2>Interested in enhancing care with the Carisma SC Nursing Bed?<\/h2>\n    <span>Find more details in our brochure.<\/span>\n    <a id=\"downlaod-btn\" class=\"uil-download-alt button button--large button--outline\" target=\"_blank\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Carisma_Brochure_Web_Version.pdf?v=1718203318\">Download PDF Brochure<\/a>\n  <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_9ajmYq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_LWdbGh": {
+      "type": "marquee",
+      "blocks": {
+        "text_EQw3bC": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_Hnf4m8": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €50.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EQw3bC",
+        "text_Hnf4m8"
+      ],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "custom_liquid_begAtM",
+    "text_columns_images_jzTycy",
+    "custom_liquid_Ne8KUp",
+    "rich_text_wkfpdL",
+    "rich_text_jLdnCC",
+    "rich_text_9Kr4Yg",
+    "custom_liquid_ckhnBR",
+    "custom_liquid_cy9JYz",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_9ajmYq",
+    "marquee_LWdbGh"
+  ]
+}

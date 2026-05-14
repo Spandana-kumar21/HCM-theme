@@ -1,0 +1,544 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_d7hBCx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"tofarvel-video-poster\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/video-poster_86e9560e-22cf-4716-bb5c-9515094fb6d4.jpg?v=1717747573\">\n        <video id=\"video\" autoplay=\"\" loop=\"\"><source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b694ea96a40e4b4e9cde165acc21ecb4.mp4\" type=\"video\/mp4\"> Your browser does not support the video tag.<\/video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Homecare Medical\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                        Empowering\u2028<br>your life at home\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                        <div class=\"increased-spacing\">\n                                <a href=\"#shopify-section-template--22909691363675__custom_liquid_ckhnBR\" class=\"button button--large button--outline\" >See our mission<\/a>\n                        <\/div>\n                       \n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": false
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Safeguarding \u2028your independence",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Homecare Medical, we deliver the support \u2028you need right to your doorstep. <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're caring for a loved one, receiving care, or caring for yourself, we're here to ensure every moment at home is filled with comfort and dignity.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_37F7HA",
+        "text_THFAz9"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_1_jpg_ef34106c-21b2-4ab6-bf0d-6f0045c61e6b.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_JPKaJh": {
+      "type": "rich-text",
+      "blocks": {
+        "title_CMmeYX": {
+          "type": "title",
+          "settings": {
+            "title": "Why we care",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_6Bkaim": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every journey at home is unique. \u2028\u2028<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_B8AjD6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From challenging nights to joyful days, we’re here to support and empower you, ensuring every moment is lived to its fullest.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_CMmeYX",
+        "text_6Bkaim",
+        "text_B8AjD6"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #fff;}",
+        ".text-size--regular {color: #fff;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_1.jpg_1.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "#350078",
+        "color_text_main": "#33b692",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "text_columns_images_b6d3QA": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_HxAdFp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/user_1_59915349-4182-4365-8960-4959dc1958d9.svg",
+            "title": "Caregiver Support",
+            "caption": "Empowering caregivers with tools and knowledge to provide the best care.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_jG4Rah": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/self-love_1.svg",
+            "title": "Personal Care",
+            "caption": "Innovative solutions for those who wish to maintain independence at home",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_bCGKJ8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/corn-1084_f6e8128e-cecb-4905-974e-cf688e4845a1.png_1.svg",
+            "title": "Comprehensive Care",
+            "caption": "Complete-care solutions, from mobility aids to daily living accessories.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_HxAdFp",
+        "image_jG4Rah",
+        "image_bCGKJ8"
+      ],
+      "custom_css": [
+        ".lazy-image img {object-fit: inherit; border-radius: 0 !important;}",
+        ".lazy-image {border-radius: 0 !important;}",
+        ".lazy-image[data-ratio] img {position: absolute; \/* top: 0; *\/ height: 70px; width: 70px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}",
+        ".h5 {color: #350078;}",
+        ".section-heading__title {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px) !important;}",
+        ".card__icon-size--large {width: 160px !important; height: 160px !important;}"
+      ],
+      "settings": {
+        "heading": "How we help",
+        "subheading": "",
+        "section_heading_layout": "section-heading--center",
+        "style": "grid",
+        "layout": "grid-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_ckhnBR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "img {width: 100%;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"tofarvel-video-poster\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/video-poster-2.jpg?v=1717747733\">\n        <img id=\"video\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/div.card__image.png?v=1717582887\">\n        <div class=\"no-overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Homecare Medical\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                       Our Mission\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                       \n                        <div class=\"increased-spacing\">\n                                <a class=\"mobx button button--large button--outline\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c07b6c01242a4398af2b7b5e0e1114b9.mp4\">Watch Video<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "rich_text_wkfpdL": {
+      "type": "rich-text",
+      "blocks": {
+        "title_dY4k3Y": {
+          "type": "title",
+          "settings": {
+            "title": "Solutions built for you",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Gbzaxh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With a deep understanding of your needs, we're committed to providing discreet, tailored care solutions to help you keep doing what you love.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_dY4k3Y",
+        "text_Gbzaxh"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2_jpg_34c6080d-6613-43ec-94bb-b690d5715158.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "e5d33890-e104-4507-b42a-a40303dc52ab": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Figure_promo_bread_27dc722f-4f6d-4b81-b75d-542077a4156a_jpg.png",
+            "caption": "Mobility Solutions",
+            "title": "Move freely,\u2028live fully",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/mobility",
+            "button_label": "Explore now",
+            "color_background_main": "#c2bff3",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Figure_promo_superfoods_242a5de7-13e1-48e3-a56e-6c3013431280_jpg.png",
+            "caption": "Daily Living Aids",
+            "title": "Simplify your everyday",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/daily-living-aids",
+            "button_label": "Explore now",
+            "color_background_main": "#99ded0",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Figure_promo_pure_7c759baf-9767-4fc0-bee1-99e0ad3d0a9c_jpg.png",
+            "caption": "Nurse Station",
+            "title": "Essential Care Tools",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/care-essentials",
+            "button_label": "Explore now",
+            "color_background_main": "#f8f1e4",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3"
+      ],
+      "custom_css": [
+        ".card__text h3 {font-weight: 400;}",
+        ".button--outline:hover {background-color: #350078; border-color: #350078;}",
+        ".button--outline {color: #350078; border: 1px solid #350078;}",
+        ".button--outline:hover {color: #fff; background: #350078;}",
+        "h2 {font-size: calc(32px \/ 60 * var(--base-headings-size) + 0px); color: #350078;}",
+        ".card__text h3 {font-weight: 400; font-size: 28px; min-height: 68px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "testimonials_niKpRT": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_qPJLfE": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Helen - Registered Nurse",
+            "author_title": "Professional Endorsement",
+            "quote": "<p>During my father’s illness, Homecare Medical proved invaluable. As a retired registered nurse, I was particularly impressed by their swift and efficient service. The quality of their equipment and customer support truly stood out. I wholeheartedly recommend them to anyone considering home nursing care.<\/p>",
+            "image": "shopify:\/\/shop_images\/div.testimonial__avatar-image_46b19848-cbfb-49f2-a91a-882ca21cf33b.png"
+          }
+        },
+        "testimonial_rBDFYi": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "author_name": "Author",
+            "author_title": "Customer",
+            "quote": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_qPJLfE",
+        "testimonial_rBDFYi"
+      ],
+      "custom_css": [
+        ".h4 {font-size: calc(42px \/ 60 * var(--base-headings-size) + 0px); color: #3c0077;}",
+        ".testimonials--center .testimonial {padding: 0 12%;}"
+      ],
+      "settings": {
+        "heading": "Hear from our happy homes",
+        "subheading": "Explore the testimonials of families who trust our care solutions.",
+        "section_heading_layout": "section-heading--center",
+        "quote_font": "poppins_i4",
+        "quote_font_size": 24,
+        "quote_line_height": 1.5,
+        "content_alignment": "center",
+        "color_background_main": "#e5daf3",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_ae563507-89f4-4c6a-8057-38cc0bbf0587.png",
+            "title": "Our Price Promise",
+            "caption": "We match over 5,000 products, all with the same exceptional service & support",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    },
+    "newsletter_jgakdH": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "show_icon": true,
+        "title": "Sign up and save 10% off orders over €50",
+        "text": "<p>By signing up, you not only gain access to our range of quality products and services but also unlock the benefit of reduced pricing.<\/p>",
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "custom_liquid_4qwXDc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-WhcdXW\"><\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "marquee_f9Uab3": {
+      "type": "marquee",
+      "blocks": {
+        "text_QVcWUQ": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>Opened a new store in <\/em><em><strong>Ballyhaunis<\/strong><\/em><em>. Check it Out!<\/em>"
+          }
+        },
+        "text_eLnwg6": {
+          "type": "text",
+          "settings": {
+            "marquee_text": "<em>FREE SHIPPING on orders above €75.<\/em>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QVcWUQ",
+        "text_eLnwg6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "scroll_direction": "left",
+        "speed": 100,
+        "pause_on_hover": false,
+        "remove_top_margin": false,
+        "remove_bottom_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#1d1d1d"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_d7hBCx",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "rich_text_JPKaJh",
+    "text_columns_images_b6d3QA",
+    "custom_liquid_ckhnBR",
+    "rich_text_wkfpdL",
+    "e5d33890-e104-4507-b42a-a40303dc52ab",
+    "testimonials_niKpRT",
+    "text_columns_images_jaDike",
+    "newsletter_jgakdH",
+    "custom_liquid_4qwXDc",
+    "marquee_f9Uab3"
+  ]
+}

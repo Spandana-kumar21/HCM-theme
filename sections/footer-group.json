@@ -1,0 +1,83 @@
+{
+  "type": "footer",
+  "name": "t:sections.refactor_words.labels.footer_group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "size": "h5",
+            "content": "",
+            "show_social_icons": true,
+            "enable_follow_on_shop": false
+          }
+        },
+        "menu-1": {
+          "type": "menu",
+          "settings": {
+            "title": "Popular Categories",
+            "menu": "main-menu"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "title": "Get in Touch",
+            "size": "h5",
+            "content": "<p><strong>Homecare Medical, \u2028Tooraree, Knock Road, Ballyhaunis, Co. Mayo, \u2028F35 KW83<\/strong><\/p><p>LoCall: <a href=\"tel:0818 911 555\" title=\"tel:0818 911 555\">0818 911 555<\/a><\/p><p>Phone: <a href=\"tel:+353 (094) 9633 800\" title=\"tel:+353 (094) 9633 800\">+353 (094) 9633 800<\/a><\/p><p>Email: <a href=\"mailto:info@homecaremedical.ie\" title=\"mailto:info@homecaremedical.ie\">info@homecaremedical.ie<\/a><\/p>",
+            "show_social_icons": false,
+            "enable_follow_on_shop": false
+          }
+        },
+        "menu-2": {
+          "type": "menu",
+          "settings": {
+            "title": "Quick Links",
+            "menu": "quick-links"
+          }
+        }
+      },
+      "block_order": [
+        "text-1",
+        "menu-1",
+        "text-2",
+        "menu-2"
+      ],
+      "custom_css": [
+        ".footer-item__title {font-weight: 400;}",
+        ".grid--gap-xlarge {gap: 20px !important; --col-gap: 0px;}"
+      ],
+      "settings": {
+        "layout": "grid-4 grid-portable-2 grid-lap-1",
+        "show_locale_selector": false,
+        "show_country_selector": false,
+        "remove_margin": false,
+        "seo_h_tag": "h4"
+      }
+    },
+    "1728563825dcaee2e5": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_Lr67ry": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_Lr67ry"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "1728563825dcaee2e5"
+  ]
+}

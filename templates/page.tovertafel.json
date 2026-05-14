@@ -1,0 +1,870 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "center": false
+      }
+    },
+    "custom_liquid_wP8eKM": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 0;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img class=\"tofarvel-video-poster\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/video-poster.jpg?v=1717745373\">\n        <video id=\"video\" autoplay=\"\" loop=\"\"><source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9f5d4c125c2a4f87ba17dd0a3d453f17.mp4\" type=\"video\/mp4\"> Your browser does not support the video tag.<\/video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Innovation\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                       Sparking Joy<\/br>\u2028Through Tovertafel\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                       \n                        <div class=\"increased-spacing\">\n                                <a class=\"mobx button button--large button--outline\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/23178f0712934612a55e53166a5cf88b.mp4\">See Tovertafel in Action<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": true,
+        "remove_margin": true
+      }
+    },
+    "6e087eab-3dbe-4205-8598-6edc1efc119b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Enhancing Life Through \u2028Cognitive Play",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_37F7HA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tovertafel is transforming care with innovative games designed to enhance the daily experiences of individuals with cognitive challenges. <\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_THFAz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>These games not only offer fun and engagement but also support significant improvements in quality of life for both participants and their caregivers.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__6e087eab-3dbe-4205-8598-6edc1efc119b-title-1",
+        "text_37F7HA",
+        "text_THFAz9"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--large p {font-weight: 600; color: #333;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {font-weight: 500;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/01-Intro_1.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_PNhCnn": {
+      "type": "rich-text",
+      "blocks": {
+        "title_Gyamhx": {
+          "type": "title",
+          "settings": {
+            "title": "Interactive Light Projections",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_ekbaaG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Captivate and engage with games that respond to the smallest movements, enhancing motor skills and cognitive function.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "title_kCDdx8": {
+          "type": "title",
+          "settings": {
+            "title": "Customized Games",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_Kjp8nw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From stimulating the senses with colourful visuals and sounds to encouraging physical activity, our games cater to specific needs, providing tailored support for users.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_Gyamhx",
+        "text_ekbaaG",
+        "title_kCDdx8",
+        "text_Kjp8nw"
+      ],
+      "custom_css": [
+        ".rich-text__title {color: #6dcfbd;}",
+        ".rich-text__container--image-right {padding: 40px 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Tovertafel_Image_02A.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false
+      }
+    },
+    "rich_text_jNUxQA": {
+      "type": "rich-text",
+      "blocks": {
+        "title_wLxCzy": {
+          "type": "title",
+          "settings": {
+            "title": "Who Benefits from Tovertafel?",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "title_wLxCzy"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "small",
+        "image_crop": true,
+        "text_alignment": "horizontal-center",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_VdwVn4": {
+      "type": "rich-text",
+      "blocks": {
+        "title_H7CMXh": {
+          "type": "title",
+          "settings": {
+            "title": "Seniors with dementia",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_k9jnQ3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Enhance the well-being of seniors with dementia through Tovertafel's interactive games. <\/strong>Designed for individual or group play, these games effectively stimulate physical, cognitive, social, and sensory engagement, promoting movement, interaction, and joy.<br\/><br\/><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_H7CMXh",
+        "text_k9jnQ3"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {}",
+        ".text-size--large {color: #333;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Tovertafel_Seniors_Image_03A.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": true,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_VVEjBx": {
+      "type": "rich-text",
+      "blocks": {
+        "title_KQmKB6": {
+          "type": "title",
+          "settings": {
+            "title": "Adults with intellectual difficulties",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_TUKmU6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tailored to meet diverse needs, Tovertafel's games offer a supportive environment where adults with intellectual disabilities can engage without the fear of making mistakes. Each session is an opportunity for personal growth and building confidence, enhancing daily life one game at a time.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_KQmKB6",
+        "text_TUKmU6"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Tovertafel_ID_Image_04A.png",
+        "image_position": "right",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_ALhwFQ": {
+      "type": "rich-text",
+      "blocks": {
+        "title_tYiFhU": {
+          "type": "title",
+          "settings": {
+            "title": "Children with special needs",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_t83dQz": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tover emphasizes the power of play in education and development. <\/strong>For children with special needs, engaging in Tovertafel’s playful activities not only enhances social-emotional learning and focus but also supports teachers in creating an inclusive classroom environment where every child can thrive.<br\/><\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_tYiFhU",
+        "text_t83dQz"
+      ],
+      "custom_css": [
+        ".rich-text__title {font-weight: 400;}",
+        ".text-size--regular {color: #1d1d1d;}",
+        ".text-size--regular p {}",
+        ".text-size--large {color: #333;}",
+        ".spacing--large > *.increased-spacing {display: inline-block;}",
+        "@media only screen and (min-width: 768px) {.card__text {padding: 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Tovertafel_Kids_Image_05A.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "rich_text_4V6qDa": {
+      "type": "rich-text",
+      "blocks": {
+        "button_QTzH9M": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "button_QTzH9M"
+      ],
+      "custom_css": [
+        ".increased-spacing a {width: 350px; background: #6ccfbd; border-color: #6ccfbd; color: #3c0077;}",
+        ".increased-spacing a:hover {background: #3c0077; border-color: #3c0077; color: #fff;}"
+      ],
+      "settings": {
+        "image_position": "top no-image",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-center",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "custom_liquid_rAygcN": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".video-container img {width: 100%; display: block; border-radius: 10px;}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Tovertafel_Full_Video.-poster.jpg?v=1716998654\">\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Innovation\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                       Watch Tovertafel <br>\n                        in Action\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline  mobx\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9f5d4c125c2a4f87ba17dd0a3d453f17.mp4\" data-poster=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/Tovertafel_Full_Video.-poster.jpg?v=1716998654\">Watch Video<\/a>\n                        <\/div>\n                        \n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "custom_liquid_YbTTqq": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb-main {display: none;}",
+        ".overlay {border-radius: 10px;}",
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {border-color: #6ecfbc; color: #350078; background: #6ecfbc;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n<img style=\" border-radius:10px;\" class=\"tofarvel-video-poster\" src=https:\/\/cdn.shopify.com\/s\/files\/1\/0801\/1307\/4523\/files\/video-poster.jpg?v=1717745373\">\n        <video id=\"video\" autoplay=\"\" loop=\"\"><source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9f5d4c125c2a4f87ba17dd0a3d453f17.mp4\" type=\"video\/mp4\"> Your browser does not support the video tag.<\/video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Innovation\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                       Sparking Joy<\/br>\u2028Through Tovertafel\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                       \n                        <div class=\"increased-spacing\">\n                                <a class=\"mobx button button--large button--outline\" href=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/23178f0712934612a55e53166a5cf88b.mp4\">See Tovertafel in Action<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>",
+        "full_width": false,
+        "remove_margin": true
+      }
+    },
+    "text_columns_icons_pPWbm4": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "image_8RXX9k": {
+          "type": "image",
+          "settings": {
+            "icon": "delivery",
+            "image": "shopify:\/\/shop_images\/brain_1.svg",
+            "title": "Cognitive",
+            "caption": "Boost alertness and focus while enhancing memory and problem-solving skills.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_gYcLEB": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "image": "shopify:\/\/shop_images\/user_1.svg",
+            "title": "Physical",
+            "caption": "Promote fine motor skills and general physical activity through fun, interactive games.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_GjFdqq": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "image": "shopify:\/\/shop_images\/people_2.svg",
+            "title": "Social",
+            "caption": "Encourage social interaction, enhancing emotional connections among users and caregivers.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_9aVWRc": {
+          "type": "image",
+          "settings": {
+            "icon": "tree",
+            "image": "shopify:\/\/shop_images\/self-love_1.svg",
+            "title": "Sensory",
+            "caption": "Stimulate senses in a relaxed, enjoyable way, helping to reduce anxiety and improve overall mood.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_8RXX9k",
+        "image_gYcLEB",
+        "image_GjFdqq",
+        "image_9aVWRc"
+      ],
+      "custom_css": [
+        ".text-size--small {color: #333333 !important; opacity: 0.8;}",
+        "@media screen and (min-width: 1024px) {h4, .h4 {font-size: 2em; }}"
+      ],
+      "settings": {
+        "heading": "How Tovertafel Enhances Lives",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "grid",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 200,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h4"
+      }
+    },
+    "rich_text_nPpyMH": {
+      "type": "rich-text",
+      "blocks": {
+        "title_7WV3fa": {
+          "type": "title",
+          "settings": {
+            "title": "Featured Games",
+            "title_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_yHJDY4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rainbow<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_fCemHD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A multi sensory delight enhancing colour and sound recognition.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_iwXGHX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sheet Music<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_gwaqzd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Foster joy and movement with musical notes that play familiar tunes.<\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_GHCnyz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mole Hunt<\/p>",
+            "text_size": "large"
+          }
+        },
+        "text_BkCeif": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Encourage faster and further arm movements in a fun, nostalgic game.<\/p>",
+            "text_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "title_7WV3fa",
+        "text_yHJDY4",
+        "text_fCemHD",
+        "text_iwXGHX",
+        "text_gwaqzd",
+        "text_GHCnyz",
+        "text_BkCeif"
+      ],
+      "custom_css": [
+        ".rich-text__title,.text-size--large {color: #6ccfbd;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HCM_Tovertafel_Featured_Games_07A.jpg",
+        "image_position": "right",
+        "height": "regular",
+        "image_crop": true,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": true,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "#350078",
+        "color_text_main": "#ffffff",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false
+      }
+    },
+    "featured_collection_6fDXC9": {
+      "type": "featured-collection",
+      "blocks": {
+        "price_8EERbF": {
+          "type": "price",
+          "settings": {}
+        },
+        "title_6eQVGf": {
+          "type": "title",
+          "settings": {}
+        },
+        "quick_buy_MhanbJ": {
+          "type": "quick_buy",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price_8EERbF",
+        "title_6eQVGf",
+        "quick_buy_MhanbJ"
+      ],
+      "settings": {
+        "heading": "Complementary Aids for Tovertafel Users",
+        "subheading": "",
+        "show_view_all": true,
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 8,
+        "collection": "daily-living-aids",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "testimonials_HhidMP": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_YxY3MA": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Siobhan Murphy",
+            "author_title": "Senior Caregiver at Dublin Health Care Center",
+            "quote": "<p><em>Tovertafel has been a game-changer in our care sessions, sparking joy and improving engagement for my patients. It’s heartening to see such a positive shift in their mood and interaction.<\/em><\/p>",
+            "image": "shopify:\/\/shop_images\/div.testimonial__avatar-image_46b19848-cbfb-49f2-a91a-882ca21cf33b.png"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_YxY3MA"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "quote_font": "poppins_n4",
+        "quote_font_size": 24,
+        "quote_line_height": 1.5,
+        "content_alignment": "center",
+        "color_background_main": "#e5daf3",
+        "color_text_main": "#1d1d1d",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": false,
+        "color_hide_shadow": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "rich_text_kQpH3j": {
+      "type": "rich-text",
+      "blocks": {
+        "title_BBWQte": {
+          "type": "title",
+          "settings": {
+            "title": "Transforming Lives",
+            "title_size": "h3",
+            "seo_h_tag": "h2"
+          }
+        },
+        "text_kfGcz9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether enhancing cognitive abilities, fostering social connections, or simply bringing joy, Tovertafel is here to make a positive impact. <\/p>",
+            "text_size": "regular"
+          }
+        },
+        "text_nN4aF3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Have questions or interested in seeing Tovertafel in action?<\/strong> Click 'Book Demo' below to request a free demonstration from the Homecare Medical team.<br\/><\/p>",
+            "text_size": "regular"
+          }
+        },
+        "button_nXyqaJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book a demo",
+            "link": "shopify:\/\/pages\/contact",
+            "button_size": "large",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "title_BBWQte",
+        "text_kfGcz9",
+        "text_nN4aF3",
+        "button_nXyqaJ"
+      ],
+      "custom_css": [
+        "p {color: #1d1d1d;}",
+        "a {background: #6ccfbd; border-color: #6ccfbd; color: #3c0077;}",
+        "a:hover {background: #3c0077; border-color: #3c0077; color: #fff;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Figure_about_us_2_jpg.png",
+        "image_position": "left",
+        "height": "small",
+        "image_crop": false,
+        "text_alignment": "horizontal-left",
+        "is_fullwidth": false,
+        "section_background_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "#350078",
+        "color_accent_main": "rgba(0,0,0,0)",
+        "color_borders_main": "rgba(0,0,0,0)",
+        "color_shadow_main": "rgba(0,0,0,0)",
+        "color_hide_borders": true,
+        "color_hide_shadow": true
+      }
+    },
+    "e5d33890-e104-4507-b42a-a40303dc52ab": {
+      "type": "promotion-cards",
+      "blocks": {
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Mobility_Aids_Image_01A.jpg",
+            "caption": "Mobility Aids",
+            "title": "Enhance Movement, Enhance Life",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/mobility",
+            "button_label": "Show more",
+            "color_background_main": "#c2bff3",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Daily_Living_Aids_Image_01A.jpg",
+            "caption": "Daily Living Aids",
+            "title": "Simplify Daily \u2028Tasks",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/daily-living-aids",
+            "button_label": "Show more",
+            "color_background_main": "#99ded0",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HCM_Daily_Bedroom_Comforts_Image_01A.jpg",
+            "caption": "Bedroom Comforts",
+            "title": "Restful Solutionsfor Better Sleep",
+            "subtitle": "",
+            "link": "shopify:\/\/collections\/bedroom",
+            "button_label": "Show more",
+            "color_background_main": "#f8f1e4",
+            "color_text_main": "rgba(0,0,0,0)",
+            "color_accent_main": "rgba(0,0,0,0)",
+            "color_borders_main": "rgba(0,0,0,0)",
+            "color_shadow_main": "rgba(0,0,0,0)",
+            "color_hide_borders": true,
+            "color_hide_shadow": false,
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-1",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-2",
+        "template--20503782687067__e5d33890-e104-4507-b42a-a40303dc52ab-card-3"
+      ],
+      "custom_css": [
+        ".card__text h3 {font-weight: 400;}",
+        ".button--outline:hover {background-color: #350078; border-color: #350078;}",
+        ".button--outline {color: #350078; border: 1px solid #350078;}",
+        ".button--outline:hover {color: #fff; background: #350078;}",
+        "h2 {font-size: calc(32px \/ 60 * var(--base-headings-size) + 0px); color: #350078;}",
+        ".card__text h3 {font-weight: 400; font-size: 28px; min-height: 68px;}"
+      ],
+      "settings": {
+        "heading": "Stimulate the Senses",
+        "subheading": "Complement the cognitive and sensory benefits of Tovertafel games with practical and supportive products from Homecare Medical Supplies.",
+        "section_heading_layout": "section-heading--left",
+        "layout": "grid-3 grid-lap-1",
+        "image_aspect_ratio": "1",
+        "text_alignment": "text-align--center",
+        "caption_size": "regular",
+        "title_size": "h3",
+        "subtitle_size": "regular",
+        "button_size": "large",
+        "button_style": "outline",
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "text_columns_images_jaDike": {
+      "type": "text-columns-images",
+      "blocks": {
+        "image_qct6JB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_KBBLt4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_hgttPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "title": "Local delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        },
+        "image_ethYPH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "image_qct6JB",
+        "image_KBBLt4",
+        "image_hgttPw",
+        "image_ethYPH"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h3"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_wP8eKM",
+    "6e087eab-3dbe-4205-8598-6edc1efc119b",
+    "rich_text_PNhCnn",
+    "rich_text_jNUxQA",
+    "rich_text_VdwVn4",
+    "rich_text_VVEjBx",
+    "rich_text_ALhwFQ",
+    "rich_text_4V6qDa",
+    "custom_liquid_rAygcN",
+    "custom_liquid_YbTTqq",
+    "text_columns_icons_pPWbm4",
+    "rich_text_nPpyMH",
+    "featured_collection_6fDXC9",
+    "testimonials_HhidMP",
+    "rich_text_kQpH3j",
+    "e5d33890-e104-4507-b42a-a40303dc52ab",
+    "text_columns_images_jaDike"
+  ]
+}

@@ -1,0 +1,207 @@
+<div {% if customer.b2b? %} id="product-price-container-b2b" {%- endif -%} class="product-price">
+
+  {%- liquid
+    assign show_price = true
+    assign vat_rate = metafields.custom.tax_rate
+    assign vat_multiplier = vat_rate | divided_by: 100 | plus: 1
+  -%}
+
+  {%- if product_price_varies -%}
+    <div class="product-price-original-container_2">
+      <span class="product-price--original" data-js-product-price-original>
+        {%- liquid
+          if customer.b2b?
+            assign price = target.price | money
+          else
+            assign vat_rate = metafields.custom.tax_rate
+            assign vat_multiplier = vat_rate | divided_by: 100 | plus: 1
+            assign gross_price = target.price | times: vat_multiplier
+            assign price = gross_price | money
+          endif
+
+          if show_price
+            if target.compare_at_price > target.price or target.compare_at_price_varies
+              if customer.b2b?
+                echo 'Unit price '
+              endif
+              echo 'products.grid.on_sale_from_html' | t: price: price
+            else
+              if customer.b2b?
+                echo 'Unit price '
+              endif
+              echo 'products.grid.from_text_html' | t: price: price
+            endif
+          endif
+        -%}
+      </span>
+      <span class="homecare-price-type">
+        {%- liquid
+          if customer.b2b?
+            echo 'products.custom.ex_vat' | t
+          else
+            echo 'products.custom.inc_vat' | t
+          endif
+        -%}
+      </span>
+
+    </div>
+  {%- else -%}
+    <div class="product-price-original-container_2">
+        <div class="product-price-original-container_inner_2">
+        <span class="product-price--original {{ text_size_class }}" data-js-product-price-original="{{ product.id }}">
+          {%- liquid
+            if show_price == true and is_plp == false
+              if customer.b2b?
+                if target.compare_at_price > target.price
+                  echo '<span class="now-price-b2b-text">now</span>'
+                  echo '<span class="now-price-b2b-amount">'
+                  echo target.price | money
+                  echo '</span>'
+                else
+                  echo 'Unit Price: '
+                  echo target.price | money
+                endif
+              else
+                assign vat_rate = metafields.custom.tax_rate
+                assign vat_multiplier = vat_rate | divided_by: 100 | plus: 1
+                assign gross_price = target.price | times: vat_multiplier
+                assign price = gross_price | money
+                if product.tags contains "Subscribe and Save"
+                  echo price 
+                else
+                  echo price
+                endif
+              endif
+            elsif is_plp == true and customer and customer.b2b? == false
+              echo target.price | times: vat_multiplier | money
+            elsif is_plp == true and customer == null
+              echo target.price | times: vat_multiplier | money
+            endif
+          -%}
+        </span>
+        <span class="homecare-price-type">
+        {%- liquid
+          if show_price and is_plp == false
+            if customer.b2b?
+              echo 'products.custom.ex_vat' | t
+            else
+              echo 'products.custom.inc_vat' | t
+            endif
+          endif
+        -%}
+        </span>
+      </div>
+    </div>
+    {% if is_plp %}
+
+      <div class="plp-customer-b2b-price">
+        {%- liquid
+       if show_price
+        if target.compare_at_price > target.price
+          if show_saving and customer.b2b?
+            echo '<span>Now '
+            echo target.price | money
+            echo ' </span>'
+            echo '<del class="was-price-b2b-text"> Was '
+            echo target.compare_at_price | money
+            echo '</del>'
+            echo '<span>per unit</span>'
+          endif
+        elsif show_saving and customer.b2b?
+          echo '<span>'
+          echo target.price | money
+          echo ' per unit</span>'
+        endif
+       endif
+    -%}
+      </div>
+    {% else %}
+      <del class="product-price--compare" data-js-product-price-compare>
+
+        {%- liquid
+        if show_price
+          if target.compare_at_price > target.price
+            if show_saving and customer.b2b? 
+              echo '<span class="was-price-b2b-text">Unit Price was: </span>'
+              echo '<span class="was-rice-b2b-amount">'
+              echo target.compare_at_price | money
+              echo '</span>'
+            else
+              assign vat_rate = metafields.custom.tax_rate
+              assign vat_multiplier = vat_rate | divided_by: 100 | plus: 1
+              assign gross_compare_at_price = target.compare_at_price | times: vat_multiplier
+              assign compare_at_price = gross_compare_at_price | money
+              assign gross_price = target.price | times: vat_multiplier
+              assign save_amount = gross_compare_at_price | minus: gross_price | money
+              echo compare_at_price | prepend: '<span class="was-price-b2c">' | append: '</span>' 
+              echo 'products.page.sales_amount_html' | t: amount: save_amount | prepend: '<span>' | append: ''
+            endif
+          endif
+        endif
+    -%}
+    </del>
+    {% endif %}
+
+  {%- endif -%}
+  {% comment %}
+  <span class="product-price--unit text-size--regular" data-js-product-price-unit>
+    {%- liquid
+      if variant.unit_price_measurement
+        echo variant.unit_price | money
+        echo ' / '
+        if variant.unit_price_measurement.reference_value != 1
+          echo variant.unit_price_measurement.reference_value
+        endif
+        echo variant.unit_price_measurement.reference_unit
+      endif
+    -%}
+  </span>
+  {% endcomment %}
+
+  <div class="product-price-original-container_1">
+    {%- if customer.b2b? and show_price and template == 'product' -%}
+      <!-- Pack Price -->
+      <div class="total-price-container">
+      <span class="product-price--pack-title text-size--regular">{%- liquid  echo 'products.page.total_price' | t -%}</span>
+      <span class="product-price--pack text-size--large" data-js-product-price-pack="{{ product.id }}">
+
+        {%- liquid
+          assign pack_price = variant.price | times: product.selected_or_first_available_variant.quantity_rule.min
+          echo pack_price | money
+        -%}
+      </span>
+      </div>
+    {%- endif -%}
+
+    {%- if customer.b2b? and show_price and template == 'product.quick-view' -%}
+      <!-- Pack Price -->
+      <span class="product-price--pack-title text-size--regular">{%- liquid  echo 'products.page.total_price' | t -%}</span>
+      <span class="product-price--pack text-size--large" data-js-product-price-pack="{{ product.id }}">
+
+        {%- liquid
+          assign pack_price = variant.price | times: product.selected_or_first_available_variant.quantity_rule.min
+          echo pack_price | money
+        -%}
+      </span>
+    {%- endif -%}
+  </div>
+
+  {% if is_plp %}
+    {% if target.compare_at_price > target.price %}
+      <div class="plp-customer-was-price">
+        {%- liquid
+            if show_saving and customer.b2b? != true
+              assign vat_rate = metafields.custom.tax_rate
+              assign vat_multiplier = vat_rate | divided_by: 100 | plus: 1
+              assign gross_compare_at_price = target.compare_at_price | times: vat_multiplier
+              assign compare_at_price = gross_compare_at_price | money
+              assign gross_price = target.price | times: vat_multiplier
+              assign save_amount = gross_compare_at_price | minus: gross_price | money
+              echo compare_at_price | prepend: '<span class="was-price-b2c">' | append: '</span>' 
+              echo 'products.page.sales_amount_html' | t: amount: save_amount | prepend: '<span>' | append: ''
+            endif
+        -%}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
