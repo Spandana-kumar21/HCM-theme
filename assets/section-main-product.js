@@ -49,6 +49,26 @@ if ( typeof ProductPage !== 'function' ) {
 
 				}
 
+				// Drag-to-scroll for standard thumbnail strip
+				if (productGaleryThumbnails) {
+					let _dragStart = 0, _dragScrollLeft = 0, _isDragging = false;
+					productGaleryThumbnails.addEventListener('mousedown', e => {
+						_isDragging = true;
+						_dragStart = e.pageX - productGaleryThumbnails.offsetLeft;
+						_dragScrollLeft = productGaleryThumbnails.scrollLeft;
+						productGaleryThumbnails.classList.add('is-dragging');
+					});
+					document.addEventListener('mouseup', () => {
+						_isDragging = false;
+						productGaleryThumbnails.classList.remove('is-dragging');
+					});
+					document.addEventListener('mousemove', e => {
+						if (!_isDragging) return;
+						e.preventDefault();
+						productGaleryThumbnails.scrollLeft = _dragScrollLeft - (e.pageX - productGaleryThumbnails.offsetLeft - _dragStart);
+					});
+				}
+
 				this.productSlider.addEventListener('navigation', e=>{
 					this._playMedia(this.productGallery.querySelector(`.product-gallery-item[data-index="${e.target.index}"]`));
 				})
@@ -413,12 +433,14 @@ if ( typeof ProductPage !== 'function' ) {
 									// Compute how many thumbnails fit with arrows present
 									const _arrowW = (_prevC?.offsetWidth || 36) + 8;
 									_VISIBLE = Math.max(1, Math.floor((_containerW - 2 * _arrowW) / _tw));
+									// Use exact pixel width so no empty gap appears after last thumbnail
+									const _exactW = _VISIBLE * _tw - 8;
+									_viewport.style.flex = `0 0 ${_exactW}px`;
 								} else {
 									// No scrolling — treat all thumbnails as visible so track stays at 0
 									_VISIBLE = _galleryImages.length;
+									_viewport.style.flex = '0 0 auto';
 								}
-								// Viewport fills space between arrows when scrolling; auto-sizes when all fit
-								_viewport.style.flex = _overflow ? '1' : '0 0 auto';
 								// Centre thumbnails in the track when no scrolling is needed
 								_track.style.justifyContent = _overflow ? '' : 'center';
 								if (_prevC) _prevC.style.display = _overflow ? '' : 'none';

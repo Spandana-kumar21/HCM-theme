@@ -1,15 +1,7 @@
 {%- if settings.show_breadcrumb and template != 'index' and template != blank and template != '404' -%}
 
-	{%- comment -%}Track navigation source for breadcrumb context{%- endcomment -%}
-	{%- if template contains 'collection' and collection -%}
-		<script>
-			sessionStorage.setItem('hcm_bc', JSON.stringify({
-				src: 'collection',
-				title: {{ collection.title | json }},
-				url: {{ collection.url | json }}
-			}));
-		</script>
-	{%- elsif template contains 'search' -%}
+	{%- comment -%}Track search context so collection-scoped product URLs can be cleared when navigating via search{%- endcomment -%}
+	{%- if template contains 'search' -%}
 		<script>
 			sessionStorage.setItem('hcm_bc', JSON.stringify({ src: 'search' }));
 		</script>
@@ -51,7 +43,24 @@
 
 						<span class="breadcrumb__separator">/</span>
 						{%- if template contains 'collection' -%}
-							<span class="breadcrumb__current">{{ collection.title | escape }}</span>
+							{%- if collection.handle == 'vendors' -%}
+								<span class="breadcrumb__current" id="breadcrumb-vendor-label">{{ collection.title | escape }}</span>
+								<script>
+									(function () {
+										var q = new URLSearchParams(window.location.search).get('q');
+										if (!q) return;
+										var label = document.getElementById('breadcrumb-vendor-label');
+										if (label) label.textContent = q;
+										sessionStorage.setItem('hcm_bc', JSON.stringify({
+											src: 'collection',
+											title: q,
+											url: window.location.pathname + window.location.search
+										}));
+									})();
+								</script>
+							{%- else -%}
+								<span class="breadcrumb__current">{{ collection.title | escape }}</span>
+							{%- endif -%}
 						{%- else -%}
 							<span class="breadcrumb__link">
 								{%- liquid
@@ -66,36 +75,6 @@
 								-%}
 							</span>
 						{%- endif -%}
-
-					{%- elsif product -%}
-
-						{%- comment -%}
-							No collection in URL — use sessionStorage to inject collection crumb if user
-							navigated from a collection page, otherwise show only Home / Product Name.
-						{%- endcomment -%}
-						{%- assign collections_label = 'general.breadcrumb.collections' | t -%}
-						<span id="breadcrumb-collection-slot"></span>
-						<script>
-							(function () {
-								var raw = sessionStorage.getItem('hcm_bc');
-								if (!raw) return;
-								var data;
-								try { data = JSON.parse(raw); } catch (e) { return; }
-								if (data.src !== 'collection' || !data.title || !data.url) return;
-								var slot = document.getElementById('breadcrumb-collection-slot');
-								if (!slot) return;
-								var safe = data.title
-									.replace(/&/g, '&amp;')
-									.replace(/</g, '&lt;')
-									.replace(/>/g, '&gt;');
-								var collectionsUrl = {{ routes.collections_url | json }};
-								slot.outerHTML =
-									'<span class="breadcrumb__separator">/</span>' +
-									'<span class="breadcrumb__link"><a href="' + collectionsUrl + '">{{ collections_label }}</a></span>' +
-									'<span class="breadcrumb__separator">/</span>' +
-									'<span class="breadcrumb__link"><a href="' + data.url + '">' + safe + '</a></span>';
-							})();
-						</script>
 
 					{%- elsif blog or article -%}
 

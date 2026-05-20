@@ -313,7 +313,9 @@ html[dir=ltr] .facets__form--mobile .facets__display {
   opacity: 0.66;
   margin-bottom: 1.75rem;
 }
-
+  p#CollectionProductCount {
+    padding: 0px 15px 10px 15px;
+}
 .collection.loading {
   opacity: 0.36;
   pointer-events: none;

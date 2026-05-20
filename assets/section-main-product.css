@@ -43,7 +43,7 @@ html[dir=ltr] .product-gallery-item model-viewer, .product-gallery-item html[dir
 }
 /* ── PDP gallery: framed image stage ── */
 .main-product .product-gallery .element--border-radius {
-  background: #f7f7f7;
+  background: transparent;
 }
 
 /* -- Product Page Section * -- */
@@ -146,7 +146,14 @@ button[data-shopify-xr-hidden] {
   overflow: auto;
   scroll-behavior: smooth;
   max-width: 100%;
+  width: fit-content;
   gap: 0.5rem;
+  cursor: grab;
+  user-select: none;
+}
+.product-gallery__thumbnails-holder.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
 }
 .product-gallery__thumbnails .thumbnail {
   width: 5rem !important;

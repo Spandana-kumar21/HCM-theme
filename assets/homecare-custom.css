@@ -3,6 +3,11 @@ html {
   /*Adds smooth scrolling instead of snapping to element*/
 }
 
+/* Header must stack above all page content so the search dropdown is never obscured */
+.site-header {
+  z-index: 200 !important;
+}
+
 /* Quick-view modal must stack above the cart drawer (z-index: 1001) */
 .modal {
   z-index: 1100 !important;
@@ -1867,10 +1872,6 @@ featured-block-image-f img{
         padding-inline-end: var(--gutter-container);
        
     }
-  .search-results-overlay.active+.search-results-container{
-    z-index:99999999999;
-    position:relative;
-  }
 }
 .homecare-b2b-ato{
       background: #f9f9f9;
