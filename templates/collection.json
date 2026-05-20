@@ -1,1 +1,176 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{"show_collection_description":true,"show_collection_image":false,"alignment":"horizontal-left align-content--vertical-bottom","color_background_main":"rgba(0,0,0,0)","color_text_main":"rgba(0,0,0,0)"}},"177762172684ecd43a":{"type":"apps","blocks":{"sami_product_labels_app_block_banner_QecJcF":{"type":"shopify:\/\/apps\/sami-product-labels\/blocks\/app-block-banner\/b9b44663-5d51-4be1-8104-faedd68da8c5","settings":{"shortcode":"<div class=\"samitaPL-banner\" data-id=\"3591\"><\/div>"}}},"block_order":["sami_product_labels_app_block_banner_QecJcF"],"settings":{"full_width":false,"remove_margin":false}},"product-grid":{"type":"main-collection-product-grid","blocks":{"price":{"type":"price","settings":{}},"title":{"type":"title","settings":{}},"c5c9cf67-372f-4480-89ff-6726dd242b2a":{"type":"rating","settings":{}},"01688a07-1bac-4c58-8271-4a421e6f07b6":{"type":"text","settings":{"metafield":"custom.product_card_excerpt","text_size":"text-size--regular","text_color":"#6a6a6a","text_transform":false}},"quick_buy":{"type":"quick_buy","settings":{}}},"block_order":["price","title","c5c9cf67-372f-4480-89ff-6726dd242b2a","01688a07-1bac-4c58-8271-4a421e6f07b6","quick_buy"],"settings":{"layout":"grid-4 grid-portable-3 grid-lap-2 grid-tiny-1","products_number":24,"enable_filtering":true,"enable_sorting":true}},"5855068c-420c-4d1e-ae86-887f7e412fc7":{"type":"custom-liquid","custom_css":["@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",".card__text h2 {font-weight: 400; color: #fff;}",".button--outline {background: #6dd0bd; border-color: #6dd0bd; color: #350078;}",".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",".rich-text__text {padding-top: 10vh !important;}"],"settings":{"custom_liquid":"<div class=\"video-container\">\n        <video autoplay=\"\" loop=\"\"><source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b694ea96a40e4b4e9cde165acc21ecb4.mp4\" type=\"video\/mp4\"> Your browser does not support the video tag.<\/video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Online Account\n                        <\/p>\n                <\/div>\n                <h2 class=\"h2 rte rich-text__title\">\n                        Make Ordering Easy With A<br>\n                        Personal Account\n                <\/h2>\n                <div class=\"buttons-wrapper\">\n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/account\/login\">Login<\/a>\n                        <\/div>\n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"\/account\/register\">Sign Up<\/a>\n                        <\/div>\n                <\/div>\n        <\/div>\n<\/div>","full_width":false,"remove_margin":false}},"78f321d0-79f9-4cb1-a6c8-201ea468b348":{"type":"text-columns-icons","blocks":{"template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-1":{"type":"image","settings":{"icon":"delivery","image":"shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png","title":"Local Pickup","caption":"Swiftly collect your products from our nearby retail outlets.","link":"","color_background_main":"rgba(0,0,0,0)","color_icons_main":"rgba(0,0,0,0)","seo_h_tag":"h3"}},"template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-2":{"type":"image","settings":{"icon":"time-limit","image":"shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png","title":"Advice","caption":"We provide invaluable expertise in non-acute healthcare.","link":"","color_background_main":"rgba(0,0,0,0)","color_icons_main":"rgba(0,0,0,0)","seo_h_tag":"h3"}},"template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-3":{"type":"image","settings":{"icon":"store","image":"shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png","title":"Local Delivery","caption":"We offer fast and convenient service to your doorstep.","link":"","color_background_main":"rgba(0,0,0,0)","color_icons_main":"rgba(0,0,0,0)","seo_h_tag":"h3"}},"template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-4":{"type":"image","settings":{"icon":"tree","image":"shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png","title":"Support","caption":"We're here to assist you every step of the way on your healthcare journey.","link":"","color_background_main":"rgba(0,0,0,0)","color_icons_main":"rgba(0,0,0,0)","seo_h_tag":"h3"}}},"block_order":["template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-1","template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-2","template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-3","template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-4"],"custom_css":[".h5 {font-weight: 400;}",".card__icon--is-img img {width: 100%; height: auto;}"],"settings":{"heading":"","subheading":"","section_heading_layout":"section-heading--left","style":"slider","layout":"grid-4 grid-portable-3 grid-lap-2","border_radius":0,"section_background_color":"rgba(0,0,0,0)","section_heading_color":"rgba(0,0,0,0)","remove_margin":false,"seo_h_tag":"h2"}}},"order":["banner","177762172684ecd43a","product-grid","5855068c-420c-4d1e-ae86-887f7e412fc7","78f321d0-79f9-4cb1-a6c8-201ea468b348"]}
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "alignment": "horizontal-left align-content--vertical-bottom",
+        "color_background_main": "rgba(0,0,0,0)",
+        "color_text_main": "rgba(0,0,0,0)"
+      }
+    },
+    "177762172684ecd43a": {
+      "type": "apps",
+      "blocks": {
+        "sami_product_labels_app_block_banner_QecJcF": {
+          "type": "shopify://apps/sami-product-labels/blocks/app-block-banner/b9b44663-5d51-4be1-8104-faedd68da8c5",
+          "settings": {
+            "shortcode": "<div class=\"samitaPL-banner\" data-id=\"3591\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "sami_product_labels_app_block_banner_QecJcF"
+      ],
+      "settings": {
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "c5c9cf67-372f-4480-89ff-6726dd242b2a": {
+          "type": "rating",
+          "settings": {}
+        },
+        "01688a07-1bac-4c58-8271-4a421e6f07b6": {
+          "type": "text",
+          "settings": {
+            "metafield": "custom.product_card_excerpt",
+            "text_size": "text-size--regular",
+            "text_color": "#6a6a6a",
+            "text_transform": false
+          }
+        },
+        "quick_buy": {
+          "type": "quick_buy",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price",
+        "title",
+        "c5c9cf67-372f-4480-89ff-6726dd242b2a",
+        "01688a07-1bac-4c58-8271-4a421e6f07b6",
+        "quick_buy"
+      ],
+      "settings": {
+        "layout": "grid-4 grid-portable-3 grid-lap-2 grid-tiny-1",
+        "products_number": 24,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    },
+    "5855068c-420c-4d1e-ae86-887f7e412fc7": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.rich-text__text {grid-area: image !important; padding-top: 40vh !important; }}",
+        ".card__text h2 {font-weight: 400; color: #fff;}",
+        ".button--outline {background: #6dd0bd; border-color: #6dd0bd; color: #350078;}",
+        ".button--outline:hover {color: #fff; background: #350078; border-color: #350078;}",
+        ".rich-text__text {padding-top: 10vh !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"video-container\">\n        <video muted playsinline autoplay=\"\" loop=\"\"><source src=\"https://cdn.shopify.com/videos/c/o/v/b694ea96a40e4b4e9cde165acc21ecb4.mp4\" type=\"video/mp4\"> Your browser does not support the video tag.</video>\n        <div class=\"overlay\">\n                <div class=\"rte text-size--regular\">\n                        <p>\n                                Online Account\n                        </p>\n                </div>\n                <h2 class=\"h2 rte rich-text__title\">\n                        Make Ordering Easy With A<br>\n                        Personal Account\n                </h2>\n                <div class=\"buttons-wrapper\">\n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"/account/login\">Login</a>\n                        </div>\n                        <div class=\"increased-spacing\">\n                                <a class=\"button button--large button--outline\" href=\"/account/register\">Sign Up</a>\n                        </div>\n                </div>\n        </div>\n</div>",
+        "full_width": false,
+        "remove_margin": false
+      }
+    },
+    "78f321d0-79f9-4cb1-a6c8-201ea468b348": {
+      "type": "text-columns-icons",
+      "blocks": {
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-1": {
+          "type": "image",
+          "settings": {
+            "icon": "delivery",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "title": "Local Pickup",
+            "caption": "Swiftly collect your products from our nearby retail outlets.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-2": {
+          "type": "image",
+          "settings": {
+            "icon": "time-limit",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-2.png",
+            "title": "Advice",
+            "caption": "We provide invaluable expertise in non-acute healthcare.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-3": {
+          "type": "image",
+          "settings": {
+            "icon": "store",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-1.png",
+            "title": "Local Delivery",
+            "caption": "We offer fast and convenient service to your doorstep.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        },
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-4": {
+          "type": "image",
+          "settings": {
+            "icon": "tree",
+            "image": "shopify://shop_images/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "title": "Support",
+            "caption": "We're here to assist you every step of the way on your healthcare journey.",
+            "link": "",
+            "color_background_main": "rgba(0,0,0,0)",
+            "color_icons_main": "rgba(0,0,0,0)",
+            "seo_h_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-1",
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-2",
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-3",
+        "template--20476970467675__78f321d0-79f9-4cb1-a6c8-201ea468b348-image-4"
+      ],
+      "custom_css": [
+        ".h5 {font-weight: 400;}",
+        ".card__icon--is-img img {width: 100%; height: auto;}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "section_heading_layout": "section-heading--left",
+        "style": "slider",
+        "layout": "grid-4 grid-portable-3 grid-lap-2",
+        "border_radius": 0,
+        "section_background_color": "rgba(0,0,0,0)",
+        "section_heading_color": "rgba(0,0,0,0)",
+        "remove_margin": false,
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "177762172684ecd43a",
+    "product-grid",
+    "5855068c-420c-4d1e-ae86-887f7e412fc7",
+    "78f321d0-79f9-4cb1-a6c8-201ea468b348"
+  ]
+}

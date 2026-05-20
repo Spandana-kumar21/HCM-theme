@@ -17,7 +17,15 @@
   }
 }
 .cart-section aside {
-  position: relative;
+  position: sticky;
+  top: 1.25rem;
+  align-self: start;
+}
+@media screen and (max-width: 1023px) {
+  .cart-section aside {
+    position: relative;
+    top: auto;
+  }
 }
 .cart-section--empty shipping-calculator,
 .cart-section--empty product-recommendations,
@@ -33,8 +41,6 @@
 
 .cart__subtotal-widget {
   padding: var(--gutter-regular);
-  position: sticky;
-  top: 1.25rem;
 }
 html[dir=rtl] .cart__subtotal-widget {
   right: 0;

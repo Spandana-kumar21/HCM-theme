@@ -1,7 +1,22 @@
 {%- if settings.show_breadcrumb and template != 'index' and template != blank and template != '404' -%}
 
+	{%- comment -%}Track navigation source for breadcrumb context{%- endcomment -%}
+	{%- if template contains 'collection' and collection -%}
+		<script>
+			sessionStorage.setItem('hcm_bc', JSON.stringify({
+				src: 'collection',
+				title: {{ collection.title | json }},
+				url: {{ collection.url | json }}
+			}));
+		</script>
+	{%- elsif template contains 'search' -%}
+		<script>
+			sessionStorage.setItem('hcm_bc', JSON.stringify({ src: 'search' }));
+		</script>
+	{%- endif -%}
+
 	<div class="breadcrumb-main">
-	
+
 		<div class="breadcrumb-container">
 
 			{{ 'component-breadcrumb.css' | asset_url | stylesheet_tag }}
@@ -16,7 +31,7 @@
 					<span class="breadcrumb__current">{{ 'general.breadcrumb.search' | t: terms: search.terms }}</span>
 
 				{%- else -%}
-				
+
 					{%- unless template contains 'product' -%}
 						<span class="breadcrumb__separator">/</span>
 						{%- if template contains 'collections' -%}
@@ -28,6 +43,12 @@
 
 					{%- if collection -%}
 
+						{%- comment -%}Product page navigated via collection-scoped URL — server-side full breadcrumb{%- endcomment -%}
+						{%- if template contains 'product' -%}
+							<span class="breadcrumb__separator">/</span>
+							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+						{%- endif -%}
+
 						<span class="breadcrumb__separator">/</span>
 						{%- if template contains 'collection' -%}
 							<span class="breadcrumb__current">{{ collection.title | escape }}</span>
@@ -36,8 +57,8 @@
 								{%- liquid
 									if collection.handle
 										capture url
-											echo routes.collections_url 
-												echo '/'
+											echo routes.collections_url
+											echo '/'
 											echo collection.handle
 										endcapture
 										echo collection.title | link_to: url
@@ -45,11 +66,36 @@
 								-%}
 							</span>
 						{%- endif -%}
-						
+
 					{%- elsif product -%}
 
-						<span class="breadcrumb__separator">/</span>
-						<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+						{%- comment -%}
+							No collection in URL — use sessionStorage to inject collection crumb if user
+							navigated from a collection page, otherwise show only Home / Product Name.
+						{%- endcomment -%}
+						{%- assign collections_label = 'general.breadcrumb.collections' | t -%}
+						<span id="breadcrumb-collection-slot"></span>
+						<script>
+							(function () {
+								var raw = sessionStorage.getItem('hcm_bc');
+								if (!raw) return;
+								var data;
+								try { data = JSON.parse(raw); } catch (e) { return; }
+								if (data.src !== 'collection' || !data.title || !data.url) return;
+								var slot = document.getElementById('breadcrumb-collection-slot');
+								if (!slot) return;
+								var safe = data.title
+									.replace(/&/g, '&amp;')
+									.replace(/</g, '&lt;')
+									.replace(/>/g, '&gt;');
+								var collectionsUrl = {{ routes.collections_url | json }};
+								slot.outerHTML =
+									'<span class="breadcrumb__separator">/</span>' +
+									'<span class="breadcrumb__link"><a href="' + collectionsUrl + '">{{ collections_label }}</a></span>' +
+									'<span class="breadcrumb__separator">/</span>' +
+									'<span class="breadcrumb__link"><a href="' + data.url + '">' + safe + '</a></span>';
+							})();
+						</script>
 
 					{%- elsif blog or article -%}
 
@@ -68,7 +114,7 @@
 
 						<span class="breadcrumb__current">{{ 'general.breadcrumb.cart' | t }}</span>
 
-					{%- else -%}	
+					{%- else -%}
 
 						<span class="breadcrumb__current">{{ page.title | escape }}</span>
 

@@ -63,7 +63,7 @@
         ".rich-text__text {padding-top: 10vh !important;}"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"video-container\">\n    <video autoplay loop muted>\n      <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b694ea96a40e4b4e9cde165acc21ecb4.mp4\" type=\"video\/mp4\">\n      Your browser does not support the video tag.\n    <\/video>\n\n    <div class=\"overlay\">\n<div class=\"rte text-size--regular\">\n                  <p>Online Account<\/p>\n                <\/div>\n      <h2 class=\"h2 rte rich-text__title\">\n                 Make Ordering Easy With A<\/br>\nPersonal Account\n                <\/h2>\n<div class=\"buttons-wrapper\">\n      <div class=\"increased-spacing\">\n                  <a href=\"\/account\/login\" class=\"button button--large button--outline\">\n                    Login\n                  <\/a>\n                <\/div>\n     <div class=\"increased-spacing\">\n                  <a href=\"\/account\/register\" class=\"button button--large button--outline\">\n                    Sign Up\n                  <\/a>\n                <\/div>\n    <\/div>\n<\/div>\n  <\/div>",
+        "custom_liquid": "<div class=\"video-container\">\n    <video playsinline autoplay loop muted>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/b694ea96a40e4b4e9cde165acc21ecb4.mp4\" type=\"video/mp4\">\n      Your browser does not support the video tag.\n    </video>\n\n    <div class=\"overlay\">\n<div class=\"rte text-size--regular\">\n                  <p>Online Account</p>\n                </div>\n      <h2 class=\"h2 rte rich-text__title\">\n                 Make Ordering Easy With A</br>\nPersonal Account\n                </h2>\n<div class=\"buttons-wrapper\">\n      <div class=\"increased-spacing\">\n                  <a href=\"/account/login\" class=\"button button--large button--outline\">\n                    Login\n                  </a>\n                </div>\n     <div class=\"increased-spacing\">\n                  <a href=\"/account/register\" class=\"button button--large button--outline\">\n                    Sign Up\n                  </a>\n                </div>\n    </div>\n</div>\n  </div>",
         "full_width": false,
         "remove_margin": false
       }
@@ -75,7 +75,7 @@
           "type": "image",
           "settings": {
             "icon": "delivery",
-            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-0_d1947656-5402-4bcd-a0e7-534f60ff92de.png",
             "title": "Local Pickup",
             "caption": "Swiftly collect your products from our nearby retail outlets.",
             "link": "",
@@ -88,7 +88,7 @@
           "type": "image",
           "settings": {
             "icon": "time-limit",
-            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-2.png",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-2.png",
             "title": "Advice",
             "caption": "We provide invaluable expertise in non-acute healthcare.",
             "link": "",
@@ -101,7 +101,7 @@
           "type": "image",
           "settings": {
             "icon": "store",
-            "image": "shopify:\/\/shop_images\/div_element-1655970985e1e8c596-1.png",
+            "image": "shopify://shop_images/div_element-1655970985e1e8c596-1.png",
             "title": "Local Delivery",
             "caption": "We offer fast and convenient service to your doorstep.",
             "link": "",
@@ -114,7 +114,7 @@
           "type": "image",
           "settings": {
             "icon": "tree",
-            "image": "shopify:\/\/shop_images\/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
+            "image": "shopify://shop_images/div_element-41380ebb-0166-4f1a-af8f-a77893a5b806.png",
             "title": "Support",
             "caption": "We're here to assist you every step of the way on your healthcare journey.",
             "link": "",

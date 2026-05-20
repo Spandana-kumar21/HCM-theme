@@ -257,21 +257,253 @@ if ( typeof ProductPage !== 'function' ) {
 
 			if (variant) {
 
-				// image handling
-				if (variant.featured_media != null) {
-					let variantImg = this.productGallery.querySelector('.product-gallery-item[data-media-id="' + variant.featured_media.id + '"]');
-					if (variantImg) {
-						if (this.productGallery.classList.contains('product-gallery--slider') || (this.productGallery.classList.contains('product-gallery--scroll') && window.innerWidth < 1024)) {
-							if (this.productGallery.querySelector('css-slider') && this.productGallery.querySelector('css-slider').sliderEnabled) {
-								this.productGallery.querySelector('css-slider').changeSlide(variantImg.dataset.index);
-							} else {
-								this.firstProductGalleryIndex = variantImg.dataset.index;
+				// image handling — variant gallery metafield (custom.gallery_images) takes priority
+				const _metafieldsEl = document.getElementById('ProductVariantMetafields');
+				const _allMeta = _metafieldsEl ? JSON.parse(_metafieldsEl.textContent) : [];
+				const _variantMeta = _allMeta.find(v => v.id === variant.id);
+				let _galleryImages = (_variantMeta?.metafields?.custom?.gallery_images || []).slice();
+
+				const _galleryGrid = this.productGallery.querySelector('.grid');
+				let _thumbsHolder = this.querySelector('.product-gallery__thumbnails-holder');
+				const _cssSlider = this.productGallery.querySelector('css-slider');
+				const _sliderHolder = _cssSlider?.querySelector('.css-slider-holder') || _galleryGrid;
+				const _isSlider = this.productGallery.classList.contains('product-gallery--slider') ||
+					(this.productGallery.classList.contains('product-gallery--scroll') && window.innerWidth < 1024);
+
+				if (_galleryImages.length > 0) {
+
+					// Prepend variant featured image if not already first
+					if (variant.featured_image && variant.featured_image.src) {
+						const fSrc = variant.featured_image.src;
+						const fThumb = fSrc.split('?')[0] + '?width=200';
+						const fAlt  = variant.featured_image.alt || '';
+						const alreadyFirst = _galleryImages[0]?.src?.split('?')[0].split('/').pop() ===
+							fSrc.split('?')[0].split('/').pop();
+						if (!alreadyFirst) {
+							_galleryImages.unshift({ src: fSrc, thumb: fThumb, alt: fAlt });
+						}
+					}
+
+					// Save original gallery HTML once (before first swap)
+					if (!this._origGalleryHTML) {
+						this._origGalleryHTML = _galleryGrid ? _galleryGrid.innerHTML : null;
+						this._origThumbsHTML  = _thumbsHolder ? _thumbsHolder.innerHTML : null;
+					}
+
+					// Build slides — add css-slide class so css-slider recognises them after resetSlider()
+					if (_galleryGrid) {
+						_galleryGrid.innerHTML = _galleryImages.map((img, i) => `
+							<div class="product-gallery-item css-slide element--border-radius"
+								data-product-media-type="image"
+								data-media-id="variant-${i}"
+								data-index="${i}"
+								style="padding-top:100%">
+								<img src="${img.src}"
+									alt="${img.alt}"
+									loading="${i === 0 ? 'eager' : 'lazy'}"
+									class="element--border-radius"
+									style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block">
+							</div>`).join('');
+					}
+
+					// Force css-slider to rescan new slides and rebuild dots/nav
+					if (_cssSlider && _cssSlider.sliderEnabled) {
+						_cssSlider.items = _cssSlider.querySelectorAll(_cssSlider.o.selector);
+						_cssSlider.resetSlider();
+					} else if (_sliderHolder) {
+						_sliderHolder.scrollLeft = 0;
+					}
+
+					// Build thumbnail viewport — inserted BETWEEN the slider's own < > arrows on desktop
+					// No own arrows; the existing css-slider arrows navigate slides and sync thumbnails
+					if (!this._variantThumbViewport) {
+						const _vp = document.createElement('div');
+						_vp.className = 'variant-thumb-carousel__viewport';
+						const _tr = document.createElement('div');
+						_tr.className = 'variant-thumb-carousel__track';
+						_vp.appendChild(_tr);
+						this._variantThumbViewport = _vp;
+					}
+
+					const _viewport = this._variantThumbViewport;
+					const _track = _viewport.querySelector('.variant-thumb-carousel__track');
+					_viewport._offset = 0;
+					let _VISIBLE = 4;
+
+					// Populate thumbnail images
+					_track.innerHTML = _galleryImages.map((img, i) => `
+						<button class="thumbnail element--border-radius ${i === 0 ? 'active' : ''}"
+							data-vt="${i}" tabindex="0">
+							<img src="${img.thumb}" alt="${img.alt}"
+								class="thumbnail__image" loading="lazy"
+								style="width:100%;height:100%;object-fit:cover">
+						</button>`).join('');
+
+					// When all thumbs fit without scrolling, size viewport to content
+					// so no empty gap appears after the last thumbnail
+					_viewport.style.flex = _galleryImages.length <= _VISIBLE ? '0 0 auto' : '1';
+
+					const _vtUpdate = () => {
+						const _th = _track.querySelector('.thumbnail');
+						const _tw = _th ? (_th.offsetWidth + 8) : 88; // thumb width + 0.5rem gap
+						_track.style.transform = `translateX(-${_viewport._offset * _tw}px)`;
+					};
+
+					// Thumbnail click → navigate main image
+					_track.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+						thumb.addEventListener('click', () => {
+							const _max = Math.max(0, _galleryImages.length - _VISIBLE);
+							if (i < _viewport._offset) {
+								_viewport._offset = i;
+							} else if (i >= _viewport._offset + _VISIBLE) {
+								_viewport._offset = Math.min(i - _VISIBLE + 1, _max);
 							}
-						} else {
-							window.scrollTo({
-								top: variantImg.offsetTop,
-								behavior: 'smooth'
+							_vtUpdate();
+							_track.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+							thumb.classList.add('active');
+							if (_cssSlider && _cssSlider.sliderEnabled) { _cssSlider.changeSlide(i); }
+						});
+					});
+
+					// Sync active thumbnail + scroll track when slider arrows / swipe navigate
+					if (_cssSlider) {
+						if (this._vtSliderListener) {
+							_cssSlider.removeEventListener('change', this._vtSliderListener);
+						}
+						this._vtSliderListener = () => {
+							const _ai = _cssSlider.index;
+							_track.querySelectorAll('.thumbnail').forEach((t, i) => t.classList.toggle('active', i === _ai));
+							const _max = Math.max(0, _galleryImages.length - _VISIBLE);
+							if (_ai < _viewport._offset) {
+								_viewport._offset = _ai;
+								_vtUpdate();
+							} else if (_ai >= _viewport._offset + _VISIBLE) {
+								_viewport._offset = Math.min(_ai - _VISIBLE + 1, _max);
+								_vtUpdate();
+							}
+						};
+						_cssSlider.addEventListener('change', this._vtSliderListener);
+					}
+
+					// Place viewport — defer until slider ready if nav container not yet created (first page load)
+					const _insertViewport = () => {
+						const _navContC = _cssSlider?.querySelector('.css-slider-navigation-container');
+						if (_navContC) {
+							const _nextC = _navContC.querySelector('.css-slider-next');
+							const _prevC = _navContC.querySelector('.css-slider-prev');
+							const _dotsC = _navContC.querySelector('.css-slider-dot-navigation');
+							if (_dotsC) _dotsC.style.display = 'none';
+							if (_viewport.parentNode !== _navContC) {
+								_nextC ? _navContC.insertBefore(_viewport, _nextC) : _navContC.appendChild(_viewport);
+							}
+							_navContC.style.marginBottom = '0.5rem';
+							// Make nav container a centred flex row so thumbnails sit in the middle
+							_navContC.style.display = 'flex';
+							_navContC.style.alignItems = 'center';
+							_navContC.style.justifyContent = 'center';
+							_navContC.style.gap = '0.5rem';
+
+							const _refresh = () => {
+								const _th = _track.querySelector('.thumbnail');
+								const _tw = _th ? (_th.offsetWidth + 8) : 88;
+								const _containerW = _navContC.offsetWidth;
+								// Arrows appear only when there are more than 6 thumbnails
+								const _overflow = _galleryImages.length > 6;
+								if (_overflow) {
+									// Compute how many thumbnails fit with arrows present
+									const _arrowW = (_prevC?.offsetWidth || 36) + 8;
+									_VISIBLE = Math.max(1, Math.floor((_containerW - 2 * _arrowW) / _tw));
+								} else {
+									// No scrolling — treat all thumbnails as visible so track stays at 0
+									_VISIBLE = _galleryImages.length;
+								}
+								// Viewport fills space between arrows when scrolling; auto-sizes when all fit
+								_viewport.style.flex = _overflow ? '1' : '0 0 auto';
+								// Centre thumbnails in the track when no scrolling is needed
+								_track.style.justifyContent = _overflow ? '' : 'center';
+								if (_prevC) _prevC.style.display = _overflow ? '' : 'none';
+								if (_nextC) _nextC.style.display = _overflow ? '' : 'none';
+								_vtUpdate();
+							};
+
+							if (this._vtResizeListener) window.removeEventListener('resize', this._vtResizeListener);
+							this._vtResizeListener = _refresh;
+							window.addEventListener('resize', _refresh, { passive: true });
+							setTimeout(_refresh, 50);
+						} else if (_cssSlider) {
+							_cssSlider.addEventListener('ready', _insertViewport, { once: true });
+						}
+					};
+					_insertViewport();
+
+				} else {
+					// No metafield — restore original gallery
+					if (this._origGalleryHTML && _galleryGrid) {
+						_galleryGrid.innerHTML = this._origGalleryHTML;
+						this._origGalleryHTML = null;
+						if (_cssSlider && _cssSlider.sliderEnabled) {
+							_cssSlider.items = _cssSlider.querySelectorAll(_cssSlider.o.selector);
+							_cssSlider.resetSlider();
+						}
+					}
+
+					// Remove thumbnail viewport from nav container and cleanup
+					if (this._variantThumbViewport) {
+						this._variantThumbViewport.remove();
+						this._variantThumbViewport = null;
+					}
+					if (this._vtSliderListener && _cssSlider) {
+						_cssSlider.removeEventListener('change', this._vtSliderListener);
+						this._vtSliderListener = null;
+					}
+					if (this._vtResizeListener) {
+						window.removeEventListener('resize', this._vtResizeListener);
+						this._vtResizeListener = null;
+					}
+
+					// Restore slider dot navigation and nav container margin
+					const _navContR = _cssSlider?.querySelector('.css-slider-navigation-container');
+					const _dotsR = _navContR?.querySelector('.css-slider-dot-navigation');
+					const _prevR = _navContR?.querySelector('.css-slider-prev');
+					const _nextR = _navContR?.querySelector('.css-slider-next');
+					if (_dotsR) _dotsR.style.display = '';
+					if (_prevR) _prevR.style.display = 'none';
+					if (_nextR) _nextR.style.display = 'none';
+					if (_navContR) {
+						_navContR.style.marginBottom = '';
+						_navContR.style.display = '';
+						_navContR.style.alignItems = '';
+						_navContR.style.justifyContent = '';
+						_navContR.style.gap = '';
+					}
+
+					// Restore original thumbnail strip content if one existed
+					const _origHolder = this.querySelector('.product-gallery__thumbnails-holder');
+					if (this._origThumbsHTML && _origHolder) {
+						_origHolder.innerHTML = this._origThumbsHTML;
+						this._origThumbsHTML = null;
+						_origHolder.querySelectorAll('.thumbnail').forEach((elm, i) => {
+							if (i === 0) elm.classList.add('active');
+							elm.addEventListener('click', e => {
+								if (_cssSlider && _cssSlider.sliderEnabled) {
+									_cssSlider.changeSlide(e.currentTarget.dataset.index);
+								}
 							});
+						});
+					}
+
+					// Fall back to featured_media jump
+					if (variant.featured_media != null) {
+						const variantImg = this.productGallery.querySelector(
+							'.product-gallery-item[data-media-id="' + variant.featured_media.id + '"]');
+						if (variantImg) {
+							if (_isSlider && _cssSlider && _cssSlider.sliderEnabled) {
+								_cssSlider.changeSlide(variantImg.dataset.index);
+							} else if (_isSlider) {
+								this.firstProductGalleryIndex = variantImg.dataset.index;
+							} else {
+								window.scrollTo({ top: variantImg.offsetTop, behavior: 'smooth' });
+							}
 						}
 					}
 				}
@@ -371,14 +603,16 @@ if ( typeof ProductPage !== 'function' ) {
                     priceElement.priceCompare.innerHTML = '';
                 }
 
-                if (variant.unit_price_measurement) {
-                    priceElement.priceUnit.innerHTML = `
-                        ${this.productVariants._formatMoney(unitPrice, KROWN.settings.shop_money_format)} /
-                        ${(variant.unit_price_measurement.reference_value != 1 ? variant.unit_price_measurement.reference_value + ' ' : '' )}
-                        ${variant.unit_price_measurement.reference_unit}
-                    `;
-                } else {
-                    priceElement.priceUnit.innerHTML = '';
+                if (priceElement.priceUnit) {
+                    if (variant.unit_price_measurement) {
+                        priceElement.priceUnit.innerHTML = `
+                            ${this.productVariants._formatMoney(unitPrice, KROWN.settings.shop_money_format)} /
+                            ${(variant.unit_price_measurement.reference_value != 1 ? variant.unit_price_measurement.reference_value + ' ' : '' )}
+                            ${variant.unit_price_measurement.reference_unit}
+                        `;
+                    } else {
+                        priceElement.priceUnit.innerHTML = '';
+                    }
                 }
             }
         }

@@ -378,7 +378,7 @@ if ( typeof SidebarDrawer !== 'function' ) {
 			} else if ( this.classList.contains('sidebar--left') ) {
 				document.body.classList.add('sidebar-opened--left');
 			}
-			this.style.display = 'grid';
+			this.style.display = this.id === 'site-cart-sidebar' ? 'flex' : 'grid';
 			setTimeout(()=>{
 				this.classList.add('sidebar--opened');
 				window.inertElems.forEach(elm=>{

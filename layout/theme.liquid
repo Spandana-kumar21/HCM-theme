@@ -286,19 +286,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <script src="{{ 'component-cart-recommendations.js' | asset_url }}" defer></script>
         {%- endif -%}
 
-        {%- if settings.cart_notes_enable -%}
-          <div class="cart-instructions hide-if-empty-cart">
-            <div class="form-field">
-              <label for="cartSpecialInstructions">{{ 'cart.note' | t }}</label>
-              <textarea name="note" id="cartSpecialInstructions" form="cart">{{ cart.note }}</textarea>
-            </div>
-          </div>
-        {%- endif -%}
 
       </div>
 
       <div class="sidebar__footer hide-if-empty-cart">
         {%- render 'cart-subtotal', type: 'sidebar' -%}
+        {%- if settings.cart_notes_enable -%}
+          <div class="cart-instructions" style="border-top: 1px solid var(--color-borders-main); padding-top: var(--sidebar-gutter);">
+            <div class="form-field">
+              <label for="cartSpecialInstructions">{{ 'cart.note' | t }}</label>
+              <textarea name="note" id="cartSpecialInstructions" form="cart" rows="2">{{ cart.note }}</textarea>
+            </div>
+          </div>
+        {%- endif -%}
       </div>
 
     </sidebar-drawer>

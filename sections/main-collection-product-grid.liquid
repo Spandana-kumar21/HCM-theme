@@ -3,62 +3,86 @@
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
   {{ 'component-range-slider.css' | asset_url | stylesheet_tag }}
-  <div class="container--large" data-js-inert>
-    {%- render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, type: 'desktop' -%}
-  </div>
 {%- endif -%}
 
-<div id="CollectionProductGrid" data-js-inert>
-  
-  {%- paginate collection.products by section.settings.products_number -%}
-    
-    <div class="container--large">
+<div class="container--large collection-layout-with-sidebar">
 
-      <div id="main-collection-product-grid" data-id="{{ section.id }}" class="collection grid grid--layout 
-        {% unless collection.products.size == 0 %} {{ section.settings.layout }} {% endunless %}
-      ">
+  {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+    <aside class="collection-sidebar-panel portable-hide" data-js-inert>
+      {%- render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, type: 'desktop' -%}
+    </aside>
+  {%- endif -%}
 
-        {%- for product in collection.products -%}
-          {%- liquid
-              if forloop.index <= 2
-                assign preload = true
-              else 
-                assign preload = false
-              endif
-              render 'product-item', product: product, product_collection: collection, section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout, preload: preload
-          -%}
-        {%- else -%}
-          {%- if collection.filters != empty -%}
-            {%- liquid
-              assign sort_by = collection.sort_by | default: collection.default_sort_by
-              assign terms = collection.terms | escape
-              if collection.current_vendor
-                assign terms = collection.current_vendor | escape
-              endif
-              assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
-            -%}
-              <p class="no-content-message rte">
-                {{ 'collections.empty' | t }}<br/>
-                {{ 'collections.use_fewer_filters_html' | t: link: results_url, class: 'button--text' }}
-              </p>
-          {%- else %}
-            <p class="no-content-message">
-              {{ 'products.grid.no_products_text' | t }}
-            </p>
-          {%- endif -%}
-        {%- endfor -%}
+  <div class="collection-products-panel">
 
+    {%- if section.settings.enable_sorting and collection.products.size != 0 -%}
+      <div class="collection-sort-bar portable-hide">
+        <div class="collection-sort-bar__chips"></div>
+        <div class="collection-sort-bar__select">
+          <label class="collection-filters__label body-text-sm" for="SortBy-top">{{ 'collections.sort_by_label' | t }}</label>
+          <div class="select">
+            {%- assign sort_by_top = collection.sort_by | default: collection.default_sort_by -%}
+            <select id="SortBy-top" class="select__select collection-filters__sort" aria-describedby="a11y-refresh-page-message">
+              {%- for option in collection.sort_options -%}
+                <option value="{{ option.value | escape }}"{% if option.value == sort_by_top %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+        </div>
       </div>
+    {%- endif -%}
 
-      {%- liquid
-        if paginate.pages > 1
-          render 'pagination', paginate: paginate
-        endif
-      -%}
+    <div id="CollectionProductGrid" data-js-inert>
+
+      {%- paginate collection.products by section.settings.products_number -%}
+
+        <div id="main-collection-product-grid" data-id="{{ section.id }}" class="collection grid grid--layout
+          {% unless collection.products.size == 0 %} {{ section.settings.layout }} {% endunless %}
+        ">
+
+          {%- for product in collection.products -%}
+            {%- liquid
+                if forloop.index <= 2
+                  assign preload = true
+                else
+                  assign preload = false
+                endif
+                render 'product-item', product: product, product_collection: collection, section_blocks: section.blocks, index: forloop.index, layout: section.settings.layout, preload: preload
+            -%}
+          {%- else -%}
+            {%- if collection.filters != empty -%}
+              {%- liquid
+                assign sort_by = collection.sort_by | default: collection.default_sort_by
+                assign terms = collection.terms | escape
+                if collection.current_vendor
+                  assign terms = collection.current_vendor | escape
+                endif
+                assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+              -%}
+                <p class="no-content-message rte">
+                  {{ 'collections.empty' | t }}<br/>
+                  {{ 'collections.use_fewer_filters_html' | t: link: results_url, class: 'button--text' }}
+                </p>
+            {%- else %}
+              <p class="no-content-message">
+                {{ 'products.grid.no_products_text' | t }}
+              </p>
+            {%- endif -%}
+          {%- endfor -%}
+
+        </div>
+
+        {%- liquid
+          if paginate.pages > 1
+            render 'pagination', paginate: paginate
+          endif
+        -%}
+
+      {%- endpaginate -%}
 
     </div>
 
-  {%- endpaginate -%}
+  </div>
 
 </div>
 
@@ -77,7 +101,262 @@
       {%- render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, type: 'mobile' -%}
     </div>
   </sidebar-drawer>
+
+  <div class="collection-sticky-bar hide portable-show">
+    <button class="collection-sticky-bar__btn" data-js-sidebar-handle aria-controls="site-filters-sidebar" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m2 6h60l-24 26v20l-12 6v-26z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/></svg>
+      {{ 'collections.filter_and_sort' | t }}
+    </button>
+  </div>
+
   <script src="{{ 'component-facets.js' | asset_url }}" defer></script>
+
+  <script>
+    (function () {
+      function alignFilterHeader() {
+        var sortBar = document.querySelector('.collection-sort-bar');
+        var filterHeading = document.querySelector('.collection-sidebar-panel .facets__heading');
+        if (!sortBar || !filterHeading) return;
+        filterHeading.style.paddingTop = '';
+        var diff = sortBar.offsetHeight - filterHeading.offsetHeight;
+        if (diff > 0) filterHeading.style.paddingTop = diff + 'px';
+      }
+
+      function init() {
+        // Move the AJAX-managed active-facets-desktop into the sort bar chips slot
+        var chipsSlot = document.querySelector('.collection-sort-bar__chips');
+        var activeFacets = document.querySelector('.active-facets-desktop');
+        if (chipsSlot && activeFacets) {
+          chipsSlot.appendChild(activeFacets);
+        }
+
+        // Desktop sort bar: replace native select with custom dropdown
+        (function () {
+          var topSel  = document.getElementById('SortBy-top');
+          var sideSort = document.getElementById('desktop-SortBy');
+          if (!topSel) return;
+
+          var selectWrap = topSel.closest('.select');
+          if (!selectWrap) return;
+
+          var opts = Array.from(topSel.options);
+          var cur  = topSel.options[topSel.selectedIndex];
+
+          var wrap = document.createElement('div');
+          wrap.className = 'dsort';
+
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'dsort__trigger';
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML =
+            '<span class="dsort__val">' + (cur ? cur.text : '') + '</span>' +
+            '<span class="dsort__chevron" aria-hidden="true"></span>';
+
+          var list = document.createElement('div');
+          list.className = 'dsort__list';
+          list.hidden = true;
+
+          opts.forEach(function (opt) {
+            var o = document.createElement('button');
+            o.type = 'button';
+            o.className = 'dsort__opt' + (opt.selected ? ' dsort__opt--on' : '');
+            o.dataset.val = opt.value;
+            o.textContent = opt.text;
+            o.addEventListener('click', function () {
+              topSel.value = opt.value;
+              if (sideSort) {
+                sideSort.value = opt.value;
+                sideSort.dispatchEvent(new Event('input', { bubbles: true }));
+              }
+              btn.querySelector('.dsort__val').textContent = opt.text;
+              list.querySelectorAll('.dsort__opt').forEach(function (b) {
+                b.classList.toggle('dsort__opt--on', b === o);
+              });
+              btn.setAttribute('aria-expanded', 'false');
+              list.hidden = true;
+            });
+            list.appendChild(o);
+          });
+
+          btn.addEventListener('click', function () {
+            var open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            list.hidden = open;
+          });
+
+          // Close when clicking outside
+          document.addEventListener('click', function (e) {
+            if (!wrap.contains(e.target)) {
+              btn.setAttribute('aria-expanded', 'false');
+              list.hidden = true;
+            }
+          });
+
+          wrap.appendChild(btn);
+          wrap.appendChild(list);
+          selectWrap.style.display = 'none';
+          selectWrap.parentNode.insertBefore(wrap, selectWrap.nextSibling);
+        })();
+
+        // Align Filter: heading bottom border with sort bar bottom border
+        alignFilterHeader();
+
+        // Re-align after AJAX updates chips (chips added/removed changes sort bar height)
+        var chipsContainer = document.querySelector('.collection-sort-bar__chips');
+        if (chipsContainer && window.MutationObserver) {
+          new MutationObserver(alignFilterHeader).observe(chipsContainer, { childList: true, subtree: true });
+        }
+
+        // Mobile filter accordion — one group open at a time, smooth animation
+        (function () {
+          var drawer = document.getElementById('site-filters-sidebar');
+          if (!drawer) return;
+
+          function collapsePanel(disc) {
+            var panel = disc.querySelector('.facets__display');
+            if (!panel) { disc.removeAttribute('open'); return; }
+            var h = panel.offsetHeight;
+            panel.style.overflow   = 'hidden';
+            panel.style.transition = 'none';
+            panel.style.height     = h + 'px';
+            void panel.offsetHeight;
+            panel.style.transition = 'height 0.35s ease';
+            panel.style.height     = '0px';
+            var fired = false;
+            function done() {
+              if (fired) return; fired = true;
+              panel.removeEventListener('transitionend', done);
+              disc.removeAttribute('open');
+              panel.style.cssText = '';
+            }
+            panel.addEventListener('transitionend', done);
+            setTimeout(done, 400);
+          }
+
+          function expandPanel(disc) {
+            var panel = disc.querySelector('.facets__display');
+            if (!panel) { disc.setAttribute('open', ''); return; }
+            disc.setAttribute('open', '');
+            panel.style.overflow   = 'hidden';
+            panel.style.transition = 'none';
+            panel.style.height     = 'auto';
+            var h = panel.offsetHeight;   // reflow: get real content height
+            panel.style.height     = '0px';
+            void panel.offsetHeight;      // reflow: commit height 0 before transition
+            panel.style.transition = 'height 0.35s ease';
+            panel.style.height     = h + 'px';
+            var fired = false;
+            function done() {
+              if (fired) return; fired = true;
+              panel.removeEventListener('transitionend', done);
+              panel.style.cssText = '';
+            }
+            panel.addEventListener('transitionend', done);
+            setTimeout(done, 400);
+          }
+
+          drawer.querySelectorAll('.facets__disclosure > .facets__summary').forEach(function (s) {
+            s.addEventListener('click', function (e) {
+              e.preventDefault();
+              var clicked  = this.parentElement;
+              var wasOpen  = clicked.hasAttribute('open');
+              var prevOpen = drawer.querySelector('.facets__disclosure[open]');
+              if (prevOpen && prevOpen !== clicked) collapsePanel(prevOpen);
+              if (wasOpen) { collapsePanel(clicked); } else { expandPanel(clicked); }
+            });
+          });
+        })();
+
+        // Mobile sidebar: replace native <select> with a custom accordion-style sort dropdown
+        (function () {
+          var sidebar = document.getElementById('site-filters-sidebar');
+          if (!sidebar) return;
+
+          function buildSortUI() {
+            var sel = sidebar.querySelector('.collection-filters__sort');
+            if (!sel || sel._sortBuilt) return;
+            sel._sortBuilt = true;
+
+            var sortItem = sel.closest('.collection-filters__item');
+            if (!sortItem) return;
+
+            var opts = Array.from(sel.options);
+            var cur  = sel.options[sel.selectedIndex];
+
+            var wrap = document.createElement('div');
+            wrap.className = 'msort';
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'msort__trigger';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML =
+              '<span class="msort__label">Sort by</span>' +
+              '<span class="msort__name">' + (cur ? cur.text : '') + '</span>' +
+              '<span class="msort__chevron" aria-hidden="true"></span>';
+
+            var list = document.createElement('div');
+            list.className = 'msort__list';
+            list.hidden = true;
+
+            opts.forEach(function (opt) {
+              var o = document.createElement('button');
+              o.type = 'button';
+              o.className = 'msort__opt' + (opt.selected ? ' msort__opt--on' : '');
+              o.dataset.val = opt.value;
+              o.textContent = opt.text;
+              o.addEventListener('click', function () {
+                sel.value = opt.value;
+                sel.dispatchEvent(new Event('input', { bubbles: true }));
+                btn.querySelector('.msort__name').textContent = opt.text;
+                btn.querySelector('.msort__label').textContent = 'Sort by';
+                list.querySelectorAll('.msort__opt').forEach(function (b) {
+                  b.classList.toggle('msort__opt--on', b === o);
+                });
+                btn.setAttribute('aria-expanded', 'false');
+                list.hidden = true;
+              });
+              list.appendChild(o);
+            });
+
+            btn.addEventListener('click', function () {
+              var open = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', String(!open));
+              list.hidden = open;
+            });
+
+            wrap.appendChild(btn);
+            wrap.appendChild(list);
+            sortItem.hidden = true;
+            sortItem.parentNode.insertBefore(wrap, sortItem.nextSibling);
+          }
+
+          buildSortUI();
+
+          // Rebuild after AJAX re-renders the facets form
+          if (window.MutationObserver) {
+            var body = sidebar.querySelector('.sidebar__body');
+            if (body) {
+              new MutationObserver(function () {
+                var el = sidebar.querySelector('.collection-filters__sort');
+                if (el && !el._sortBuilt) {
+                  sidebar.querySelectorAll('.msort').forEach(function (n) { n.remove(); });
+                  buildSortUI();
+                }
+              }).observe(body, { childList: true, subtree: true });
+            }
+          }
+        })();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
 {%- endif -%}
 
 {% schema %}

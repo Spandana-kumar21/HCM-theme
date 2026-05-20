@@ -58,8 +58,12 @@
        
             <a href="{{ product.url }}" class="text-line-height--small text-weight--bold">
               <span class="text-animation--underline-thin">{{ product.title | escape }}</span>
-            </a>	
-          
+            </a>
+
+          </div>
+
+          <div style="margin-top: 0.5rem;">
+            {%- render 'quick-buy', product: product, button_classes: 'button--small' -%}
           </div>
 
 				</div>
