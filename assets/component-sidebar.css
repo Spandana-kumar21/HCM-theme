@@ -98,8 +98,67 @@ html[dir=ltr] .sidebar--left {
 .sidebar__body {
   position: relative;
 }
+
+/* ── Cart drawer: flex column, only body scrolls ── */
+#site-cart-sidebar {
+  flex-direction: column;
+  overflow: hidden;
+}
+#site-cart-sidebar .sidebar__header {
+  flex-shrink: 0;
+}
+#site-cart-sidebar .sidebar__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#site-cart-sidebar .sidebar__body::-webkit-scrollbar {
+  display: none;
+}
+#site-cart-sidebar .sidebar__footer {
+  flex-shrink: 0;
+  padding: calc(var(--sidebar-gutter) * 0.75);
+}
+#site-cart-sidebar .sidebar__footer .text-size--heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+#site-cart-sidebar .sidebar__footer .cart__total {
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+#AjaxCartForm .cart__total{
+  display: none;
+}
+
+#site-cart-sidebar .sidebar__footer .cart__shipping {
+  margin-bottom: 0.4rem;
+}
+#site-cart-sidebar .sidebar__footer .flex-buttons {
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+#site-cart-sidebar .sidebar__footer .flex-buttons .button {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  font-size: 0.875rem;
+}
+#site-cart-sidebar .sidebar__footer textarea {
+  min-height: 3rem;
+  height: 4rem;
+  resize: none;
+}
+.cart-instructions{
+  padding-top: 15px !important;
+}
+/* ─────────────────────────────────────────────── */
+
 .sidebar__body > div.sidebar-large-padding {
   padding: var(--sidebar-gutter);
+  padding-bottom: 25px ;
 }
 .sidebar__body > div:not(.sidebar-large-padding) {
   padding: calc(var(--sidebar-gutter) / 2) var(--sidebar-gutter);
@@ -109,9 +168,20 @@ html[dir=ltr] .sidebar--left {
 }
 .sidebar cart-recommendations:not(:empty) {
   display: block;
-  padding: calc(var(--sidebar-gutter) / 2) var(--sidebar-gutter);
+  padding: var(--sidebar-gutter);
   width: var(--sidebar-width);
-  border-top: 1px solid var(--color-borders-main);
+  position: relative;
+}
+
+.sidebar cart-recommendations:not(:empty)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: var(--sidebar-gutter);
+  right: var(--sidebar-gutter);
+  height: 1px;
+  background: var(--color-borders-main);
 }
 @media screen and (min-width: 1024px) {
   .sidebar cart-recommendations:not(:empty) .css-slider-navigation-container {

@@ -181,6 +181,22 @@ html[dir=ltr] .product-item__badges {
   flex-grow: 1;
 }
 
+/* Equal-height cards: title grows to push price + CTA to the same row across cards */
+.product-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item > .product-item__text:first-of-type {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item__title {
+  flex-grow: 1;
+}
+
 .product-item .stamped-badge-caption {
   margin-inline-start: 8px;
   font-size: 80%;
@@ -195,4 +211,729 @@ html[dir=ltr] .product-item__badges {
 }
 .product-item .yotpo .standalone-bottomline.star-clickable, .product-item .yotpo .standalone-bottomline .star-clickable {
   cursor: default !important;
+}
+
+
+/* =====================================================
+   COLLECTION PAGE – SIDEBAR FILTER LAYOUT
+   ===================================================== */
+
+/* Desktop: sidebar + sort bar visible, 3-column product grid */
+@media screen and (min-width: 1024px) {
+  .collection-layout-with-sidebar {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .collection-sidebar-panel {
+    width: 260px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--color-borders-main);
+    padding-right: 1.5rem;
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .collection-products-panel {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* 3-column grid instead of 4 */
+  #main-collection-product-grid {
+    --visible-cols: 3 !important;
+  }
+
+  /* Shorter product card image */
+  .collection-products-panel .product-item__image {
+    padding-top: 70% !important;
+  }
+
+  /* Mobile trigger button is hidden on desktop */
+  .collection-mobile-filter-trigger {
+    display: none !important;
+  }
+
+  /* Show product count in sidebar; mobile filter button already hidden via .hide class */
+  .collection-sidebar-panel .section-heading--facets {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .collection-sidebar-panel .section-heading--facets .section-heading__text {
+    margin: 0;
+    padding: 0.25rem 0 0.75rem;
+  }
+
+  .collection-sidebar-panel .section-heading--facets #CollectionProductCount {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.55);
+    margin: 0;
+  }
+
+  /* ---- Sidebar facets form layout ---- */
+
+  .collection-sidebar-panel .facets {
+    margin: 0;
+  }
+
+  .collection-sidebar-panel .facets__form {
+    flex-direction: column;
+  }
+
+  .collection-sidebar-panel .facets__prewrapper {
+    max-width: 100%;
+  }
+
+  /* "Filter:" heading */
+  .collection-sidebar-panel .facets__heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #350078;
+    padding: 0 0 0.75rem;
+    border-bottom: 1px solid var(--color-borders-main);
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  /* ---- Individual filter group ---- */
+  .collection-sidebar-panel .facets__disclosure {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-inline-end: 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  /* Filter group heading row – remove all dropdown-button styles */
+  .collection-sidebar-panel .facets__summary {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0.875rem 0 !important;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-image: none !important;
+  }
+
+  /* Remove native triangle marker */
+  .collection-sidebar-panel .facets__summary::-webkit-details-marker { display: none; }
+  .collection-sidebar-panel .facets__summary::marker { display: none; }
+
+  /* + icon when collapsed */
+  .collection-sidebar-panel .facets__summary::after {
+    content: '+';
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+    color: var(--color-text-main);
+  }
+
+  /* − icon when expanded */
+  .collection-sidebar-panel .facets__disclosure[open] > .facets__summary::after {
+    content: '−';
+  }
+
+  /* ---- Filter content – inline, never a floating dropdown ---- */
+  .collection-sidebar-panel .facets__display {
+    position: relative !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 0 0.75rem !important;
+    background: transparent;
+  }
+
+  /* Hide per-group header (selected count + reset link) – keeps UI clean */
+  .collection-sidebar-panel .facets__header {
+    display: none !important;
+  }
+
+  /* Checkbox list */
+  .collection-sidebar-panel .facets__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .collection-sidebar-panel .facets__item {
+    padding: 0.35rem 0;
+  }
+
+  .collection-sidebar-panel .facets__item label {
+    font-size: 0.9rem;
+    gap: 0.625rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  /* Checkbox — restore native browser checkbox (always visible) */
+  .collection-sidebar-panel input[type="checkbox"].styled-checkbox,
+  .collection-sidebar-panel .styled-checkbox {
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    appearance: checkbox !important;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    border-radius: 2px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: unset !important;
+    border: unset !important;
+    position: static !important;
+  }
+
+  .collection-sidebar-panel input[type="checkbox"].styled-checkbox::before,
+  .collection-sidebar-panel input[type="checkbox"].styled-checkbox::after,
+  .collection-sidebar-panel .styled-checkbox::before,
+  .collection-sidebar-panel .styled-checkbox::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Disable backdrop overlay that closes dropdowns on outside click */
+  .collection-sidebar-panel .disclosure-has-popup[open] > summary::before {
+    display: none !important;
+  }
+
+  /* Wrapper div inside facets__display (parent of price-range + slider) */
+  .collection-sidebar-panel .facets__display > div {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 230px;
+  }
+
+  /* Price range — two equal boxes, slider below, no overflow */
+  .collection-sidebar-panel .facets__price {
+    padding: 0.5rem 0 0.25rem;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .collection-sidebar-panel .facets__price .field {
+    min-width: 0 !important;
+    width: 100% !important;
+    border: 1.5px solid #ccc !important;
+    border-radius: 6px !important;
+    position: relative !important;
+    height: 2.5rem !important;
+    box-sizing: border-box !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+
+  .collection-sidebar-panel .facets__price .field__currency {
+    position: absolute !important;
+    left: 0.4rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    opacity: 0.6 !important;
+    font-size: 0.78rem !important;
+    pointer-events: none !important;
+    padding-top: 0 !important;
+  }
+
+  .collection-sidebar-panel .facets__price input {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 0.3rem !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    font-size: 0.8rem !important;
+    text-align: right !important;
+    box-sizing: border-box !important;
+  }
+
+  .collection-sidebar-panel .facets__price > label {
+    font-size: 0.78rem;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  /* Slider full width, no overflow */
+  .collection-sidebar-panel .range-slider-wrapper {
+    padding: 1.5rem 0 0.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Prevent horizontal scroll from any child */
+  .collection-sidebar-panel .facets__display {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    box-sizing: border-box;
+  }
+
+  .collection-sidebar-panel {
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Active-facets-desktop is moved by JS into the sort bar — hide the now-empty sidebar slot */
+  .collection-sidebar-panel .active-facets {
+    display: none !important;
+  }
+
+  /* Hide Sort by inside sidebar — it lives in the top bar of the products panel */
+  .collection-sidebar-panel .collection-filters__item.sorting {
+    display: none !important;
+  }
+
+  /* Sort bar: chips on the left, Sort by on the right */
+  .collection-sort-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-borders-main);
+    min-height: 2.5rem;
+  }
+
+  .collection-sort-bar__chips {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* The active-facets element moved here — make its inner flex work */
+  .collection-sort-bar__chips .active-facets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .collection-sort-bar__select {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .collection-sort-bar__select .collection-filters__label {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #350078;
+    white-space: nowrap;
+  }
+
+  .collection-sort-bar__select .select__select {
+    width: auto;
+    min-width: 160px;
+  }
+}
+
+/* Mobile: sidebar hidden, sort bar hidden (both live in mobile drawer) */
+@media screen and (max-width: 1023px) {
+  .collection-sidebar-panel {
+    display: none;
+  }
+
+  .collection-sort-bar {
+    display: none;
+  }
+
+  /* Extra bottom padding so sticky bar doesn't overlap last product */
+  .collection-layout-with-sidebar {
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* Active filter chips bar — above product grid */
+.collection-chips-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.collection-chips-bar--empty {
+  display: none !important;
+}
+
+/* Mobile sticky bar — fixed at bottom of viewport, mobile only */
+.collection-sticky-bar {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .collection-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: stretch;
+    z-index: 200;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.collection-sticky-bar__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+    color: #fff;
+    border-color: #fff;
+    background-color: #350078;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  
+}
+
+.collection-sticky-bar__divider {
+  width: 1px;
+  background: #e0e0e0;
+  flex-shrink: 0;
+}
+
+/* Restore checkboxes hidden by theme.css global rule — desktop sidebar + mobile drawer */
+.collection-sidebar-panel .facets__item [type="checkbox"]:checked,
+.collection-sidebar-panel .facets__item [type="checkbox"]:not(:checked),
+#site-filters-sidebar .facets__item [type="checkbox"]:checked,
+#site-filters-sidebar .facets__item [type="checkbox"]:not(:checked) {
+  position: static !important;
+  left: auto !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  cursor: pointer !important;
+  accent-color: #000000;
+}
+
+/* Mobile drawer — restore native checkbox, suppress theme's pseudo-element overlay */
+#site-filters-sidebar .facets__item input[type="checkbox"] {
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  appearance: checkbox !important;
+  position: static !important;
+  background: unset !important;
+  border: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#site-filters-sidebar .facets__item input[type="checkbox"]::before,
+#site-filters-sidebar .facets__item input[type="checkbox"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Mobile drawer — checkbox + label side by side */
+#site-filters-sidebar .facets__item .facet-checkbox {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+/* Mobile drawer — prevent layout shift when scrollbar appears */
+#site-filters-sidebar {
+  overflow-x: hidden;
+}
+#site-filters-sidebar .sidebar__body {
+  /* Reserve scrollbar space from the start so content never shifts when it appears */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox — hide the thin scrollbar visually */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+#site-filters-sidebar .sidebar__body::-webkit-scrollbar {
+  width: 0; /* Chrome/Safari — hide scrollbar visually but keep space reserved */
+}
+
+/* Mobile drawer: count is rendered inline above Sort by — hide the post-form duplicate */
+#site-filters-sidebar .section-heading--facets {
+  display: none;
+}
+/* Desktop sort bar — custom dropdown (replaces native select, opens left-aligned) */
+.dsort {
+  position: relative;
+  display: inline-block;
+}
+
+.dsort__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: var(--input-padding, 0.625rem 1rem);
+  padding-right: 2.5rem;
+  background: var(--color-background-main);
+  border: var(--border-width-forms) solid var(--color-borders-forms-primary);
+  border-radius: var(--border-radius-forms);
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  white-space: nowrap;
+  min-width: 200px;
+  text-align: left;
+  transition: border-color 100ms linear;
+}
+
+.dsort__trigger:hover,
+.dsort__trigger[aria-expanded="true"] {
+  border-color: var(--color-borders-forms-secondary);
+}
+
+.dsort__val {
+  flex: 1;
+}
+
+.dsort__chevron {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M1 1l5.5 5.5L12 1' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.dsort__trigger[aria-expanded="true"] .dsort__chevron {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dsort__list {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 100%;
+  background: var(--color-background-main);
+  border: var(--border-width-forms) solid var(--color-borders-forms-primary);
+  border-radius: var(--border-radius-forms);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.dsort__opt {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 80ms linear;
+}
+
+.dsort__opt:hover {
+  background: var(--color-secondary-background-main);
+}
+
+.dsort__opt--on {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Mobile sidebar — custom sort dropdown (matches desktop style) */
+.msort {
+  padding: 1rem var(--sidebar-gutter, 1.25rem);
+  border-top: 1px solid var(--color-borders-main);
+}
+
+.msort__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: var(--input-padding, 0.625rem 1rem);
+  padding-right: 2.5rem;
+  background: var(--color-background-main);
+  border: var(--border-width-forms) solid var(--color-borders-forms-primary);
+  border-radius: var(--border-radius-forms);
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  text-align: left;
+  position: relative;
+  transition: border-color 100ms linear;
+}
+
+.msort__trigger:hover,
+.msort__trigger[aria-expanded="true"] {
+  border-color: var(--color-borders-forms-secondary);
+}
+
+.msort__label {
+  font-weight: var(--font-weight-body-bold);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.msort__name {
+  flex: 1;
+  text-align: right;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  padding-right: 0.25rem;
+}
+
+.msort__chevron {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M1 1l5.5 5.5L12 1' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.msort__trigger[aria-expanded="true"] .msort__chevron {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.msort__list {
+  margin-top: 0.5rem;
+  background: var(--color-background-main);
+  border: var(--border-width-forms) solid var(--color-borders-forms-primary);
+  border-radius: var(--border-radius-forms);
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+}
+
+.msort__opt {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: background 80ms linear;
+}
+
+.msort__opt:hover {
+  background: var(--color-secondary-background-main);
+}
+
+.msort__opt--on {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Mobile drawer — animated chevron (replaces theme's static background-image arrow) */
+#site-filters-sidebar .facets__form--mobile .facets__summary {
+  background-image: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-right: 0 !important;
+}
+
+#site-filters-sidebar .facets__form--mobile .facets__summary::after {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: transform 0.25s ease;
+}
+
+/* Flip chevron upward when filter group is open */
+#site-filters-sidebar .facets__form--mobile .facets__disclosure[open] > .facets__summary::after {
+  transform: rotate(180deg);
+}
+
+/* Kill the desktop "click-outside" overlay inside the mobile drawer —
+   it intercepts clicks on other filter items and blocks the accordion from opening them */
+#site-filters-sidebar .facets__disclosure[open] > .facets__summary::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ---- Active filter badges (chips) ---- */
+/* No hover effect on the badge itself */
+.collection-sort-bar__chips .active-facets__button--light:hover,
+.collection-sort-bar__chips .active-facets__button--light:focus {
+  background: transparent !important;
+  color: var(--color-text-main) !important;
+  border-color: var(--color-borders-forms-primary) !important;
+}
+
+/* Default cursor on the badge, pointer only on the × icon */
+.collection-sort-bar__chips .active-facets__button--light {
+  cursor: default !important;
+}
+.collection-sort-bar__chips .active-facets__button--light svg {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* Keep × icon black on hover — polygon inherits fill from color, lock it to black */
+.collection-sort-bar__chips .active-facets__button--light:hover svg,
+.collection-sort-bar__chips .active-facets__button--light:focus svg,
+.collection-sort-bar__chips .active-facets__button--light:hover svg *,
+.collection-sort-bar__chips .active-facets__button--light:focus svg * {
+  fill: #000000 !important;
+  color: #000000 !important;
 }

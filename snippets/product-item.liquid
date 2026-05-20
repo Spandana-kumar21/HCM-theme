@@ -25,8 +25,8 @@
       assign aspect_ratio = settings.product_card_aspect_ratio
     endif
 
-    if settings.within_filter_enabled and product_collection
-      assign product_url = product.url
+    if product_collection
+      assign product_url = product.url | within: product_collection
     else
       assign product_url = product.url
     endif
@@ -227,7 +227,13 @@
 
         {%- when 'quick_buy' -%}
 
-          {%- unless poa_product -%}
+          {%- if poa_product -%}
+            <div class="product-item__quick-buy" {{ block.shopify_attributes }}>
+              <a href="{{ product.url }}" class="button button--regular button--fullwidth button--outline">
+                Enquire Now
+              </a>
+            </div>
+          {%- else -%}
             {%- if product.available -%}
               {%- if settings.product_card_align_buy -%}
                 </div><div
@@ -242,7 +248,7 @@
                 {%- render 'quick-buy', product: product, button_classes: 'button--regular button--fullwidth', layout: layout -%}
               </div>
             {%- endif -%}
-          {%- endunless -%}
+          {%- endif -%}
 
         {%- when 'rating' -%}
           <div

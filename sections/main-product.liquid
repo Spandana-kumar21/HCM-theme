@@ -28,7 +28,7 @@
         {%- endif -%}
         "listenScroll": true
       }'
-        class="css-slider--bottom-navigation element--border-radius"
+        class="css-slider--bottom-navigation {% if section.settings.gallery_pagination == 'thumbnails' %}css-slider--with-thumbnails{% endif %} element--border-radius"
         id="css-slider-{{ section.id }}"
       >
       {%- render 'custom-shadow', section_id: section.id -%}
@@ -499,7 +499,16 @@
                     "id": {{ variant.id }},
                     "metafields": {
                       "custom": {
-                        "tax_rate": {{ variant.metafields.custom.tax_rate | json }}
+                        "tax_rate": {{ variant.metafields.custom.tax_rate | json }},
+                        "gallery_images": [
+                          {%- for image in variant.metafields.custom.gallery_images.value -%}
+                            {
+                              "src": {{ image.preview_image | image_url: width: 1500 | json }},
+                              "thumb": {{ image.preview_image | image_url: width: 200 | json }},
+                              "alt": {{ image.preview_image.alt | default: variant.title | json }}
+                            }{%- unless forloop.last -%},{%- endunless -%}
+                          {%- endfor -%}
+                        ]
                       }
                     }
                   }{%- unless forloop.last -%},{%- endunless -%}
@@ -752,30 +761,31 @@
               <span class="product-related-title text-size--large text-weight--bold">{{ block.settings.heading | escape }}</span>
 
               {%- for product in recommendations.products -%}
+                {%- assign rec_url = product.url | within: product.collections.first -%}
+                {%- unless product.collections.first -%}{%- assign rec_url = product.url -%}{%- endunless -%}
 
                 <div class="product-related-item" data-js-product-item>
 
-                  <a href="{{ product.url }}" class="product-related-item__image element--border-width-clamped element--border-radius">
+                  <a href="{{ rec_url }}" class="product-related-item__image element--border-width-clamped element--border-radius">
                     {%- render 'lazy-image-small', image: product.featured_media, aspect_ratio: settings.cart_image_ratio, fit: settings.cart_image_fit -%}
                   </a>
 
                   <div class="product-related-item__text">
-                    <a class="product-related-item__title text-size--large text-weight--bold" href="{{ product.url }}">
+                    <a class="product-related-item__title text-size--large text-weight--bold" href="{{ rec_url }}">
                       <span class="text-animation--underline-thin">{{ product.title | escape }}</span>
                     </a>
                     {%- if block.settings.show_price -%}
                       {% liquid
-                          assign current_variant = product.selected_or_first_available_variant 
+                          assign current_variant = product.selected_or_first_available_variant
                       %}
-                      <span class="product-related-item__price">
+                      <div class="product-related-item__price">
                         {%- case current_variant.metafields.custom.stocking_status -%}
                           {%- when 'POA' -%}
                             <span>{{ 'products.b2b.poa' | t }}</span>
                           {%- else -%}
                             {%- render 'product-price', product: product, variant: current_variant, metafields: current_variant.metafields, target: current_variant, product_price_varies: product.price_varies, is_plp: false -%}
                         {%- endcase -%}
-
-                      </span>
+                      </div>
                     {%- endif -%}
                     {%- if block.settings.show_rating -%}
                       <div class="product-item__ratings">
@@ -824,26 +834,27 @@
               {%- endunless -%}
 
               {%- for product in block.settings.product_list -%}
+                {%- assign rel_url = product.url | within: product.collections.first -%}
+                {%- unless product.collections.first -%}{%- assign rel_url = product.url -%}{%- endunless -%}
 
                 <div class="product-related-item">
 
-                  <a href="{{ product.url }}" class="product-related-item__image element--border-width-clamped element--border-radius">
+                  <a href="{{ rel_url }}" class="product-related-item__image element--border-width-clamped element--border-radius">
                     {%- render 'lazy-image-small', image: product.featured_media, aspect_ratio: settings.cart_image_ratio, fit: settings.cart_image_fit -%}
                   </a>
 
                   <div class="product-related-item__text">
-                    <a class="product-related-item__title text-size--large text-weight--bold" href="{{ product.url }}">
+                    <a class="product-related-item__title text-size--large text-weight--bold" href="{{ rel_url }}">
                       <span class="text-animation--underline-thin">{{ product.title | escape }}</span>
                     </a>
-                    <span class="product-related-item__price">
+                    <div class="product-related-item__price">
                       {%- case product.selected_or_first_available_variant.metafields.custom.stocking_status -%}
                         {%- when 'POA' -%}
                           <span>{{ 'products.b2b.poa' | t }}</span>
                         {%- else -%}
                           {%- render 'product-price', variant: product.selected_or_first_available_variant, target: product.selected_or_first_available_variant, product_price_varies: product.price_varies -%}
                       {%- endcase -%}
-
-                    </span>
+                    </div>
                   </div>
 
                   <div class="product-related-item__button">

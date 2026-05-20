@@ -48,7 +48,7 @@
       ],
       "custom_css": [
         ".footer-item__title {font-weight: 400;}",
-        ".grid--gap-xlarge {gap: 20px !important; --col-gap: 0px;}"
+        ".grid--gap-xlarge {gap: 20px !important; --col-gap: 20px !important;}"
       ],
       "settings": {
         "layout": "grid-4 grid-portable-2 grid-lap-1",

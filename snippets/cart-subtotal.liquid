@@ -37,7 +37,7 @@
 		{%- endfor -%}
 
 		<div class="cart__total">
-			<span>{{ 'cart.total' | t }}</span>
+			<span class="text-size--heading">{{ 'cart.total' | t }}</span>
 			{%- if customer.b2b? -%}
 			  <strong class="text-size--heading">{{ cart.total_price | money }}</strong>
 			{%- else -%}

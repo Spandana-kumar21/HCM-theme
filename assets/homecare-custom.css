@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
   /*Adds smooth scrolling instead of snapping to element*/
 }
+
+/* Quick-view modal must stack above the cart drawer (z-index: 1001) */
+.modal {
+  z-index: 1100 !important;
+}
 .granite-quantity-rules {
         margin-top: 0px;
         color: #000000;
@@ -1536,9 +1541,6 @@ color:#350078;
 #seal-login-helper a:hover{
   color:#350078;
 }
-.sidebar-opened .site-overlay{
-  display:none!important;
-}
 .jdgm-form__title{
    font-weight: normal!important;
 }
@@ -2330,5 +2332,176 @@ padding: 15px 0;
 }
 
 .hcm-b2b-customer .discounty-portal{
-  display:none!important;
+  display:none !important;
+}
+
+/* ---- Uniform price & button alignment across product cards ---- */
+/* Cards in a CSS grid row share equal height. Making the card flex-column  */
+/* and the title flex-grow:1 pushes price and buy button to a consistent    */
+/* bottom position regardless of how many lines the title wraps to.         */
+.product-item.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text section fills the card space below the image */
+.product-item .card__text.product-item__text {
+  flex: 1;
+}
+
+/* Title grows, pushing price and CTA button to the bottom of every card */
+.product-item .product-item__title {
+  flex: 1;
+}
+
+
+
+/* ---- Online Account video section: mobile fix ---- */
+/* On mobile, autoplay is blocked so the video collapses to 0 height.      */
+/* min-height ensures the container always has space; overflow:hidden       */
+/* prevents the overlay content from escaping the rounded container bounds. */
+
+.video-container {
+  overflow: hidden;          /* clip overlay content to the container       */
+}
+
+@media screen and (max-width: 767px) {
+  .video-container {
+    min-height: 200px;       /* guarantees a visible area even with no video */
+    border-radius: 10px;
+  }
+
+  .video-container video {
+    position: absolute;      /* take video out of flow so min-height governs */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    padding: 1.5rem 1rem;    /* breathing room so text doesn't touch edges  */
+    justify-content: center;
+  }
+
+  /* Stack buttons vertically and stretch them full-width on mobile */
+  .buttons-wrapper {
+    
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    
+  }
+
+  .buttons-wrapper .increased-spacing {
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttons-wrapper .button {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .video-container .overlay h2{
+  font-size: 1.5rem !important;
+  }
+}
+
+/* ─── Variant gallery filter ─── */
+.product-gallery-item.variant-gallery--hidden {
+  display: none !important;
+}
+.product-gallery__thumbnails .thumbnail.variant-gallery--hidden {
+  display: none !important;
+}
+
+/* ─── Variant gallery: thumbnail viewport inside slider nav ─── */
+
+/* order:2 places viewport between prev(order:1) and next(order:3) arrows.
+   flex:1 makes it fill all space between the arrows. */
+.variant-thumb-carousel__viewport {
+  order: 2;
+  /* flex is set by JS: '1' when scrolling, '0 0 auto' when all thumbs fit */
+  min-width: 0;
+  overflow: hidden;
+}
+.variant-thumb-carousel__track {
+  display: flex;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  /* justify-content toggled by JS: 'center' (no overflow) or '' (overflow) */
+}
+.variant-thumb-carousel__viewport .thumbnail {
+  width: 5.25rem !important;
+  height: 5.25rem;
+  flex-shrink: 0;
+  display: block;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.66;
+  border: 2px solid transparent !important;
+  overflow: hidden;
+  border-radius: var(--border-radius-cards);
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.variant-thumb-carousel__viewport .thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.variant-thumb-carousel__viewport .thumbnail.active {
+  opacity: 1;
+  border-color: #350078 !important;
+  box-shadow: 0 0 0 1px #350078;
+}
+.no-touchevents .variant-thumb-carousel__viewport .thumbnail:hover {
+  opacity: 1;
+  border-color: rgba(53, 0, 120, 0.35) !important;
+}
+
+/* Tablet: smaller thumbnails so more fit in the narrower gallery column */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .variant-thumb-carousel__viewport .thumbnail {
+    width: 4rem !important;
+    height: 4rem;
+  }
+}
+
+/* ── PDP thumbnail carousel: bigger, visible navigation arrows ── */
+.main-product .css-slider-navigation-container .css-slider-button {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #d8d8d8;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+.main-product .css-slider-navigation-container .css-slider-button svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.no-touchevents .main-product .css-slider-navigation-container .css-slider-button:not(.disabled):hover {
+  background: #f5f0ff;
+  border-color: #350078;
+}
+
+/* Mobile: hide the thumbnail viewport entirely — slider dots remain */
+@media (max-width: 767px) {
+  .variant-thumb-carousel__viewport {
+    display: none !important;
+  }
 }

@@ -115,11 +115,42 @@
       
     </main>
 
-    <aside>
+    <aside id="cart-aside">
       {%- render 'cart-subtotal', type: 'page' -%}
     </aside>
-  </div>  
+  </div>
 </div>
+
+<script>
+  (function () {
+    var aside = document.getElementById('cart-aside');
+    if (!aside) return;
+
+    function updateTop() {
+      var sh = document.querySelector('.sticky-header');
+      if (sh && sh.classList.contains('show')) {
+        aside.style.top = (sh.offsetHeight + 8) + 'px';
+      } else {
+        aside.style.top = '';
+      }
+    }
+
+    function attachObserver() {
+      var sh = document.querySelector('.sticky-header');
+      if (!sh) return false;
+      new MutationObserver(updateTop).observe(sh, { attributes: true, attributeFilter: ['class'] });
+      updateTop();
+      return true;
+    }
+
+    if (!attachObserver()) {
+      var bodyObs = new MutationObserver(function (_, obs) {
+        if (attachObserver()) obs.disconnect();
+      });
+      bodyObs.observe(document.body, { childList: true });
+    }
+  })();
+</script>
 
 {% schema %}
 {
