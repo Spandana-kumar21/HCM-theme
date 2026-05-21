@@ -25,18 +25,20 @@
 				{%- else -%}
 
 					{%- unless template contains 'product' -%}
-						<span class="breadcrumb__separator">/</span>
-						{%- if template contains 'collections' -%}
-							<span class="breadcrumb__current">{{ 'general.breadcrumb.collections' | t }}</span>
-						{%- elsif collection -%}
-							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
-						{%- endif -%}
+						{%- unless collection.handle == 'vendors' -%}
+							<span class="breadcrumb__separator">/</span>
+							{%- if template contains 'collections' -%}
+								<span class="breadcrumb__current">{{ 'general.breadcrumb.collections' | t }}</span>
+							{%- elsif collection -%}
+								<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+							{%- endif -%}
+						{%- endunless -%}
 					{%- endunless -%}
 
 					{%- if collection -%}
 
 						{%- comment -%}Product page navigated via collection-scoped URL — server-side full breadcrumb{%- endcomment -%}
-						{%- if template contains 'product' -%}
+						{%- if template contains 'product' and collection.handle != 'vendors' -%}
 							<span class="breadcrumb__separator">/</span>
 							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
 						{%- endif -%}

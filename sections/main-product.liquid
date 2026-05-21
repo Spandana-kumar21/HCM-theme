@@ -95,6 +95,52 @@
 
     {%- endif -%}
 
+    {%- assign _product_video = product.media | where: 'media_type', 'video' | first -%}
+    {%- if _product_video -%}
+      <script type="application/json" id="ProductVideoMedia">
+        {
+          "thumb":   {{ _product_video.preview_image | image_url: width: 200  | json }},
+          "preview": {{ _product_video.preview_image | image_url: width: 1500 | json }},
+          "alt":     {{ _product_video.alt | default: product.title | json }},
+          "sources": [
+            {%- for _src in _product_video.sources -%}
+              {"url": {{ _src.url | json }}, "type": {{ _src.mime_type | json }}}
+              {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ]
+        }
+      </script>
+    {%- endif -%}
+
+    <script type="application/json" id="ProductAllMedia">
+      [
+        {%- for _m in product.media -%}
+          {%- if _m.media_type == 'video' -%}
+            {
+              "isVideo": true,
+              "thumb":   {{ _m.preview_image | image_url: width: 200  | json }},
+              "preview": {{ _m.preview_image | image_url: width: 1500 | json }},
+              "alt":     {{ _m.alt | default: product.title | json }},
+              "sources": [
+                {%- for _s in _m.sources -%}
+                  {"url": {{ _s.url | json }}, "type": {{ _s.mime_type | json }}}
+                  {%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
+              ]
+            }
+          {%- else -%}
+            {
+              "src":   {{ _m.preview_image | image_url: width: 1500 | json }},
+              "zoom":  {{ _m.preview_image | image_url: width: 2048 | json }},
+              "thumb": {{ _m.preview_image | image_url: width: 200  | json }},
+              "alt":   {{ _m.alt | default: product.title | json }}
+            }
+          {%- endif -%}
+          {%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    </script>
+
     {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 
     {%- if first_3d_model -%}
@@ -503,9 +549,10 @@
                         "gallery_images": [
                           {%- for image in variant.metafields.custom.gallery_images.value -%}
                             {
-                              "src": {{ image.preview_image | image_url: width: 1500 | json }},
-                              "thumb": {{ image.preview_image | image_url: width: 200 | json }},
-                              "alt": {{ image.preview_image.alt | default: variant.title | json }}
+                              "src":   {{ image.preview_image | image_url: width: 1500 | json }},
+                              "zoom":  {{ image.preview_image | image_url: width: 2048 | json }},
+                              "thumb": {{ image.preview_image | image_url: width: 200  | json }},
+                              "alt":   {{ image.preview_image.alt | default: variant.title | json }}
                             }{%- unless forloop.last -%},{%- endunless -%}
                           {%- endfor -%}
                         ]

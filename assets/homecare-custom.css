@@ -2506,3 +2506,76 @@ padding: 15px 0;
     display: none !important;
   }
 }
+
+/* ─── Cart page: tighten gap between breadcrumb and heading ─── */
+.template-cart #main > .shopify-section .container--vertical-space {
+  margin-top: 0.75rem;
+}
+
+/* ─── Cart page: sticky total card on mobile ─── */
+@media screen and (max-width: 1023px) {
+  /* Sticky at bottom of the cart-section (stops naturally above the footer) */
+  .cart-section:not(.cart-section--empty) #cart-aside {
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Strip the card border/radius — let the shadow on #cart-aside do the work */
+  #cart-aside .cart__subtotal-widget {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 1rem 1.25rem;
+  }
+
+  /* Total row: label and amount side by side, like the drawer footer */
+  #cart-aside .cart__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #cart-aside .cart__total span,
+  #cart-aside .cart__total strong {
+    display: inline !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+  }
+
+  /* Order instructions: compact textarea */
+  #cart-aside .cart__instructions {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #cart-aside .cart__instructions label {
+    font-size: 0.8125rem;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  #cart-aside .cart__instructions textarea {
+    min-height: 56px;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    height: 3.5rem !important;
+    
+  }
+
+  /* Taxes/shipping line */
+  #cart-aside .cart__shipping {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Checkout button: full width, consistent with drawer */
+  #cart-aside #CheckOut {
+    width: 100%;
+  }
+}

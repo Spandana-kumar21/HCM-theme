@@ -281,7 +281,13 @@ if ( typeof ProductPage !== 'function' ) {
 				const _metafieldsEl = document.getElementById('ProductVariantMetafields');
 				const _allMeta = _metafieldsEl ? JSON.parse(_metafieldsEl.textContent) : [];
 				const _variantMeta = _allMeta.find(v => v.id === variant.id);
-				let _galleryImages = (_variantMeta?.metafields?.custom?.gallery_images || []).slice();
+				// Only use metafield gallery when the product has more than one variant;
+				// single-variant products use the standard uploaded media instead.
+				const _hasMultipleVariants = _allMeta.length > 1;
+				let _galleryImages = (_hasMultipleVariants
+					? (_variantMeta?.metafields?.custom?.gallery_images || [])
+					: []
+				).slice();
 
 				const _galleryGrid = this.productGallery.querySelector('.grid');
 				let _thumbsHolder = this.querySelector('.product-gallery__thumbnails-holder');
@@ -290,48 +296,141 @@ if ( typeof ProductPage !== 'function' ) {
 				const _isSlider = this.productGallery.classList.contains('product-gallery--slider') ||
 					(this.productGallery.classList.contains('product-gallery--scroll') && window.innerWidth < 1024);
 
+				// True when the current variant has metafield images to replace the gallery
+				const _usingMetafield = _galleryImages.length > 0;
+
+				// Single-variant (or variant with no metafield): use all uploaded product media
+				if (!_usingMetafield) {
+					const _allMediaEl = document.getElementById('ProductAllMedia');
+					if (_allMediaEl) {
+						try { _galleryImages = JSON.parse(_allMediaEl.textContent); } catch(e) {}
+					}
+					// Ensure the uploaded video always sits at position 1 (same as metafield path)
+					const _vidIdx = _galleryImages.findIndex(m => m.isVideo);
+					if (_vidIdx > 1) {
+						const [_vid] = _galleryImages.splice(_vidIdx, 1);
+						_galleryImages.splice(1, 0, _vid);
+					}
+				}
+
 				if (_galleryImages.length > 0) {
 
-					// Prepend variant featured image if not already first
-					if (variant.featured_image && variant.featured_image.src) {
-						const fSrc = variant.featured_image.src;
-						const fThumb = fSrc.split('?')[0] + '?width=200';
-						const fAlt  = variant.featured_image.alt || '';
-						const alreadyFirst = _galleryImages[0]?.src?.split('?')[0].split('/').pop() ===
-							fSrc.split('?')[0].split('/').pop();
-						if (!alreadyFirst) {
-							_galleryImages.unshift({ src: fSrc, thumb: fThumb, alt: fAlt });
+					if (_usingMetafield) {
+						// Prepend variant featured image if not already first
+						if (variant.featured_image && variant.featured_image.src) {
+							const fSrc   = variant.featured_image.src;
+							const fBase  = fSrc.split('?')[0];
+							const fThumb = fBase + '?width=200';
+							const fZoom  = fBase + '?width=2048';
+							const fAlt   = variant.featured_image.alt || '';
+							const alreadyFirst = _galleryImages[0]?.src?.split('?')[0].split('/').pop() ===
+								fBase.split('/').pop();
+							if (!alreadyFirst) {
+								_galleryImages.unshift({ src: fSrc, zoom: fZoom, thumb: fThumb, alt: fAlt });
+							}
 						}
-					}
 
-					// Save original gallery HTML once (before first swap)
-					if (!this._origGalleryHTML) {
-						this._origGalleryHTML = _galleryGrid ? _galleryGrid.innerHTML : null;
-						this._origThumbsHTML  = _thumbsHolder ? _thumbsHolder.innerHTML : null;
-					}
+						// Inject product video at position 1 (video already present in ProductAllMedia)
+						const _videoScriptEl = document.getElementById('ProductVideoMedia');
+						if (_videoScriptEl) {
+							try {
+								const _vd = JSON.parse(_videoScriptEl.textContent);
+								_vd.isVideo = true;
+								_galleryImages.splice(Math.min(1, _galleryImages.length), 0, _vd);
+							} catch(e) {}
+						}
 
-					// Build slides — add css-slide class so css-slider recognises them after resetSlider()
-					if (_galleryGrid) {
-						_galleryGrid.innerHTML = _galleryImages.map((img, i) => `
-							<div class="product-gallery-item css-slide element--border-radius"
-								data-product-media-type="image"
-								data-media-id="variant-${i}"
-								data-index="${i}"
-								style="padding-top:100%">
-								<img src="${img.src}"
-									alt="${img.alt}"
-									loading="${i === 0 ? 'eager' : 'lazy'}"
-									class="element--border-radius"
-									style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block">
-							</div>`).join('');
-					}
+						// Save original gallery HTML once (before first swap)
+						if (!this._origGalleryHTML) {
+							this._origGalleryHTML = _galleryGrid ? _galleryGrid.innerHTML : null;
+							this._origThumbsHTML  = _thumbsHolder ? _thumbsHolder.innerHTML : null;
+						}
 
-					// Force css-slider to rescan new slides and rebuild dots/nav
-					if (_cssSlider && _cssSlider.sliderEnabled) {
-						_cssSlider.items = _cssSlider.querySelectorAll(_cssSlider.o.selector);
-						_cssSlider.resetSlider();
-					} else if (_sliderHolder) {
-						_sliderHolder.scrollLeft = 0;
+						// Build slides — add css-slide class so css-slider recognises them after resetSlider()
+						if (_galleryGrid) {
+							_galleryGrid.innerHTML = _galleryImages.map((img, i) => {
+								if (img.isVideo) {
+									const _sources = (img.sources || []).map(s =>
+										`<source src="${s.url}" type="${s.type}">`).join('');
+									return `<div class="product-gallery-item css-slide element--border-radius"
+										data-product-media-type="video"
+										data-media-id="variant-video-${i}"
+										data-index="${i}"
+										style="padding-top:100%;background:#000">
+										<video controls playsinline preload="auto" poster="${img.preview}"
+											style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain">
+											${_sources}
+										</video>
+									</div>`;
+								}
+								return `<div class="product-gallery-item css-slide element--border-radius"
+									data-product-media-type="image"
+									data-media-id="variant-${i}"
+									data-index="${i}"
+									data-image-zoom
+									style="padding-top:100%">
+									<img src="${img.src}"
+										alt="${img.alt}"
+										loading="${i === 0 ? 'eager' : 'lazy'}"
+										class="element--border-radius"
+										style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block">
+									${img.zoom ? `<product-image-zoom class="product-gallery-item__zoom" data-image="${img.zoom}" aria-hidden="true" tabindex="-1"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9.08008" cy="9" r="8" stroke="var(--main-text)" stroke-width="2" style="fill:none!important" /><rect x="14.2988" y="15.9062" width="1.98612" height="6.65426" transform="rotate(-45 14.2988 15.9062)" fill="#111111"/><path d="M8.08008 5H10.0801V13H8.08008V5Z" fill="#111111"/><path d="M13.0801 8V10L5.08008 10L5.08008 8L13.0801 8Z" fill="#111111"/></svg></product-image-zoom>` : ''}
+								</div>`;
+							}).join('');
+						}
+
+						// Force css-slider to rescan new slides and rebuild dots/nav
+						if (_cssSlider && _cssSlider.sliderEnabled) {
+							_cssSlider.items = _cssSlider.querySelectorAll(_cssSlider.o.selector);
+							_cssSlider.resetSlider();
+						} else if (_sliderHolder) {
+							_sliderHolder.scrollLeft = 0;
+						}
+
+					} else {
+						// Single-variant: rebuild gallery from ProductAllMedia so video slides
+						// are plain <video> elements that _syncVideo can control.
+						if (!this._origGalleryHTML) {
+							this._origGalleryHTML = _galleryGrid ? _galleryGrid.innerHTML : null;
+							this._origThumbsHTML  = _thumbsHolder ? _thumbsHolder.innerHTML : null;
+						}
+						if (_galleryGrid) {
+							_galleryGrid.innerHTML = _galleryImages.map((img, i) => {
+								if (img.isVideo) {
+									const _sources = (img.sources || []).map(s =>
+										`<source src="${s.url}" type="${s.type}">`).join('');
+									return `<div class="product-gallery-item css-slide element--border-radius"
+										data-product-media-type="video"
+										data-media-id="variant-video-${i}"
+										data-index="${i}"
+										style="padding-top:100%;background:#000">
+										<video controls playsinline preload="auto" poster="${img.preview}"
+											style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain">
+											${_sources}
+										</video>
+									</div>`;
+								}
+								return `<div class="product-gallery-item css-slide element--border-radius"
+									data-product-media-type="image"
+									data-media-id="variant-${i}"
+									data-index="${i}"
+									data-image-zoom
+									style="padding-top:100%">
+									<img src="${img.src}"
+										alt="${img.alt}"
+										loading="${i === 0 ? 'eager' : 'lazy'}"
+										class="element--border-radius"
+										style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block">
+									${img.zoom ? `<product-image-zoom class="product-gallery-item__zoom" data-image="${img.zoom}" aria-hidden="true" tabindex="-1"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9.08008" cy="9" r="8" stroke="var(--main-text)" stroke-width="2" style="fill:none!important" /><rect x="14.2988" y="15.9062" width="1.98612" height="6.65426" transform="rotate(-45 14.2988 15.9062)" fill="#111111"/><path d="M8.08008 5H10.0801V13H8.08008V5Z" fill="#111111"/><path d="M13.0801 8V10L5.08008 10L5.08008 8L13.0801 8Z" fill="#111111"/></svg></product-image-zoom>` : ''}
+								</div>`;
+							}).join('');
+						}
+						if (_cssSlider && _cssSlider.sliderEnabled) {
+							_cssSlider.items = _cssSlider.querySelectorAll(_cssSlider.o.selector);
+							_cssSlider.resetSlider();
+						} else if (_sliderHolder) {
+							_sliderHolder.scrollLeft = 0;
+						}
 					}
 
 					// Build thumbnail viewport — inserted BETWEEN the slider's own < > arrows on desktop
@@ -353,10 +452,16 @@ if ( typeof ProductPage !== 'function' ) {
 					// Populate thumbnail images
 					_track.innerHTML = _galleryImages.map((img, i) => `
 						<button class="thumbnail element--border-radius ${i === 0 ? 'active' : ''}"
-							data-vt="${i}" tabindex="0">
+							data-vt="${i}" tabindex="0" style="position:relative;overflow:hidden">
 							<img src="${img.thumb}" alt="${img.alt}"
 								class="thumbnail__image" loading="lazy"
 								style="width:100%;height:100%;object-fit:cover">
+							${img.isVideo ? `<span class="thumbnail__badge" aria-hidden="true"
+								style="position:absolute;bottom:4px;right:4px;display:flex;align-items:center;justify-content:center;
+								width:20px;height:20px;background:rgba(0,0,0,0.55);border-radius:50%">
+								<svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1.5L8 5L1 8.5V1.5Z" fill="white"/>
+								</svg></span>` : ''}
 						</button>`).join('');
 
 					// When all thumbs fit without scrolling, size viewport to content
@@ -367,6 +472,18 @@ if ( typeof ProductPage !== 'function' ) {
 						const _th = _track.querySelector('.thumbnail');
 						const _tw = _th ? (_th.offsetWidth + 8) : 88; // thumb width + 0.5rem gap
 						_track.style.transform = `translateX(-${_viewport._offset * _tw}px)`;
+					};
+
+					// Pause all gallery videos then autoplay the one at idx after slide transition
+					const _syncVideo = (idx) => {
+						_galleryGrid.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
+						if (_galleryImages[idx] && _galleryImages[idx].isVideo) {
+							setTimeout(() => {
+								const _slide = _galleryGrid.querySelectorAll('.product-gallery-item')[idx];
+								const _vid = _slide && _slide.querySelector('video');
+								if (_vid) _vid.play().catch(() => {});
+							}, 350);
+						}
 					};
 
 					// Thumbnail click → navigate main image
@@ -382,6 +499,7 @@ if ( typeof ProductPage !== 'function' ) {
 							_track.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
 							thumb.classList.add('active');
 							if (_cssSlider && _cssSlider.sliderEnabled) { _cssSlider.changeSlide(i); }
+							_syncVideo(i);
 						});
 					});
 
@@ -401,6 +519,7 @@ if ( typeof ProductPage !== 'function' ) {
 								_viewport._offset = Math.min(_ai - _VISIBLE + 1, _max);
 								_vtUpdate();
 							}
+							_syncVideo(_ai);
 						};
 						_cssSlider.addEventListener('change', this._vtSliderListener);
 					}
