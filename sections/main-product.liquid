@@ -1009,6 +1009,123 @@
   <script src="{{ 'component-nutritional-info.js' | asset_url }}" defer></script>
 {%- endif -%}
 
+{%- comment -%}Sticky Add to Cart bar — mobile only{%- endcomment -%}
+<div class="sticky-atc" id="sticky-atc-{{ section.id }}" style="display:none" aria-hidden="true">
+  <div class="sticky-atc__inner">
+    <div class="sticky-atc__qty">
+      <button class="sticky-atc__qty-btn sticky-atc__qty-minus" type="button" aria-label="{{ 'general.accessibility_labels.decrease_quantity' | t }}">
+        {%- render 'theme-symbols', icon: 'minus' -%}
+      </button>
+      <span class="sticky-atc__qty-val" aria-live="polite">1</span>
+      <button class="sticky-atc__qty-btn sticky-atc__qty-plus" type="button" aria-label="{{ 'general.accessibility_labels.increase_quantity' | t }}">
+        {%- render 'theme-symbols', icon: 'plus' -%}
+      </button>
+    </div>
+    <button class="sticky-atc__btn add-to-cart button button--solid" type="button" data-sticky-section="{{ section.id }}">
+      {{ 'products.page.add_to_cart_button' | t }}
+    </button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var sectionId = '{{ section.id }}';
+  var bar = document.getElementById('sticky-atc-' + sectionId);
+  if (!bar) return;
+
+  var mainForm = document.getElementById('add-to-cart-' + sectionId);
+  if (!mainForm) return;
+
+  var mainBtn    = mainForm.querySelector('[data-js-product-add-to-cart]');
+  var mainQtyInput = mainForm.querySelector('input[name="quantity"]');
+  var stickyQtyVal = bar.querySelector('.sticky-atc__qty-val');
+  var stickyMinus  = bar.querySelector('.sticky-atc__qty-minus');
+  var stickyPlus   = bar.querySelector('.sticky-atc__qty-plus');
+  var stickyBtn    = bar.querySelector('.sticky-atc__btn');
+
+  function isMobile() { return window.innerWidth < 768; }
+
+  /* ---------- show / hide via IntersectionObserver ---------- */
+  if ('IntersectionObserver' in window && mainBtn) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var show = !entry.isIntersecting && isMobile();
+        bar.style.display = show ? '' : 'none';
+        bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      });
+    }, { threshold: 0.5 });
+    io.observe(mainBtn);
+  }
+
+  window.addEventListener('resize', function () {
+    if (!isMobile()) { bar.style.display = 'none'; }
+  });
+
+  /* ---------- hide quantity controls if setting is off ---------- */
+  if (!mainQtyInput) {
+    var qtyEl = bar.querySelector('.sticky-atc__qty');
+    if (qtyEl) qtyEl.style.display = 'none';
+  }
+
+  /* ---------- quantity sync ---------- */
+  function updateDisplay() {
+    if (!mainQtyInput) return;
+    var q   = parseInt(mainQtyInput.value, 10) || 1;
+    var min = parseInt(mainQtyInput.min, 10)   || 1;
+    var max = parseInt(mainQtyInput.max, 10)   || 999;
+    if (stickyQtyVal) stickyQtyVal.textContent = q;
+    if (stickyMinus)  stickyMinus.disabled = q <= min;
+    if (stickyPlus)   stickyPlus.disabled  = q >= max;
+  }
+
+  if (mainQtyInput) {
+    mainQtyInput.addEventListener('change', updateDisplay);
+    mainQtyInput.addEventListener('input',  updateDisplay);
+  }
+  updateDisplay();
+
+  stickyMinus && stickyMinus.addEventListener('click', function () {
+    if (!mainQtyInput) return;
+    var min = parseInt(mainQtyInput.min, 10) || 1;
+    var val = parseInt(mainQtyInput.value, 10) || 1;
+    if (val > min) {
+      mainQtyInput.value = val - 1;
+      mainQtyInput.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    updateDisplay();
+  });
+
+  stickyPlus && stickyPlus.addEventListener('click', function () {
+    if (!mainQtyInput) return;
+    var max = parseInt(mainQtyInput.max, 10) || 999;
+    var val = parseInt(mainQtyInput.value, 10) || 1;
+    if (val < max) {
+      mainQtyInput.value = val + 1;
+      mainQtyInput.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    updateDisplay();
+  });
+
+  /* ---------- proxy click to real submit button ---------- */
+  stickyBtn && stickyBtn.addEventListener('click', function () {
+    if (mainBtn && !mainBtn.disabled && !mainBtn.classList.contains('disabled')) {
+      mainBtn.click();
+    }
+  });
+
+  /* ---------- sync disabled state ---------- */
+  if (mainBtn && stickyBtn) {
+    function syncDisabled() {
+      var off = mainBtn.classList.contains('disabled');
+      stickyBtn.classList.toggle('disabled', off);
+      stickyBtn.disabled = off;
+    }
+    syncDisabled();
+    new MutationObserver(syncDisabled).observe(mainBtn, { attributes: true, attributeFilter: ['class'] });
+  }
+})();
+</script>
+
 {% schema %}
 	{
     "name": "t:sections.local-extra-words.sections.main-product.name",
