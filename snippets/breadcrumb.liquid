@@ -53,11 +53,17 @@
 										if (!q) return;
 										var label = document.getElementById('breadcrumb-vendor-label');
 										if (label) label.textContent = q;
-										sessionStorage.setItem('hcm_bc', JSON.stringify({
-											src: 'collection',
-											title: q,
-											url: window.location.pathname + window.location.search
-										}));
+										function setVendorCtx() {
+											sessionStorage.setItem('hcm_bc', JSON.stringify({
+												src: 'vendor',
+												title: q,
+												url: window.location.pathname + window.location.search
+											}));
+										}
+										setVendorCtx();
+										window.addEventListener('pageshow', function (e) {
+											if (e.persisted) setVendorCtx();
+										});
 									})();
 								</script>
 							{%- else -%}
@@ -99,6 +105,29 @@
 
 						<span class="breadcrumb__current">{{ page.title | escape }}</span>
 
+					{%- endif -%}
+
+					{%- comment -%}Vendor breadcrumb — shown via JS when navigating from a brand/vendor listing page{%- endcomment -%}
+					{%- if template contains 'product' and collection.handle == blank -%}
+						<span class="breadcrumb__separator breadcrumb__vendor-sep" style="display:none">/</span>
+						<span class="breadcrumb__link breadcrumb__vendor-link" style="display:none"></span>
+						<script>
+							(function () {
+								var data = null;
+								try { data = JSON.parse(sessionStorage.getItem('hcm_bc')); } catch (e) {}
+								if (!data || data.src !== 'vendor' || !data.title || !data.url) return;
+								var sep = document.querySelector('.breadcrumb__vendor-sep');
+								var linkSpan = document.querySelector('.breadcrumb__vendor-link');
+								if (!sep || !linkSpan) return;
+								var a = document.createElement('a');
+								a.href = data.url;
+								a.textContent = data.title;
+								linkSpan.appendChild(a);
+								sep.style.display = '';
+								linkSpan.style.display = '';
+								sessionStorage.removeItem('hcm_bc');
+							})();
+						</script>
 					{%- endif -%}
 
 					{%- if product -%}
