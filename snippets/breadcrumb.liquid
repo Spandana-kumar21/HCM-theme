@@ -1,11 +1,47 @@
 {%- if settings.show_breadcrumb and template != 'index' and template != blank and template != '404' -%}
 
-	{%- comment -%}Track search context so collection-scoped product URLs can be cleared when navigating via search{%- endcomment -%}
+	{%- comment -%}Store collection context when browsing a collection page (non-vendor){%- endcomment -%}
+	{%- if template contains 'collection' and collection and collection.handle != 'vendors' -%}
+		<script>
+			(function () {
+				function setCollectionCtx() {
+					sessionStorage.setItem('hcm_bc', JSON.stringify({
+						src: 'collection',
+						title: {{ collection.title | json }},
+						url: {{ collection.url | json }}
+					}));
+				}
+				setCollectionCtx();
+				window.addEventListener('pageshow', function (e) {
+					if (e.persisted) setCollectionCtx();
+				});
+			})();
+		</script>
+	{%- endif -%}
+
+	{%- comment -%}Store search context so product page falls back to first valid product collection{%- endcomment -%}
 	{%- if template contains 'search' -%}
 		<script>
 			sessionStorage.setItem('hcm_bc', JSON.stringify({ src: 'search' }));
 		</script>
 	{%- endif -%}
+
+	{%- comment -%}Overlay search: set search context the moment user types in any search input{%- endcomment -%}
+	<script>
+		(function () {
+			document.addEventListener('input', function (e) {
+				var el = e.target;
+				if (
+					el.tagName === 'INPUT' &&
+					(el.type === 'search' || el.name === 'q' || (el.form && el.form.action && el.form.action.indexOf('/search') !== -1))
+				) {
+					if (el.value.trim().length > 0) {
+						sessionStorage.setItem('hcm_bc', JSON.stringify({ src: 'search' }));
+					}
+				}
+			}, true);
+		})();
+	</script>
 
 	<div class="breadcrumb-main">
 
@@ -24,65 +60,119 @@
 
 				{%- else -%}
 
-					{%- unless template contains 'product' -%}
-						{%- unless collection.handle == 'vendors' -%}
-							<span class="breadcrumb__separator">/</span>
-							{%- if template contains 'collections' -%}
-								<span class="breadcrumb__current">{{ 'general.breadcrumb.collections' | t }}</span>
-							{%- elsif collection -%}
-								<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+					{%- comment -%}
+						Build the exclusion list once.
+						Normalise admin input so both display names and handles work:
+						  "Ready to Dine" → downcase → "ready to dine" → replace spaces → "ready-to-dine"
+					{%- endcomment -%}
+					{%- assign _bc_cust = settings.breadcrumb_excluded_collections | strip | downcase | replace: "'", '' | replace: ' & ', '-' | replace: '&', '' | replace: ' , ', ',' | replace: ', ', ',' | replace: ' ,', ',' | replace: ' ', '-' | replace: '--', '-' -%}
+					{%- if _bc_cust != blank -%}
+						{%- assign _bc_all = 'vendors,frontpage,all,' | append: _bc_cust -%}
+					{%- else -%}
+						{%- assign _bc_all = 'vendors,frontpage,all' -%}
+					{%- endif -%}
+					{%- assign _bc_excl = _bc_all | split: ',' -%}
+
+					{%- comment -%}
+						Determine whether the collection in the URL (if any) is excluded.
+						_bc_col_excluded = true  → skip server-side breadcrumb, run JS block instead.
+						_bc_col_excluded = false → use server-side breadcrumb as normal.
+					{%- endcomment -%}
+					{%- assign _bc_col_excluded = false -%}
+					{%- if template contains 'product' -%}
+						{%- if collection -%}
+							{%- if _bc_excl contains collection.handle -%}
+								{%- assign _bc_col_excluded = true -%}
 							{%- endif -%}
-						{%- endunless -%}
+						{%- endif -%}
+					{%- endif -%}
+
+					{%- comment -%}"Collections" link for non-product pages (collection listing, vendor, etc.){%- endcomment -%}
+					{%- unless template contains 'product' -%}
+						<span class="breadcrumb__separator">/</span>
+						{%- if template contains 'collections' -%}
+							<span class="breadcrumb__current">{{ 'general.breadcrumb.collections' | t }}</span>
+						{%- elsif collection -%}
+							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+						{%- endif -%}
 					{%- endunless -%}
 
 					{%- if collection -%}
 
-						{%- comment -%}Product page navigated via collection-scoped URL — server-side full breadcrumb{%- endcomment -%}
-						{%- if template contains 'product' and collection.handle != 'vendors' -%}
-							<span class="breadcrumb__separator">/</span>
-							<span class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
-						{%- endif -%}
+						{%- comment -%}
+							Product page via collection-scoped URL AND that collection is excluded:
+							skip server-side output entirely — JS block handles the rest.
+						{%- endcomment -%}
+						{%- unless template contains 'product' and _bc_col_excluded -%}
 
-						<span class="breadcrumb__separator">/</span>
-						{%- if template contains 'collection' -%}
-							{%- if collection.handle == 'vendors' -%}
-								<span class="breadcrumb__current" id="breadcrumb-vendor-label">{{ collection.title | escape }}</span>
-								<script>
-									(function () {
-										var q = new URLSearchParams(window.location.search).get('q');
-										if (!q) return;
-										var label = document.getElementById('breadcrumb-vendor-label');
-										if (label) label.textContent = q;
-										function setVendorCtx() {
-											sessionStorage.setItem('hcm_bc', JSON.stringify({
-												src: 'vendor',
-												title: q,
-												url: window.location.pathname + window.location.search
-											}));
-										}
-										setVendorCtx();
-										window.addEventListener('pageshow', function (e) {
-											if (e.persisted) setVendorCtx();
-										});
-									})();
-								</script>
-							{%- else -%}
-								<span class="breadcrumb__current">{{ collection.title | escape }}</span>
+							{%- if template contains 'product' and collection.handle != 'vendors' -%}
+								<span id="bc-svr-col-sep" class="breadcrumb__separator">/</span>
+								<span id="bc-svr-col-link" class="breadcrumb__link"><a href="{{ routes.collections_url }}">{{ 'general.breadcrumb.collections' | t }}</a></span>
+								<script>sessionStorage.removeItem('hcm_bc');</script>
 							{%- endif -%}
-						{%- else -%}
-							<span class="breadcrumb__link">
-								{%- liquid
-									if collection.handle
-										capture url
-											echo routes.collections_url
-											echo '/'
-											echo collection.handle
-										endcapture
-										echo collection.title | link_to: url
-									endif
-								-%}
-							</span>
-						{%- endif -%}
+
+							{%- if template contains 'product' -%}
+
+								<span id="bc-svr-name-sep" class="breadcrumb__separator">/</span>
+								<span id="bc-svr-name-link" class="breadcrumb__link">
+									{%- liquid
+										if collection.handle
+											capture url
+												echo routes.collections_url
+												echo '/'
+												echo collection.handle
+											endcapture
+											echo collection.title | link_to: url
+										endif
+									-%}
+								</span>
+
+							{%- else -%}
+
+								<span class="breadcrumb__separator">/</span>
+								{%- if template contains 'collection' -%}
+									{%- if collection.handle == 'vendors' -%}
+										<span class="breadcrumb__current" id="breadcrumb-vendor-label">{{ collection.title | escape }}</span>
+										<script>
+											(function () {
+												var q = new URLSearchParams(window.location.search).get('q');
+												if (!q) return;
+												var label = document.getElementById('breadcrumb-vendor-label');
+												if (label) label.textContent = q;
+												function setVendorCtx() {
+													sessionStorage.setItem('hcm_bc', JSON.stringify({
+														src: 'vendor',
+														title: q,
+														url: window.location.pathname + window.location.search
+													}));
+												}
+												setVendorCtx();
+												window.addEventListener('pageshow', function (e) {
+													if (e.persisted) setVendorCtx();
+												});
+											})();
+										</script>
+									{%- else -%}
+										<span class="breadcrumb__current">{{ collection.title | escape }}</span>
+									{%- endif -%}
+								{%- else -%}
+									<span class="breadcrumb__link">
+										{%- liquid
+											if collection.handle
+												capture url
+													echo routes.collections_url
+													echo '/'
+													echo collection.handle
+												endcapture
+												echo collection.title | link_to: url
+											endif
+										-%}
+									</span>
+								{%- endif -%}
+
+							{%- endif -%}
+
+						{%- endunless -%}
 
 					{%- elsif blog or article -%}
 
@@ -107,27 +197,106 @@
 
 					{%- endif -%}
 
-					{%- comment -%}Vendor breadcrumb — shown via JS when navigating from a brand/vendor listing page{%- endcomment -%}
-					{%- if template contains 'product' and collection.handle == blank -%}
-						<span class="breadcrumb__separator breadcrumb__vendor-sep" style="display:none">/</span>
-						<span class="breadcrumb__link breadcrumb__vendor-link" style="display:none"></span>
+					{%- comment -%}
+						JS breadcrumb block — always runs on product pages.
+						Handles three cases:
+						  1. No collection in URL (search / direct) → use sessionStorage or first valid collection.
+						  2. Collection in URL is excluded (Liquid check may have failed) → hide server-side, use fallback.
+						  3. Collection in URL is valid → clear sessionStorage and exit silently.
+						productCollections is built from ALL product collections, filtered JS-side so
+						the exclusion works even if the Liquid-side normalisation mismatch occurs.
+					{%- endcomment -%}
+					{%- if template contains 'product' -%}
+
+						<span id="bc-col-sep" class="breadcrumb__separator" style="display:none">/</span>
+						<span id="bc-col-link" class="breadcrumb__link" style="display:none"></span>
+						<span id="bc-name-sep" class="breadcrumb__separator" style="display:none">/</span>
+						<span id="bc-name-link" class="breadcrumb__link" style="display:none"></span>
+
 						<script>
 							(function () {
+								var bcExcluded = {{ _bc_excl | json }};
+								var currentHandle = {{ collection.handle | default: '' | json }};
+
+								{%- comment -%}All product collections with handles — JS filters out excluded ones.{%- endcomment -%}
+								var productCollections = [
+									{%- assign sorted_cols = product.collections | sort: 'id' -%}
+									{%- assign bc_first = true -%}
+									{%- for col in sorted_cols -%}
+										{%- unless bc_first -%},{%- endunless -%}
+										{ "handle": {{ col.handle | json }}, "title": {{ col.title | json }}, "url": {{ col.url | json }} }
+										{%- assign bc_first = false -%}
+									{%- endfor -%}
+								].filter(function (c) {
+									return bcExcluded.indexOf(c.handle) === -1;
+								});
+
+								var svrIsExcluded = currentHandle && bcExcluded.indexOf(currentHandle) !== -1;
+
+								// Valid non-excluded collection URL — server-side breadcrumb is correct
+								if (currentHandle && !svrIsExcluded) {
+									sessionStorage.removeItem('hcm_bc');
+									return;
+								}
+
+								// Server-side rendered an excluded collection (Liquid check may have missed it)
+								// Hide those elements so we can replace them below
+								if (svrIsExcluded) {
+									['bc-svr-col-sep', 'bc-svr-col-link', 'bc-svr-name-sep', 'bc-svr-name-link'].forEach(function (id) {
+										var el = document.getElementById(id);
+										if (el) el.style.display = 'none';
+									});
+								}
+
+								var colSep  = document.getElementById('bc-col-sep');
+								var colLink = document.getElementById('bc-col-link');
+								var nameSep = document.getElementById('bc-name-sep');
+								var nameLink = document.getElementById('bc-name-link');
+
+								if (!colSep || !colLink || !nameSep || !nameLink) return;
+
 								var data = null;
 								try { data = JSON.parse(sessionStorage.getItem('hcm_bc')); } catch (e) {}
-								if (!data || data.src !== 'vendor' || !data.title || !data.url) return;
-								var sep = document.querySelector('.breadcrumb__vendor-sep');
-								var linkSpan = document.querySelector('.breadcrumb__vendor-link');
-								if (!sep || !linkSpan) return;
-								var a = document.createElement('a');
-								a.href = data.url;
-								a.textContent = data.title;
-								linkSpan.appendChild(a);
-								sep.style.display = '';
-								linkSpan.style.display = '';
+
+								var title = null;
+								var url   = null;
+
+								if (data && data.src === 'vendor' && data.title && data.url) {
+									title = data.title;
+									url   = data.url;
+								} else if (data && data.src === 'collection' && data.title && data.url) {
+									var isAssigned = productCollections.some(function (c) { return c.url === data.url; });
+									if (isAssigned) {
+										title = data.title;
+										url   = data.url;
+									}
+								}
+
+								if (!title && productCollections.length > 0) {
+									title = productCollections[0].title;
+									url   = productCollections[0].url;
+								}
+
+								if (!title) return;
+
+								var collectionsA = document.createElement('a');
+								collectionsA.href = {{ routes.collections_url | json }};
+								collectionsA.textContent = {{ 'general.breadcrumb.collections' | t | json }};
+								colLink.appendChild(collectionsA);
+								colSep.style.display  = '';
+								colLink.style.display = '';
+
+								var nameA = document.createElement('a');
+								nameA.href = url;
+								nameA.textContent = title;
+								nameLink.appendChild(nameA);
+								nameSep.style.display  = '';
+								nameLink.style.display = '';
+
 								sessionStorage.removeItem('hcm_bc');
 							})();
 						</script>
+
 					{%- endif -%}
 
 					{%- if product -%}
