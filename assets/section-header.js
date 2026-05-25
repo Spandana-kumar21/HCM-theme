@@ -231,7 +231,7 @@ if ( typeof MainHeader !== 'function' ) {
 				})
 				window.addEventListener('load', ()=>{
 					document.querySelectorAll('.search-results-overlay').forEach(elm=>{
-						elm.style = '';
+						elm.removeAttribute('style');
 					})
 				});
 			} else {

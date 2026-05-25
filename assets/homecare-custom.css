@@ -1317,7 +1317,7 @@ color:#350078;
     margin-top:3rem;
   }
   .site-header{
-  z-index:0!important;
+  z-index:200!important;
 }
   .product-quantity__minus, .product-quantity__plus{
     width: 35px!important;
