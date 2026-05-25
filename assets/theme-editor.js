@@ -23,8 +23,8 @@ document.addEventListener('shopify:section:load', e=>{
 
 	if ( section.classList.contains('mount-header') ) {
     section.querySelector('main-header')?.mount();
-		document.querySelectorAll('.search-results-overlay').forEach(elm=>{
-			elm.style = '';
+		document.querySelectorAll('.site-overlay').forEach(elm=>{
+			elm.removeAttribute('style');
 		})
 		document.querySelectorAll('scrollable-navigation').forEach(elm=>{
 			elm.checkNav();

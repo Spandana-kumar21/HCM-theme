@@ -263,7 +263,7 @@ html[dir=ltr] .site-menu-sidebar-footer .social-icons ~ form .localization-form_
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.36);
   z-index: 9;
   opacity: 0;

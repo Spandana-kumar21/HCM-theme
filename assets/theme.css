@@ -2859,7 +2859,7 @@ background: #f9f2e4;
   position: relative;
   max-width: 100%;
   text-align: center;
-  z-index: 200;
+  z-index: 400;
 }
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
@@ -3074,7 +3074,7 @@ background: #f9f2e4;
   position: relative;
   max-width: 100%;
   text-align: center;
-  z-index: 200;
+  z-index: 400;
 }
 
 
