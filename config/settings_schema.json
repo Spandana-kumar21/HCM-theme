@@ -1120,6 +1120,13 @@
         "default": true
       },
       {
+        "type": "text",
+        "id": "breadcrumb_excluded_collections",
+        "label": "Breadcrumb: excluded collection handles",
+        "info": "Comma-separated collection names or handles to skip (e.g. Ready to Dine , Eating & Drinking). Always excludes vendors, frontpage, all. For collections with unusual characters enter the exact handle from the collection URL.",
+        "default": "b2b,b2c,dev-test-discount"
+      },
+      {
         "type": "checkbox",
         "id": "show_gotop",
         "label": "t:sections.local-extra-words.settings_schema.embellishments.settings.show_gotop.label",

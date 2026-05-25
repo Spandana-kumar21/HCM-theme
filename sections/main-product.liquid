@@ -808,8 +808,7 @@
               <span class="product-related-title text-size--large text-weight--bold">{{ block.settings.heading | escape }}</span>
 
               {%- for product in recommendations.products -%}
-                {%- assign rec_url = product.url | within: product.collections.first -%}
-                {%- unless product.collections.first -%}{%- assign rec_url = product.url -%}{%- endunless -%}
+                {%- assign rec_url = product.url -%}
 
                 <div class="product-related-item" data-js-product-item>
 
@@ -881,8 +880,7 @@
               {%- endunless -%}
 
               {%- for product in block.settings.product_list -%}
-                {%- assign rel_url = product.url | within: product.collections.first -%}
-                {%- unless product.collections.first -%}{%- assign rel_url = product.url -%}{%- endunless -%}
+                {%- assign rel_url = product.url -%}
 
                 <div class="product-related-item">
 

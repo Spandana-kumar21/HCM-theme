@@ -94,7 +94,7 @@
               {%- liquid
                 if products_results.size > 0
                   for product in products_results
-                    render 'product-item', product: product, product_collection: product.collections.first, section_blocks: section.blocks, index: forloop.index, layout: "grid-4"
+                    render 'product-item', product: product, section_blocks: section.blocks, index: forloop.index, layout: "grid-4"
                   endfor
                 endif
               -%}
