@@ -15,38 +15,6 @@
   {% assign vat = 0.23 %}
 {% endif %}
 
-{%- assign _display_max = 0 -%}
-{%- for _cp in results.products -%}
-  {%- for _cv in _cp.variants -%}
-    {%- if customer and customer.b2b? -%}
-      {%- assign _cdp = _cv.price -%}
-    {%- else -%}
-      {%- assign _cvr = _cv.metafields.custom.tax_rate | default: 0 -%}
-      {%- assign _cvm = _cvr | divided_by: 100.0 | plus: 1 -%}
-      {%- assign _cdp = _cv.price | times: _cvm | round -%}
-    {%- endif -%}
-    {%- if _cdp > _display_max -%}
-      {%- assign _display_max = _cdp -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endfor -%}
-{%- if _display_max == 0 and collection -%}
-  {%- for _cp in collection.products -%}
-    {%- for _cv in _cp.variants -%}
-      {%- if customer and customer.b2b? -%}
-        {%- assign _cdp = _cv.price -%}
-      {%- else -%}
-        {%- assign _cvr = _cv.metafields.custom.tax_rate | default: 0 -%}
-        {%- assign _cvm = _cvr | divided_by: 100.0 | plus: 1 -%}
-        {%- assign _cdp = _cv.price | times: _cvm | round -%}
-      {%- endif -%}
-      {%- if _cdp > _display_max -%}
-        {%- assign _display_max = _cdp -%}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endif -%}
-
 {%- unless results.products.size == 0 -%}
   {%- if results.results_count -%}
     <div class="text-color--opacity margin-bottom--regular" id="CollectionProductCount" role="status">
@@ -76,12 +44,9 @@
           {%- endunless -%}
 
           {%- for filter in results.filters -%}
-            {%- if _display_max > 0 -%}
-              {%- assign range_max = _display_max -%}
-            {%- else -%}
-              {%- assign filter_max_additional = filter.range_max | times: vat -%}
-              {%- assign range_max = filter.range_max | plus: filter_max_additional -%}
-            {%- endif -%}
+            {% assign filter_max_additional = filter.range_max | times: vat %}
+
+            {% assign range_max = filter.range_max | plus: filter_max_additional  %}
 
             {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
 
@@ -199,8 +164,6 @@
                         <div
                           id="facets-price-range-slider"
                           data-js-price-range-slider
-                          data-range-max-base="{{ filter.range_max }}"
-                          data-range-max-display="{{ _display_max }}"
                         ></div>
                       </div>
                     </div>
@@ -234,14 +197,11 @@
               {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                 {%- assign has_active_filter = true -%}
                 <a class="active-facets__button active-facets__button--light button button--small button--outline js-facet-remove" href="{{ filter.url_to_remove }}">
-                  {%- if _display_max > 0 and filter.range_max > 0 -%}
-                    {%- assign _eff_mult = _display_max | times: 1.0 | divided_by: filter.range_max -%}
-                    {%- assign min_value = filter.min_value.value | times: _eff_mult -%}
-                    {%- assign max_value = filter.max_value.value | times: _eff_mult -%}
-                  {%- else -%}
-                    {%- assign min_value = filter.min_value.value -%}
-                    {%- assign max_value = filter.max_value.value -%}
-                  {%- endif -%}
+                  {% assign filter_max_value_additional = filter.max_value.value | times: vat  %}
+                  {% assign filter_min_value_additional = filter.min_value.value | times: vat %}
+
+                  {% assign max_value = filter.max_value.value | plus: filter_max_value_additional %}
+                  {% assign min_value = filter.min_value.value | plus: filter_min_value_additional %}
                   {%- if filter.min_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ min_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ min_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ max_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ max_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
                   {%- render 'theme-symbols', icon: 'close-small' -%}
                 </a>
