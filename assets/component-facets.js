@@ -39,12 +39,17 @@ class FacetFiltersForm extends HTMLElement {
       const minPrice = urlSearchParams.get('filter.v.price.gte');
       const maxPrice = urlSearchParams.get('filter.v.price.lte');
 
+      const sliderEl = document.querySelector('[data-js-price-range-slider]');
+      const rangeMaxBase = sliderEl ? parseFloat(sliderEl.dataset.rangeMaxBase) : 0;
+      const rangeMaxDisplay = sliderEl ? parseFloat(sliderEl.dataset.rangeMaxDisplay) : 0;
+      const vatRatio = (rangeMaxBase > 0 && rangeMaxDisplay > 0) ? rangeMaxDisplay / rangeMaxBase : 1.23;
+
       if (minPrice) {
-        urlSearchParams.set('filter.v.price.gte', parseInt(minPrice / 1.23))
+        urlSearchParams.set('filter.v.price.gte', parseInt(minPrice / vatRatio))
       }
 
       if (maxPrice) {
-        urlSearchParams.set('filter.v.price.lte', parseInt(maxPrice / 1.23) + 1);
+        urlSearchParams.set('filter.v.price.lte', parseInt(maxPrice / vatRatio) + 1);
       }
       formattedSearchParams = urlSearchParams.toString();
     }
