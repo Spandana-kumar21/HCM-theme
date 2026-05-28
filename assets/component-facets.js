@@ -40,11 +40,15 @@ class FacetFiltersForm extends HTMLElement {
       const maxPrice = urlSearchParams.get('filter.v.price.lte');
 
       if (minPrice) {
-        urlSearchParams.set('filter.v.price.gte', parseInt(minPrice / 1.23))
+        // Divide min by 1.23 — casts a wide lower bound so VAT=23% products
+        // starting at display price `minPrice` are captured by Shopify's admin filter.
+        urlSearchParams.set('filter.v.price.gte', parseInt(minPrice / 1.23));
       }
-
       if (maxPrice) {
-        urlSearchParams.set('filter.v.price.lte', parseInt(maxPrice / 1.23) + 1);
+        // Keep max as the display price (do NOT divide by 1.23).
+        // This ensures VAT=0% products at their full display price are also captured.
+        // Client-side filtering (applyDisplayPriceFilter) removes false positives.
+        urlSearchParams.set('filter.v.price.lte', parseInt(maxPrice) + 1);
       }
       formattedSearchParams = urlSearchParams.toString();
     }
@@ -70,6 +74,8 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.renderFilters(html, event);
         FacetFiltersForm.renderProductGrid(html);
         FacetFiltersForm.renderProductCount(html);
+        // Must run AFTER renderProductCount so the count update isn't overwritten
+        FacetFiltersForm.applyDisplayPriceFilter();
       });
   }
 
@@ -78,6 +84,8 @@ class FacetFiltersForm extends HTMLElement {
     FacetFiltersForm.renderFilters(html, event);
     FacetFiltersForm.renderProductGrid(html);
     FacetFiltersForm.renderProductCount(html);
+    // Must run AFTER renderProductCount so the count update isn't overwritten
+    FacetFiltersForm.applyDisplayPriceFilter();
   }
 
   static renderProductGrid(html) {
@@ -87,7 +95,166 @@ class FacetFiltersForm extends HTMLElement {
     document.getElementById('CollectionProductGrid').innerHTML = innerHTML;
     document.getElementById('CollectionProductGrid').querySelectorAll('template').forEach(elm=>{
       elm.closest('form')?.append(elm.content.cloneNode(true));
-    })
+    });
+    // NOTE: applyDisplayPriceFilter is intentionally NOT called here —
+    // it is called after renderProductCount in each render path so the
+    // server count is set first before our client-side count override.
+  }
+
+  /**
+   * Client-side price filter — hides products whose DISPLAY price (inc. VAT)
+   * falls outside the range the customer selected in the price filter.
+   *
+   * Why this is needed: Shopify's filter API works on admin (ex-VAT) prices.
+   * Products have different VAT rates (0% or 23%), so a single server-side
+   * conversion cannot correctly filter all products. Instead:
+   *   - GTE is sent as display_min / 1.23  (wide lower bound)
+   *   - LTE is sent as display_max          (keeps VAT=0% products in range)
+   * This function then hides any cards whose data-display-price is outside
+   * the original display range the customer intended.
+   */
+  static applyDisplayPriceFilter() {
+    if (KROWN.customer.isB2B === 'true') return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const adminGteStr = urlParams.get('filter.v.price.gte');
+    const adminLteStr = urlParams.get('filter.v.price.lte');
+
+    // Ensure the "no products" message element exists inside the product grid
+    const grid = document.getElementById('CollectionProductGrid');
+    let noProductsMsg = grid ? grid.querySelector('[data-js-client-no-products]') : null;
+    if (grid && !noProductsMsg) {
+      noProductsMsg = document.createElement('p');
+      noProductsMsg.setAttribute('data-js-client-no-products', '');
+      noProductsMsg.className = 'no-content-message rte';
+      noProductsMsg.style.display = 'none';
+      noProductsMsg.innerHTML =
+        'No products found.<br>' +
+        'Use fewer filters or <a href="' + window.location.pathname + '" class="button--text">clear all</a>';
+      grid.appendChild(noProductsMsg);
+    }
+
+    // Helper: format a price in cents to EUR display format (€X.XXX,XX)
+    const formatMoneyCents = (cents) => {
+      const [int, dec] = (cents / 100).toFixed(2).split('.');
+      return '€' + int.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + dec;
+    };
+
+    // Helper: restore a card's overridden price text and image to originals
+    const restoreCard = (item) => {
+      const priceEl = item.querySelector('[data-js-product-price-original]');
+      if (priceEl && item.dataset.origPriceText) {
+        priceEl.textContent = item.dataset.origPriceText;
+        delete item.dataset.origPriceText;
+      }
+      if (item.dataset.origImgSrc) {
+        const fig = item.querySelector('.product-item__image-figure--primary');
+        const img = fig ? fig.querySelector('img') : null;
+        if (img) {
+          img.setAttribute('src', item.dataset.origImgSrc);
+          img.setAttribute('srcset', item.dataset.origImgSrcset || '');
+        }
+        delete item.dataset.origImgSrc;
+        delete item.dataset.origImgSrcset;
+      }
+    };
+
+    if (!adminGteStr && !adminLteStr) {
+      // No price filter active — restore all cards and original prices/images/count
+      document.querySelectorAll('[data-display-price-min]').forEach(item => {
+        item.style.display = '';
+        restoreCard(item);
+      });
+      document.querySelectorAll('#CollectionProductCount').forEach(el => {
+        if (el.dataset.origCountText) {
+          el.textContent = el.dataset.origCountText;
+          delete el.dataset.origCountText;
+        }
+      });
+      if (noProductsMsg) noProductsMsg.style.display = 'none';
+      return;
+    }
+
+    // Recover the customer's intended display price range (in cents):
+    // - GTE was stored as display_min / 1.23, so display_min = GTE * 1.23
+    // - LTE was stored as display_max directly (no division)
+    const adminGte = parseFloat(adminGteStr) || 0;
+    const adminLte = parseFloat(adminLteStr) || Infinity;
+
+    // GTE is in major units (e.g. 3001 = €3001); multiply by 123 to get cents × 1.23
+    const displayMinCents = Math.round(adminGte * 123);
+    // LTE is already the display price in major units; multiply by 100 to get cents
+    const displayMaxCents = adminLte === Infinity ? Infinity : Math.round(adminLte * 100);
+
+    let visibleCount = 0;
+    document.querySelectorAll('[data-display-price-min]').forEach(item => {
+      const productPriceMin = parseInt(item.dataset.displayPriceMin, 10);
+      const productPriceMax = parseInt(item.dataset.displayPriceMax, 10);
+      // Show the product if ANY of its variants' prices overlap with the filter range.
+      // Overlap condition: product max >= filter min AND product min <= filter max
+      const inRange = productPriceMax >= displayMinCents && productPriceMin <= displayMaxCents;
+      item.style.display = inRange ? '' : 'none';
+      if (inRange) visibleCount++;
+
+      // If the card is shown but its cheapest variant is BELOW the filter minimum,
+      // update both the price display and the card image to the cheapest in-range variant.
+      const priceEl = item.querySelector('[data-js-product-price-original]');
+      if (priceEl) {
+        if (inRange && productPriceMin < displayMinCents) {
+          const variantPrices = (item.dataset.variantPrices || '')
+            .split(',').map(Number).filter(p => !isNaN(p) && p > 0);
+          const inRangePrices = variantPrices.filter(p => p >= displayMinCents && p <= displayMaxCents);
+          if (inRangePrices.length > 0) {
+            const cheapestInRange = Math.min(...inRangePrices);
+
+            // --- Update price text ---
+            if (!item.dataset.origPriceText) {
+              item.dataset.origPriceText = priceEl.textContent;
+            }
+            const hadFromPrefix = priceEl.textContent.trim().indexOf('From ') === 0;
+            priceEl.textContent = hadFromPrefix
+              ? 'From ' + formatMoneyCents(cheapestInRange)
+              : formatMoneyCents(cheapestInRange);
+
+            // --- Update product card image to the in-range variant's image ---
+            const variantImages = (item.dataset.variantImages || '').split('|');
+            const cheapestIdx = variantPrices.indexOf(cheapestInRange);
+            const newImgUrl = cheapestIdx >= 0 ? variantImages[cheapestIdx] : '';
+            if (newImgUrl) {
+              const primaryFig = item.querySelector('.product-item__image-figure--primary');
+              const img = primaryFig ? primaryFig.querySelector('img') : null;
+              if (img) {
+                if (!item.dataset.origImgSrc) {
+                  item.dataset.origImgSrc = img.getAttribute('src') || '';
+                  item.dataset.origImgSrcset = img.getAttribute('srcset') || '';
+                }
+                img.setAttribute('src', newImgUrl);
+                img.setAttribute('srcset', newImgUrl + ' 840w');
+                primaryFig.classList.add('lazyloaded');
+              }
+            }
+          }
+        } else if (item.dataset.origPriceText) {
+          // Filter widened to include this variant's min price — restore originals
+          restoreCard(item);
+        }
+      }
+    });
+
+    // Show "no products" message when client-side filtering hides everything
+    if (noProductsMsg) {
+      noProductsMsg.style.display = visibleCount === 0 ? '' : 'none';
+    }
+
+    // Update the product count element(s) to reflect the client-side filtered count.
+    // The server renders e.g. "12 of 37 products" — we replace the leading number with
+    // visibleCount so it reads "5 of 37 products" (accurate after JS filtering).
+    document.querySelectorAll('#CollectionProductCount').forEach(el => {
+      if (!el.dataset.origCountText) {
+        el.dataset.origCountText = el.textContent.trim();
+      }
+      el.textContent = el.dataset.origCountText.replace(/^\d+/, String(visibleCount));
+    });
   }
 
   static renderProductCount(html) {
@@ -95,6 +262,8 @@ class FacetFiltersForm extends HTMLElement {
     if ( countEl ) {
       document.querySelectorAll('#CollectionProductCount').forEach(elm=>{
         elm.innerHTML = countEl.innerHTML;
+        // Clear any stale saved count so applyDisplayPriceFilter saves a fresh value
+        delete elm.dataset.origCountText;
       });
     }
   }
@@ -320,3 +489,9 @@ class PriceRange extends HTMLElement {
 }
 
 customElements.define('price-range', PriceRange);
+
+// On initial page load, apply client-side display-price filter if the URL
+// already contains a price filter (e.g. direct link, back navigation, page refresh).
+document.addEventListener('DOMContentLoaded', () => {
+  FacetFiltersForm.applyDisplayPriceFilter();
+});

@@ -7,7 +7,51 @@
   endif
 -%}
 
-<div id="product-item-{{ product.id }}" class="product-item card" data-js-product-item>
+{%- liquid
+  comment
+    Calculate the display price range (min/max) across ALL variants so
+    component-facets.js can show the product if ANY variant price falls
+    within the customer's selected range — not just the first/selected variant.
+  endcomment
+  if customer.b2b? or blank_product
+    assign _disp_price_min_cents = product.price_min
+    assign _disp_price_max_cents = product.price_max
+    assign _disp_variant_prices = product.price_min | append: ',' | append: product.price_max
+    assign _disp_variant_images = ''
+  else
+    assign _disp_price_min_cents = 999999999
+    assign _disp_price_max_cents = 0
+    assign _disp_variant_prices = ''
+    assign _disp_variant_images = ''
+    for _v in product.variants
+      assign _v_price_cents = _v.price
+      assign _v_tax_rate = _v.metafields.custom.tax_rate | times: 1
+      if _v_tax_rate > 0
+        assign _v_vat_mul = _v_tax_rate | divided_by: 100.0 | plus: 1
+        assign _v_price_cents = _v.price | times: _v_vat_mul | round
+      endif
+      if _v_price_cents < _disp_price_min_cents
+        assign _disp_price_min_cents = _v_price_cents
+      endif
+      if _v_price_cents > _disp_price_max_cents
+        assign _disp_price_max_cents = _v_price_cents
+      endif
+      if _v.featured_image
+        assign _v_img = _v.featured_image | image_url: width: 840
+      else
+        assign _v_img = ''
+      endif
+      if forloop.first
+        assign _disp_variant_prices = _v_price_cents
+        assign _disp_variant_images = _v_img
+      else
+        assign _disp_variant_prices = _disp_variant_prices | append: ',' | append: _v_price_cents
+        assign _disp_variant_images = _disp_variant_images | append: '|' | append: _v_img
+      endif
+    endfor
+  endif
+-%}
+<div id="product-item-{{ product.id }}" class="product-item card" data-js-product-item data-display-price-min="{{ _disp_price_min_cents }}" data-display-price-max="{{ _disp_price_max_cents }}" data-variant-prices="{{ _disp_variant_prices }}" data-variant-images="{{ _disp_variant_images }}">
 
   {%- liquid
 
