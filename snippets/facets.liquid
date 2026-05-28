@@ -12,6 +12,11 @@
 {% if customer and customer.b2b? == true %}
   {% assign vat = 0 %}
 {% else %}
+  {%- comment -%}
+    Always use 0.23 for the display range (widest possible range covers VAT=23% products).
+    Per-product VAT accuracy is handled by client-side filtering in component-facets.js,
+    which reads each product card's data-display-price attribute.
+  {%- endcomment -%}
   {% assign vat = 0.23 %}
 {% endif %}
 
@@ -25,7 +30,7 @@
 
 <facet-filters-form class="facets {% if type == 'desktop' %} portable-hide {% endif %}" data-location="{{ type }}">
 
-  <form id="FacetFiltersForm{% if type == 'mobile' %}Mobile{% endif %}" class="facets__form{% if type == 'mobile' %} facets__form--mobile {% endif %}">
+  <form id="FacetFiltersForm{% if type == 'mobile' %}Mobile{% endif %}" class="facets__form{% if type == 'mobile' %} facets__form--mobile {% endif %}" data-vat-rate="{{ vat }}">
 
     {%- if results.terms -%}
       <input type="hidden" name="q" value="{{ results.terms | escape }}">
@@ -197,11 +202,13 @@
               {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                 {%- assign has_active_filter = true -%}
                 <a class="active-facets__button active-facets__button--light button button--small button--outline js-facet-remove" href="{{ filter.url_to_remove }}">
-                  {% assign filter_max_value_additional = filter.max_value.value | times: vat  %}
+                  {%- comment -%}
+                    min: multiply by (1+vat) because URL stores admin price (display_min/1.23)
+                    max: use as-is because URL now stores the display price directly (no division)
+                  {%- endcomment -%}
                   {% assign filter_min_value_additional = filter.min_value.value | times: vat %}
-
-                  {% assign max_value = filter.max_value.value | plus: filter_max_value_additional %}
                   {% assign min_value = filter.min_value.value | plus: filter_min_value_additional %}
+                  {% assign max_value = filter.max_value.value %}
                   {%- if filter.min_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ min_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ min_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ max_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ max_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
                   {%- render 'theme-symbols', icon: 'close-small' -%}
                 </a>
