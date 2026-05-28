@@ -40,15 +40,22 @@ class FacetFiltersForm extends HTMLElement {
       const maxPrice = urlSearchParams.get('filter.v.price.lte');
 
       if (minPrice) {
-        // Divide min by 1.23 — casts a wide lower bound so VAT=23% products
-        // starting at display price `minPrice` are captured by Shopify's admin filter.
+        // Store as a class variable so applyDisplayPriceFilter always reads the current
+        // value even when the section is served from cache (updateURLHash hasn't run yet).
+        FacetFiltersForm.pendingDisplayMin = minPrice;
+        urlSearchParams.set('display_price_min', minPrice);
         urlSearchParams.set('filter.v.price.gte', parseInt(minPrice / 1.23));
+      } else {
+        FacetFiltersForm.pendingDisplayMin = null;
+        urlSearchParams.delete('display_price_min');
       }
       if (maxPrice) {
-        // Keep max as the display price (do NOT divide by 1.23).
-        // This ensures VAT=0% products at their full display price are also captured.
-        // Client-side filtering (applyDisplayPriceFilter) removes false positives.
+        FacetFiltersForm.pendingDisplayMax = maxPrice;
+        urlSearchParams.set('display_price_max', maxPrice);
         urlSearchParams.set('filter.v.price.lte', parseInt(maxPrice) + 1);
+      } else {
+        FacetFiltersForm.pendingDisplayMax = null;
+        urlSearchParams.delete('display_price_max');
       }
       formattedSearchParams = urlSearchParams.toString();
     }
@@ -175,16 +182,30 @@ class FacetFiltersForm extends HTMLElement {
       return;
     }
 
-    // Recover the customer's intended display price range (in cents):
-    // - GTE was stored as display_min / 1.23, so display_min = GTE * 1.23
-    // - LTE was stored as display_max directly (no division)
+    // Recover the customer's intended display price range (in cents).
+    // Prefer the display_price_min/max params stored by renderPage (exact values the
+    // user typed). Fall back to back-calculating from the admin price if those params
+    // are absent (e.g. old bookmarked URLs that predate this fix).
     const adminGte = parseFloat(adminGteStr) || 0;
     const adminLte = parseFloat(adminLteStr) || Infinity;
 
-    // GTE is in major units (e.g. 3001 = €3001); multiply by 123 to get cents × 1.23
-    const displayMinCents = Math.round(adminGte * 123);
-    // LTE is already the display price in major units; multiply by 100 to get cents
-    const displayMaxCents = adminLte === Infinity ? Infinity : Math.round(adminLte * 100);
+    // Class variables are set synchronously in renderPage before any section render,
+    // so they are always current even when the section comes from cache (before updateURLHash).
+    // URL params are the fallback for page reload (class vars are undefined then).
+    const displayMinParam = (FacetFiltersForm.pendingDisplayMin != null)
+      ? FacetFiltersForm.pendingDisplayMin
+      : urlParams.get('display_price_min');
+    const displayMaxParam = (FacetFiltersForm.pendingDisplayMax != null)
+      ? FacetFiltersForm.pendingDisplayMax
+      : urlParams.get('display_price_max');
+
+    // display_price_min/max are in major units (euros); convert to cents.
+    const displayMinCents = displayMinParam
+      ? Math.round(parseFloat(displayMinParam) * 100)
+      : Math.round(adminGte * 123); // fallback: GTE * 1.23 (may be up to ~0.23 too low)
+    const displayMaxCents = displayMaxParam
+      ? Math.round(parseFloat(displayMaxParam) * 100)
+      : (adminLte === Infinity ? Infinity : Math.round(adminLte * 100)); // fallback: LTE as-is
 
     let visibleCount = 0;
     document.querySelectorAll('[data-display-price-min]').forEach(item => {
@@ -302,6 +323,28 @@ class FacetFiltersForm extends HTMLElement {
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
+    FacetFiltersForm.syncPriceBadge();
+  }
+
+  // After the badge is re-rendered from the server it may be off-by-1 due to the
+  // VAT round-trip (min) and the deliberate +1 added to max before storing in the URL.
+  // Read the actual input values (which are never re-rendered after slider interaction)
+  // and push them into the badge text so both always show the same numbers.
+  static syncPriceBadge() {
+    const inputMin = document.querySelector('input[name="filter.v.price.gte"]');
+    const inputMax = document.querySelector('input[name="filter.v.price.lte"]');
+    if (!inputMin || !inputMax) return;
+    const minVal = inputMin.value;
+    const maxVal = inputMax.value;
+    if (!minVal && !maxVal) return;
+
+    document.querySelectorAll('[data-js-price-badge-text]').forEach(function (span) {
+      var badge = span.closest('[data-js-price-badge]');
+      var sym = badge ? badge.dataset.jsPriceBadge : '';
+      var minText = minVal ? sym + minVal : (sym + '0');
+      var maxText = maxVal ? sym + maxVal : '';
+      span.textContent = minText + '-' + maxText;
+    });
   }
 
   static renderCounts(source, target) {
@@ -380,6 +423,8 @@ class FacetFiltersForm extends HTMLElement {
 FacetFiltersForm.filterData = [];
 FacetFiltersForm.searchParamsInitial = window.location.search.slice(1);
 FacetFiltersForm.searchParamsPrev = window.location.search.slice(1);
+FacetFiltersForm.pendingDisplayMin = undefined;
+FacetFiltersForm.pendingDisplayMax = undefined;
 customElements.define('facet-filters-form', FacetFiltersForm);
 FacetFiltersForm.setListeners();
 
@@ -490,8 +535,29 @@ class PriceRange extends HTMLElement {
 
 customElements.define('price-range', PriceRange);
 
-// On initial page load, apply client-side display-price filter if the URL
-// already contains a price filter (e.g. direct link, back navigation, page refresh).
+// On initial page load: restore display price inputs and sync the badge, then filter.
+// Liquid renders the inputs with admin prices (GTE / 1.23), not the display prices
+// the user saw. display_price_min/max in the URL hold the original display values.
 document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const displayMin = urlParams.get('display_price_min');
+  const displayMax = urlParams.get('display_price_max');
+
+  if (displayMin || displayMax) {
+    document.querySelectorAll('price-range').forEach(function (priceRange) {
+      var inputMin = priceRange.querySelector('input[name="filter.v.price.gte"]');
+      var inputMax = priceRange.querySelector('input[name="filter.v.price.lte"]');
+      if (inputMin && displayMin) {
+        inputMin.value = displayMin;
+        if (inputMax) inputMax.setAttribute('min', displayMin);
+      }
+      if (inputMax && displayMax) {
+        inputMax.value = displayMax;
+        if (inputMin) inputMin.setAttribute('max', displayMax);
+      }
+    });
+  }
+
   FacetFiltersForm.applyDisplayPriceFilter();
+  FacetFiltersForm.syncPriceBadge();
 });
