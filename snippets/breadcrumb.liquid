@@ -60,18 +60,12 @@
 
 				{%- else -%}
 
-					{%- comment -%}
-						Build the exclusion list once.
-						Normalise admin input so both display names and handles work:
-						  "Ready to Dine" → downcase → "ready to dine" → replace spaces → "ready-to-dine"
-					{%- endcomment -%}
-					{%- assign _bc_cust = settings.breadcrumb_excluded_collections | strip | downcase | replace: "'", '' | replace: ' & ', '-' | replace: '&', '' | replace: ' , ', ',' | replace: ', ', ',' | replace: ' ,', ',' | replace: ' ', '-' | replace: '--', '-' -%}
-					{%- if _bc_cust != blank -%}
-						{%- assign _bc_all = 'vendors,frontpage,all,' | append: _bc_cust -%}
-					{%- else -%}
-						{%- assign _bc_all = 'vendors,frontpage,all' -%}
-					{%- endif -%}
-					{%- assign _bc_excl = _bc_all | split: ',' -%}
+					{%- comment -%}Build the exclusion array from the collection_list picker plus always-excluded handles.{%- endcomment -%}
+					{%- assign _bc_excl_str = 'vendors,frontpage,all' -%}
+					{%- for _bc_col in settings.breadcrumb_excluded_collections -%}
+						{%- assign _bc_excl_str = _bc_excl_str | append: ',' | append: _bc_col.handle -%}
+					{%- endfor -%}
+					{%- assign _bc_excl = _bc_excl_str | split: ',' -%}
 
 					{%- comment -%}
 						Determine whether the collection in the URL (if any) is excluded.

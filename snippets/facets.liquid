@@ -201,15 +201,16 @@
             {%- if filter.type == "price_range" -%}
               {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                 {%- assign has_active_filter = true -%}
-                <a class="active-facets__button active-facets__button--light button button--small button--outline js-facet-remove" href="{{ filter.url_to_remove }}">
+                <a class="active-facets__button active-facets__button--light button button--small button--outline js-facet-remove" href="{{ filter.url_to_remove }}" data-js-price-badge="{{ cart.currency.symbol }}">
                   {%- comment -%}
                     min: multiply by (1+vat) because URL stores admin price (display_min/1.23)
-                    max: use as-is because URL now stores the display price directly (no division)
+                    max: subtract 100 cents (1 major unit) to undo the +1 added by JS before storing
+                    The span is updated by JS (syncPriceBadge) to exactly match the input field values.
                   {%- endcomment -%}
                   {% assign filter_min_value_additional = filter.min_value.value | times: vat %}
                   {% assign min_value = filter.min_value.value | plus: filter_min_value_additional %}
-                  {% assign max_value = filter.max_value.value %}
-                  {%- if filter.min_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ min_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ min_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ max_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ max_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                  {% assign max_value = filter.max_value.value | minus: 100 %}
+                  <span data-js-price-badge-text>{%- if filter.min_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ min_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ min_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ cart.currency.symbol }}{%- if uses_comma_decimals -%}{{ max_value | money_without_currency | replace: '.', '' | replace: ',', '.' | round }}{%- else -%}{{ max_value | money_without_currency | replace: ',', '' | round }}{%- endif -%}{%- else -%}{{ filter.range_max | money }}{%- endif -%}</span>
                   {%- render 'theme-symbols', icon: 'close-small' -%}
                 </a>
               {%- endif -%}
